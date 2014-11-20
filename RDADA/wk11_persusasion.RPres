@@ -1,0 +1,42 @@
+RDADA
+Week 11 - Persuasion
+Is a Masters Degree Worth $60k?
+========================================================
+    author: Raymond Buhr
+date: 11.19.2014
+
+Challenge
+========================================================
+    
+    Will pursuing a Masters degree in Data Science will lead to greater lifetime earnings and happiness versus self-taught methods without the degree?
+
+- Known-knowns: tuition; books; interest rates.
+- Known-unknowns: reputation of schools; employer recognition of degrees; increase of earning potential.
+- Unknown-unknows: New field might be met with hostility from ingrained disciplines? Many employers might not understand field and thus undervalue skills?
+
+Difficulty of Decision
+========================================================
+    Had to calculate return on investment of a situation with lots of random variables. Focused on the known-knowns to forecast future earnings:
+    - Cost of Tuition
+- Cost of Time to complete (includes Full vs Part-time)
+- Inflation rate, loan interest rates, predicted wage raises
+- Predicted Salary, averaged over next 30 years:
+    ```{r, echo=FALSE}
+grad_school_opportunity_cost <- read.csv("~/grad_school_opp_cost.csv")
+summary(grad_school_opportunity_cost$Predicted.Salary.PT)
+```
+
+Info That Would Have Helped
+========================================================
+    - What does one learn in a Masters program that one does not or can not learn via the internet?
+- How much hands-on, applicable knowledge will the Masters program provide?
+- How much theoretical materical will I learn and permanently digest?
+- If obtained, will I be able to leverage the degree to persuade others of the value of data science?
+
+Data Science Masters Predictions
+========================================================
+    ```{r, echo=FALSE, out.width = '750px', out.height = '500px', dpi=250}
+library(ggplot2)
+plot_data <- read.csv("~/grad_school_opp_plot.csv")
+ggplot(data=plot_data, aes(x=Year, y=Salary, fill=Category)) + geom_bar(stat="identity", position=position_dodge(), width=1.25) + theme(legend.position="bottom", legend.text=element_text(size=rel(1)), axis.title.x=element_text(size=rel(1.5)), axis.title.y=element_text(size=rel(1.5), angle=90), legend.background=element_rect(colour="black"))
+```
