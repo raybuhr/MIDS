@@ -1,0 +1,6 @@
+[submodule "EDA"]
+	path = EDA
+	url = https://github.com/raybuhr/MIDS/EDA
+[submodule "RDADA"]
+	path = RDADA
+	url = https://github.com/raybuhr/MIDS/RDADA
