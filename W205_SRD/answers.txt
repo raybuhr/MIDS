@@ -1,0 +1,8 @@
+3. How long did it take to run the process for each of these?
+
+
+4. How many address tags are there in the input?
+
+
+5. Does the local version and EMR version give the same answer?
+
