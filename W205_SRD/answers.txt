@@ -1,4 +1,9 @@
 3. How long did it take to run the process for each of these?
+Local:
+real	1m37.776s
+user	1m41.892s
+EMR:
+
 
 
 4. How many address tags are there in the input?
