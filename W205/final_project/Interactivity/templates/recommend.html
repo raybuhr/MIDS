@@ -1,0 +1,104 @@
+<!--
+Kasane Utsumi 
+recommend.html
+Recommend a news source based on a keyword and current news source a user reads
+
+-->
+<html>
+<head>
+
+<style>
+
+/*
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}*/
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+<script type="text/javascript" src="{{ url_for('static', filename='d3.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-2.1.3.min.js') }}"></script>
+
+<script>
+function recommend() {
+
+	  $("#result").text("");
+
+	  $.ajax({
+			url: "/recommend",
+			type: 'POST',
+			data: { keyword: $("#keyword").val(), 
+				//tdidf: $("#tdidf").val(),
+				source: $("#source").val()
+			},
+			beforeSend: function() {
+				  $("#busy").show();
+
+			},
+			success: function(data, textStatus, xhr) {
+
+			
+				$("#result").text("You should also read " + data);    
+		
+				$("#busy").hide();
+					
+						   
+
+									
+			},
+			error: function(xhr, textStatus, errorThrown) {
+			}
+		});
+
+}
+
+
+</script>
+</head>
+<body>
+<H2>
+<div>
+Keyword: <input type="text" name="keyword" id="keyword"/>
+<div>
+<!--<div>
+TdIdf: <input type="text" name="tdidf" id="tdidf"/>
+</div>-->
+<div> 
+News source you curently read: 
+<select id="source" name="source">
+<option id="RollingStone">RollingStone</opiton>
+<option id="DailyBeast">DailyBeast</opiton>
+<option id="CNN">CNN</opiton>
+<option id="Washington_Post">Washington_Post</opiton>
+<option id="SF_Gate">SF_Gate</opiton>
+</select>
+
+<button onclick="recommend();">Recommend a news source! </button>
+
+<div id="busy" style="display:none;"><img src="{{ url_for('static', filename='ajax-loader.gif') }}"/></div>
+</H2>
+
+<H1>
+<div id="result" style="font-color:red">
+</div>
+</H1>
+</body>
+</html>

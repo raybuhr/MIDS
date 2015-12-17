@@ -1,0 +1,192 @@
+<!--
+Kasane Utsumi 
+index.html
+Based on the keyword entered, it will output average subjectivity, polairty, lexical diversity and article count of all articles (in which keyword id relevant enough per Tf-Idf value) from each source in a bar chart format. Bar chart was created using D3. 
+-->
+
+<html>
+<head>
+
+<style>
+
+/*
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}*/
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+<script type="text/javascript" src="{{ url_for('static', filename='d3.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-2.1.3.min.js') }}"></script>
+
+<script>
+
+//get source stats per typed in keyword using ajax
+function getStats() {
+
+  $("#NumArticles").html("");
+  $("#Polarity").html("");
+  $("#Sub").html("");
+  $("#LexicalDiversity").html("");
+  $("#busy").show();
+
+  $.ajax({
+				url: "/getKeywordStats",
+				type: 'POST',
+			    dataType: 'json',
+			    data: { keyword: $("#keyword").val() //, tdidf: $("#tdidf").val()
+			    },
+				beforeSend: function() {
+					//$('#'+id+' .contentarea').html('<img src="/function-demos/functions/ajax/images/loading.gif" />');
+				},
+				success: function(data, textStatus, xhr) {
+
+				
+			
+					//var ld = data.map(function(d) { return {"source": d,"value",d.  }
+					var lexDiv = data.map(function(d) { return {"source": d.Label,"value":d.LexicalDiversity  }})
+						createBarChart("LexicalDiversity", lexDiv, "Lexical Diversity",1);
+					var polarity = data.map(function(d) { return {"source": d.Label,"value":d.Polarity  }})
+						createBarChart("Polarity", polarity, "Polarity",1);
+					var lexDiv = data.map(function(d) { return {"source": d.Label,"value":d.Subjectivity  }})
+						createBarChart("Sub", lexDiv, "Subjectivity",1);
+					//var polarity = data.map(function(d) { return {"source": d.Label,"value":d.Polarity  }})
+						//createBarChart("Polarity", polarity, "Polarity",1);
+					var numArticles = data.map(function(d) { return {"source": d.Label,"value":d.Total  }})
+						createBarChart("NumArticles", numArticles, "Number of Articles");
+
+					  
+					$("#busy").hide();
+				
+
+                                
+                },
+				error: function(xhr, textStatus, errorThrown) {
+					//$('#'+id+' .contentarea').html(textStatus);
+				}
+		});
+
+}
+
+//based on data passed create a bar chart
+function createBarChart(divName, data, yLabel, yDomain)
+{
+	var c10 = d3.scale.category10();
+
+
+	var margin = {top: 20, right: 20, bottom: 30, left: 40},
+		width = 600 - margin.left - margin.right,
+		height = 300 - margin.top - margin.bottom;
+
+	var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+
+	var y = d3.scale.linear()
+		.range([height, 0]);
+
+	var xAxis = d3.svg.axis()
+		.scale(x)
+		.orient("bottom");
+
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.orient("left")
+		.ticks(10);
+
+	var svg = d3.select("#" + divName).append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+	  x.domain(data.map(function(d) { return d.source; }));
+
+	  if (typeof yDomain != "undefined")
+	  {
+		  y.domain([0, yDomain]);
+	  } else {
+		  y.domain([0, d3.max(data, function(d) { return d.value; })]);
+	  }
+
+	  svg.append("g")
+		  .attr("class", "x axis")
+		  .attr("transform", "translate(0," + height + ")")
+		  .call(xAxis);
+
+	  svg.append("g")
+		  .attr("class", "y axis")
+		  .call(yAxis)
+		.append("text")
+		  .attr("transform", "rotate(-90)")
+		  .attr("y", 6)
+		  .attr("dy", ".71em")
+		  .style("text-anchor", "end")
+		  .text(yLabel);
+
+	  svg.selectAll(".bar")
+		  .data(data)
+		  .enter().append("rect")
+		  .attr("class", "bar")
+		  .attr("x", function(d) { return x(d.source); })
+		  .attr("width", x.rangeBand())
+		  .attr("y", function(d) { return y(d.value); })
+		  .attr("height", function(d) { return height - y(d.value); })
+		  .attr("fill", function(d,i) { return c10(i); } );
+    
+
+}
+
+
+</script>
+</head>
+<H2>
+<div>
+Keyword: <input type="text" name="keyword" id="keyword"/>
+<div>
+<!--
+<div>
+TdIdf: <input type="text" name="tdidf" id="tdidf"/>
+</div>-->
+<button onclick="getStats();">Compare Sources!</button>
+</H2>
+<div id="busy" style="display:none;"><img src="{{ url_for('static', filename='ajax-loader.gif') }}"/></div>
+<BR/>
+<H3>Lexical Diversity</H3>
+
+<div id="LexicalDiversity">
+</div>
+<Br/>
+<H3>Polarity</H3>
+
+<div id="Polarity">
+</div>
+
+<Br/>
+<H3>Subjectivity</H3>
+
+<div id="Sub">
+</div>
+<Br/>
+<H3>Number of Articles</H3>
+
+<div id="NumArticles">
+</div>
+</html>
