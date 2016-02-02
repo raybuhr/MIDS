@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Binomial distribution</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Binomial_distribution.htm" rel="canonical" />
+  <link href="http://www.soschildren.org/wikipedia-for-schools" rel="author" />
+  <meta content="A Wikipedia for Schools article about Binomial distribution. Content checked by SOS Children's Villages" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Binomial_distribution skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Binomial distribution</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.Mathematics.htm">Mathematics</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Background Information</h4><p>SOS Children has tried to make Wikipedia content more accessible by this schools selection. <a href="http://www.sponsor-a-child.org.uk/">Sponsor a child</a> to make a real difference.</p></div></div>
+       <table class="infobox bordered" style="width:325px; max-width:325px; font-size:95%; text-align: left;">
+        <caption>Binomial</caption>
+        <tr style="text-align: center;">
+         <td colspan="2">Probability mass function<br /><a class="image" href="../../images/195/19535.png.htm" title="Probability mass function for the binomial distribution"><img alt="Probability mass function for the binomial distribution" height="289" src="../../images/195/19535.png"  width="434" /></a><br />
+         </td>
+        </tr>
+        <tr style="text-align: center;">
+         <td colspan="2">Cumulative distribution function<br /><a class="image" href="../../images/195/19538.png.htm" title="Cumulative distribution function for the binomial distribution"><img alt="Cumulative distribution function for the binomial distribution" height="326" src="../../images/195/19538.png"  width="434" /></a><br /><small>Colors match the image above</small></td>
+        </tr>
+        <tr>
+         <th>Parameters</th>
+         <td><img alt="n \geq 0" class="tex" src="../../images/195/19547.png" /> number of trials (<a href="../../wp/i/Integer.htm" title="Integer">integer</a>)<br /><img alt="0\leq p \leq 1" class="tex" src="../../images/195/19548.png" /> success probability (<a href="../../wp/r/Real_number.htm" title="Real number">real</a>)</td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> Support</th>
+         <td><img alt="k \in \{0,\dots,n\}\!" class="tex" src="../../images/195/19549.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> PMF</th>
+         <td><img alt="{n\choose k} p^k (1-p)^{n-k} \!" class="tex" src="../../images/195/19550.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> CDF</th>
+         <td><img alt="I_{1-p}(n-\lfloor k\rfloor, 1+\lfloor k\rfloor) \!" class="tex" src="../../images/195/19551.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> Mean</th>
+         <td><img alt="np\!" class="tex" src="../../images/195/19552.png" /></td>
+        </tr>
+        <tr>
+         <th><a href="../../wp/m/Median.htm" title="Median">Median</a></th>
+         <td>one of <img alt="\{\lfloor np\rfloor-1, \lfloor np\rfloor, \lfloor np\rfloor+1\}" class="tex" src="../../images/195/19553.png" /></td>
+        </tr>
+        <tr>
+         <th><a href="../../wp/m/Mode_%2528statistics%2529.htm" title="Mode (statistics)">Mode</a></th>
+         <td><img alt="\lfloor (n+1)\,p\rfloor\!" class="tex" src="../../images/195/19554.png" /></td>
+        </tr>
+        <tr>
+         <th><a href="../../wp/v/Variance.htm" title="Variance">Variance</a></th>
+         <td><img alt="np(1-p)\!" class="tex" src="../../images/195/19555.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> Skewness</th>
+         <td><img alt="\frac{1-2p}{\sqrt{np(1-p)}}\!" class="tex" src="../../images/195/19556.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> Ex. kurtosis</th>
+         <td><img alt="\frac{1-6p(1-p)}{np(1-p)}\!" class="tex" src="../../images/195/19557.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> Entropy</th>
+         <td><img alt=" \frac{1}{2} \ln \left( 2 \pi n e p (1-p) \right) + O \left( \frac{1}{n} \right) " class="tex" src="../../images/195/19558.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> MGF</th>
+         <td><img alt="(1-p + pe^t)^n \!" class="tex" src="../../images/195/19559.png" /></td>
+        </tr>
+        <tr>
+         <th><!--del_lnk--> CF</th>
+         <td><img alt="(1-p + pe^{it})^n \!" class="tex" src="../../images/195/19560.png" /></td>
+        </tr>
+       </table>
+       <p>In <a href="../../wp/p/Probability_theory.htm" title="Probability theory">probability theory</a> and <a href="../../wp/s/Statistics.htm" title="Statistics">statistics</a>, the <b>binomial distribution</b> is the <a class="mw-redirect" href="../../wp/p/Probability_distribution.htm" title="Discrete probability distribution">discrete probability distribution</a> of the number of successes in a sequence of <i>n</i> <!--del_lnk--> independent yes/no experiments, each of which yields success with <a href="../../wp/p/Probability.htm" title="Probability">probability</a> <i>p</i>. Such a success/failure experiment is also called a Bernoulli experiment or <!--del_lnk--> Bernoulli trial. In fact, when <i>n</i> = 1, the binomial distribution <i>is</i> a <!--del_lnk--> Bernoulli distribution. The binomial distribution is the basis for the popular <!--del_lnk--> binomial test of <!--del_lnk--> statistical significance. A binomial distribution should not be confused with a <!--del_lnk--> bimodal distribution.</p>
+       <h2><span class="mw-headline" id="Examples">Examples</span></h2>
+       <p>An elementary example is this: Roll a standard die ten times and count the number of sixes. The distribution of this random number is a binomial distribution with <i>n</i> = 10 and <i>p</i> = 1/6.</p>
+       <p>As another example, assume 5% of a very large population to be green-eyed. You pick 100 people randomly. The number of green-eyed people you pick is a <a href="../../wp/r/Random_variable.htm" title="Random variable">random variable</a> <i>X</i> which follows a binomial distribution with <i>n</i> = 100 and <i>p</i> = 0.05.</p>
+       <h2><span class="mw-headline" id="Specification">Specification</span></h2>
+       <h3><span class="mw-headline" id="Probability_mass_function">Probability mass function</span></h3>
+       <p>In general, if the random variable <i>K</i> follows the binomial distribution with parameters <i>n</i> and <i>p</i>, we write <i>K</i> ~ B(<i>n</i>, <i>p</i>). The probability of getting exactly <i>k</i> successes in <i>n</i> trials is given by the <!--del_lnk--> probability mass function:</p>
+       <dl>
+        <dd><img alt=" \Pr(K = k) = f(k;n,p)={n\choose k}p^k(1-p)^{n-k}" class="tex" src="../../images/195/19561.png" /></dd>
+       </dl>
+       <p>for <i>k</i> = 0, 1, 2, ..., <i>n</i> and where</p>
+       <dl>
+        <dd><img alt="{n\choose k}=\frac{n!}{k!(n-k)!}" class="tex" src="../../images/195/19562.png" /></dd>
+       </dl>
+       <p>is the <a href="../../wp/b/Binomial_coefficient.htm" title="Binomial coefficient">binomial coefficient</a> (hence the name of the distribution) "<i>n</i> choose <i>k</i>" (also denoted <i>C</i>(<i>n</i>, <i>k</i>) or <i>n</i>C<i>k</i>). The formula can be understood as follows: we want <i>k</i> successes (<i>p</i><sup><i>k</i></sup>) and <i>n</i> &minus; <i>k</i> failures (1 &minus; <i>p</i>)<sup><i>n</i> &minus; <i>k</i></sup>. However, the <i>k</i> successes can occur anywhere among the <i>n</i> trials, and there are C(<i>n</i>, <i>k</i>) different ways of distributing <i>k</i> successes in a sequence of <i>n</i> trials.</p>
+       <p>In creating reference tables for binomial distribution probability, usually the table is filled in up to <i>n</i>/2 values. This is because for <i>k</i> > <i>n</i>/2, the probability can be calculated by its complement as</p>
+       <dl>
+        <dd><img alt="f(k;n,p)=f(n-k;n,1-p).\,\!" class="tex" src="../../images/195/19563.png" /></dd>
+       </dl>
+       <p>So, one must look to a different <i>k</i> and a different <i>p</i> (the binomial is not symmetrical in general).</p>
+       <h3><span class="mw-headline" id="Cumulative_distribution_function">Cumulative distribution function</span></h3>
+       <p>The <!--del_lnk--> cumulative distribution function can be expressed in terms of the <!--del_lnk--> regularized incomplete beta function, as follows:</p>
+       <dl>
+        <dd><img alt=" F(k;n,p) = \Pr(X \le k) = I_{1-p}(n-k, k+1) \!" class="tex" src="../../images/195/19564.png" /></dd>
+       </dl>
+       <p>provided <i>k</i> is an integer and 0&nbsp;&le;&nbsp;<i>k</i>&nbsp;&le;&nbsp;<i>n</i>. If <i>x</i> is not necessarily an integer or not necessarily positive, one can express it thus:</p>
+       <dl>
+        <dd><img alt="F(x;n,p) = \Pr(X \le x) = \sum_{j=0}^{\operatorname{Floor}(x)} {n\choose j}p^j(1-p)^{n-j}." class="tex" src="../../images/195/19565.png" /></dd>
+       </dl>
+       <p>For <i>k</i> &le; <i>np</i>, <!--del_lnk--> upper bounds for the lower tail of the distribution function can be derived. In particular, <!--del_lnk--> Hoeffding's inequality yields the bound</p>
+       <dl>
+        <dd><img alt=" F(k;n,p) \leq \exp\left(-2 \frac{(np-k)^2}{n}\right), \!" class="tex" src="../../images/195/19566.png" /></dd>
+       </dl>
+       <p>and <!--del_lnk--> Chernoff's inequality can be used to derive the bound</p>
+       <dl>
+        <dd><img alt=" F(k;n,p) \leq \exp\left(-\frac{1}{2\,p} \frac{(np-k)^2}{n}\right). \!" class="tex" src="../../images/195/19567.png" /></dd>
+       </dl>
+       <h2><span class="mw-headline" id="Mean.2C_variance.2C_and_mode">Mean, variance, and mode</span></h2>
+       <p>If <i>X</i> ~ B(<i>n</i>, <i>p</i>) (that is, <i>X</i> is a binomially distributed random variable), then the <!--del_lnk--> expected value of <i>X</i> is</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X)=np\,\!" class="tex" src="../../images/195/19568.png" /></dd>
+       </dl>
+       <p>and the <a href="../../wp/v/Variance.htm" title="Variance">variance</a> is</p>
+       <dl>
+        <dd><img alt="\operatorname{Var}(X)=np(1-p).\,\!" class="tex" src="../../images/195/19569.png" /></dd>
+       </dl>
+       <p>This fact is easily proven as follows. Suppose first that we have exactly one Bernoulli trial. We have two possible outcomes, 1 and 0, with the first having probability <i>p</i> and the second having probability 1&nbsp;&minus;&nbsp;<i>p</i>; the mean for this trial is given by &mu;&nbsp;=&nbsp;<i>p</i>. Using the definition of <a href="../../wp/v/Variance.htm" title="Variance">variance</a>, we have</p>
+       <dl>
+        <dd><img alt="\sigma^2= \left(1 - p\right)^2p + (0-p)^2(1 - p) = p(1-p)." class="tex" src="../../images/195/19570.png" /></dd>
+       </dl>
+       <p>Now suppose that we want the variance for <i>n</i> such trials (i.e. for the general binomial distribution). Since the trials are independent, we may add the variances for each trial, giving</p>
+       <dl>
+        <dd><img alt="\sigma^2_n = \sum_{k=1}^n \sigma^2 = np(1 - p). \quad" class="tex" src="../../images/195/19571.png" /></dd>
+       </dl>
+       <p>The <a href="../../wp/m/Mode_%2528statistics%2529.htm" title="Mode (statistics)">mode</a> of <i>X</i> is the greatest integer less than or equal to (<i>n</i>&nbsp;+&nbsp;1)<i>p</i>; if <i>m</i> = (<i>n</i>&nbsp;+&nbsp;1)<i>p</i> is an integer, then <i>m</i>&nbsp;&minus;&nbsp;1 and <i>m</i> are both modes.</p>
+       <h2><span class="mw-headline" id="Explicit_derivations_of_mean_and_variance">Explicit derivations of mean and variance</span></h2>
+       <p>We derive these quantities from first principles. Certain particular sums occur in these two derivations. We rearrange the sums and terms so that sums solely over complete binomial probability mass functions (<a class="mw-redirect" href="../../wp/b/Binomial_distribution.htm#Probability_mass_function" title="Binomial Distribution">pmf</a>) arise, which are always unity</p>
+       <dl>
+        <dd><img alt=" \sum_{k=0}^n \operatorname{Pr}(X=k) = \sum_{k=0}^n {n\choose k}p^k(1-p)^{n-k} = 1" class="tex" src="../../images/195/19572.png" /></dd>
+       </dl>
+       <h3><span class="mw-headline" id="Mean">Mean</span></h3>
+       <p>We apply the definition of the <!--del_lnk--> expected value of a <a class="mw-redirect" href="../../wp/p/Probability_distribution.htm" title="Discrete random variable">discrete random variable</a> to the binomial distribution</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X) = \sum_k x_k \cdot \operatorname{Pr}(x_k) = \sum_{k=0}^n k \cdot \operatorname{Pr}(X=k)
+
+= \sum_{k=0}^n k \cdot {n\choose k}p^k(1-p)^{n-k}" class="tex" src="../../images/195/19573.png" /></dd>
+       </dl>
+       <p>The first term of the series (with index <i>k</i> = 0) has value 0 since the first factor, <i>k</i>, is zero. It may thus be discarded, i.e. we can change the lower limit to: <i>k</i> = 1</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X) = \sum_{k=1}^n k \cdot \frac{n!}{k!(n-k)!} p^k(1-p)^{n-k}
+
+=  \sum_{k=1}^n k \cdot \frac{n\cdot(n-1)!}{k\cdot(k-1)!(n-k)!} \cdot p \cdot p^{k-1}(1-p)^{n-k}" class="tex" src="../../images/195/19574.png" /></dd>
+       </dl>
+       <p>We've pulled factors of <i>n</i> and <i>k</i> out of the factorials, and one power of <i>p</i> has been split off. We are preparing to redefine the indices.</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X) = np \cdot \sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k}" class="tex" src="../../images/195/19575.png" /></dd>
+       </dl>
+       <p>We rename <i>m</i> = <i>n</i> - 1 and <i>s</i> = <i>k</i> - 1. The value of the sum is not changed by this, but it now becomes readily recognizable</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X) = np \cdot \sum_{s=0}^m \frac{(m)!}{(s)!(m-s)!} p^s(1-p)^{m-s}
+= np \cdot \sum_{s=0}^m {m\choose s} p^s(1-p)^{m-s}" class="tex" src="../../images/195/19576.png" /></dd>
+       </dl>
+       <p>The ensuing sum is a sum over a complete binomial <a class="mw-redirect" href="../../wp/b/Binomial_distribution.htm#Probability_mass_function" title="Binomial Distribution">pmf</a> (of one order lower than the initial sum, as it happens). Thus</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X) = np \cdot 1 = np" class="tex" src="../../images/195/19577.png" /></dd>
+       </dl>
+       <h3><span class="mw-headline" id="Variance">Variance</span></h3>
+       <p>It can be shown that the variance is equal to (see: <a href="../../wp/v/Variance.htm#Properties.2C_formal" title="Variance">variance, 10. Computational formula for variance</a>):</p>
+       <dl>
+        <dd><img alt="\operatorname{Var}(X) = \operatorname{E}(X^2) - (\operatorname{E}(X))^2." class="tex" src="../../images/195/19578.png" /></dd>
+       </dl>
+       <p>In using this formula we see that we now also need the expected value of <i>X</i><sup>2</sup>, which is</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X^2) = \sum_{k=0}^n k^2 \cdot \operatorname{Pr}(X=k)
+
+= \sum_{k=0}^n k^2 \cdot {n\choose k}p^k(1-p)^{n-k}." class="tex" src="../../images/195/19579.png" /></dd>
+       </dl>
+       <p>We can use our experience gained above in deriving the mean. We know how to process one factor of <i>k</i>. This gets us as far as</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X^2) = np \cdot \sum_{s=0}^m k \cdot {m\choose s} p^s(1-p)^{m-s}
+= np \cdot \sum_{s=0}^m (s+1) \cdot {m\choose s} p^s(1-p)^{m-s}" class="tex" src="../../images/195/19580.png" /></dd>
+       </dl>
+       <p>(again, with <i>m</i> = <i>n</i> - 1 and <i>s</i> = <i>k</i> - 1). We split the sum into two separate sums and we recognize each one</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X^2) = np \cdot \bigg( \sum_{s=0}^m s \cdot {m\choose s} p^s(1-p)^{m-s} + \sum_{s=0}^m 1 \cdot {m\choose s} p^s(1-p)^{m-s} \bigg)." class="tex" src="../../images/195/19581.png" /></dd>
+       </dl>
+       <p>The first sum is identical in form to the one we calculated in the Mean (above). It sums to <i>mp</i>. The second sum is unity.</p>
+       <dl>
+        <dd><img alt="\operatorname{E}(X^2) = np \cdot ( mp + 1) = np((n-1)p + 1) = np(np - p + 1)." class="tex" src="../../images/195/19582.png" /></dd>
+       </dl>
+       <p>Using this result in the expression for the variance, along with the Mean (E(<i>X</i>) = <i>np</i>), we get</p>
+       <dl>
+        <dd><img alt="\operatorname{Var}(X) = \operatorname{E}(X^2) - (\operatorname{E}(X))^2 = np(np - p + 1) - (np)^2 = np(1-p)." class="tex" src="../../images/195/19583.png" /></dd>
+       </dl>
+       <h2><span class="mw-headline" id="Relationship_to_other_distributions">Relationship to other distributions</span></h2>
+       <h3><span class="mw-headline" id="Sums_of_binomials">Sums of binomials</span></h3>
+       <p>If <i>X</i> ~ B(<i>n</i>, <i>p</i>) and <i>Y</i> ~ B(<i>m</i>, <i>p</i>) are independent binomial variables, then <i>X</i> + <i>Y</i> is again a binomial variable; its distribution is</p>
+       <dl>
+        <dd><img alt="X+Y \sim B(n+m, p).\," class="tex" src="../../images/195/19584.png" /></dd>
+       </dl>
+       <h3><span class="mw-headline" id="Normal_approximation">Normal approximation</span></h3>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:252px;"><a class="image" href="../../images/195/19585.png.htm"><img alt="" class="thumbimage" height="239" src="../../images/195/19585.png"  width="250" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/195/19585.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Binomial PDF and normal approximation for <i>n</i> = 6 and <i>p</i> = 0.5.</div>
+        </div>
+       </div>
+       <p>If <i>n</i> is large enough, the skew of the distribution is not too great, and a suitable <!--del_lnk--> continuity correction is used, then an excellent approximation to B(<i>n</i>, <i>p</i>) is given by the <a href="../../wp/n/Normal_distribution.htm" title="Normal distribution">normal distribution</a></p>
+       <dl>
+        <dd><img alt=" \operatorname{N}(np, np(1-p)).\,\!" class="tex" src="../../images/195/19590.png" /></dd>
+       </dl>
+       <p>Various <!--del_lnk--> rules of thumb may be used to decide whether <i>n</i> is large enough. One rule is that both <i>np</i> and <i>n</i>(1 &minus; <i>p</i>) must be greater than 5. However, the specific number varies from source to source, and depends on how good an approximation one wants; some sources give 10. Another commonly used rule holds that the above normal approximation is appropriate only if</p>
+       <dl>
+        <dd><img alt="\mu \pm 3 \sigma = np \pm 3 \sqrt{np(1-p)} \in [0,n]." class="tex" src="../../images/195/19591.png" /></dd>
+       </dl>
+       <p>The following is an example of applying a <!--del_lnk--> continuity correction: Suppose one wishes to calculate Pr(<i>X</i>&nbsp;&le;&nbsp;8) for a binomial random variable <i>X</i>. If <i>Y</i> has a distribution given by the normal approximation, then Pr(<i>X</i>&nbsp;&le;&nbsp;8) is approximated by Pr(<i>Y</i>&nbsp;&le;&nbsp;8.5). The addition of 0.5 is the continuity correction; the uncorrected normal approximation gives considerably less accurate results.</p>
+       <p>This approximation is a huge time-saver (exact calculations with large <i>n</i> are very onerous); historically, it was the first use of the normal distribution, introduced in <!--del_lnk--> Abraham de Moivre's book <i><!--del_lnk--> The Doctrine of Chances</i> in 1733. Nowadays, it can be seen as a consequence of the <!--del_lnk--> central limit theorem since B(<i>n</i>, <i>p</i>) is a sum of <i>n</i> independent, identically distributed 0-1 <!--del_lnk--> indicator variables.</p>
+       <p>For example, suppose you randomly sample <i>n</i> people out of a large population and ask them whether they agree with a certain statement. The proportion of people who agree will of course depend on the sample. If you sampled groups of <i>n</i> people repeatedly and truly randomly, the proportions would follow an approximate normal distribution with mean equal to the true proportion <i>p</i> of agreement in the population and with standard deviation &sigma; = (<i>p</i>(1 &minus; <i>p</i>)<i>n</i>)<sup>1/2</sup>. Large <!--del_lnk--> sample sizes <i>n</i> are good because the standard deviation, as a proportion of the expected value, gets smaller, which allows a more precise estimate of the unknown parameter <i>p</i>.</p>
+       <h3><span class="mw-headline" id="Poisson_approximation">Poisson approximation</span></h3>
+       <p>The binomial distribution converges towards the <a href="../../wp/p/Poisson_distribution.htm" title="Poisson distribution">Poisson distribution</a> as the number of trials goes to infinity while the product <i>np</i> remains fixed. Therefore the Poisson distribution with parameter &lambda; = <i>np</i> can be used as an approximation to B(<i>n</i>, <i>p</i>) of the binomial distribution if n is sufficiently large and p is sufficiently small. According to two rules of thumb, this approximation is good if <i>n</i> &ge; 20 and <i>p</i> &le; 0.05, or if <i>n</i> &ge; 100 and <i>np</i> &le; 10.</p>
+       <h2><span class="mw-headline" id="Limits_of_binomial_distributions">Limits of binomial distributions</span></h2>
+       <ul>
+        <li>As <i>n</i> approaches &infin; and <i>p</i> approaches 0 while <i>np</i> remains fixed at &lambda;&nbsp;>&nbsp;0 or at least <i>np</i> approaches &lambda;&nbsp;>&nbsp;0, then the Binomial(<i>n</i>,&nbsp;<i>p</i>) distribution approaches the <a href="../../wp/p/Poisson_distribution.htm" title="Poisson distribution">Poisson distribution</a> with <!--del_lnk--> expected value &lambda;.</li>
+       </ul>
+       <ul>
+        <li>As <i>n</i> approaches &infin; while <i>p</i> remains fixed, the distribution of</li>
+       </ul>
+       <dl>
+        <dd>
+         <dl>
+          <dd><img alt="{X-np \over \sqrt{np(1-p)\ }}" class="tex" src="../../images/195/19592.png" /></dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>approaches the <a href="../../wp/n/Normal_distribution.htm" title="Normal distribution">normal distribution</a> with expected value 0 and <a href="../../wp/v/Variance.htm" title="Variance">variance</a> 1 (this is just a specific case of the <!--del_lnk--> Central Limit Theorem).</dd>
+       </dl>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Binomial_distribution&amp;oldid=205749965"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=205749965 . </div>
+   </div>
+  </div>
+ </body>
+</html>

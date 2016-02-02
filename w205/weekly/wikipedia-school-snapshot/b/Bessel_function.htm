@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Bessel function</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Bessel_function.htm" rel="canonical" />
+  <link href="http://www.sos-schools.org/wikipedia-for-schools/license" rel="license" />
+  <meta content="Bessel function on the Wikipedia for Schools" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Bessel_function skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Bessel function</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.Mathematics.htm">Mathematics</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Background Information</h4><p>SOS Children, <a href="../../wp/s/Sos_Schools.htm">an education charity</a>, organised this selection. <a href="../../wp/s/Soschildrensvillages.htm">Click here</a> for more information on SOS Children.</p></div></div>
+       <p>In <a href="../../wp/m/Mathematics.htm" title="Mathematics">mathematics</a>, <b>Bessel functions</b>, first defined by the <a href="../../wp/m/Mathematician.htm" title="Mathematician">mathematician</a> <!--del_lnk--> Daniel Bernoulli and generalized by <!--del_lnk--> Friedrich Bessel, are <!--del_lnk--> canonical solutions <i>y</i>(<i>x</i>) of Bessel's <a href="../../wp/d/Differential_equation.htm" title="Differential equation">differential equation</a>:</p>
+       <dl>
+        <dd><img alt="x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + (x^2 - \alpha^2)y = 0" class="tex" src="../../images/208/20832.png" /></dd>
+       </dl>
+       <p>for an arbitrary real or complex number &alpha;. The most common and important special case is where &alpha; is an <a href="../../wp/i/Integer.htm" title="Integer">integer</a> <i>n</i>, then &alpha; is referred to as the <i>order</i> of the Bessel function.</p>
+       <p>Although &alpha; and &minus;&alpha; produce the same differential equation, it is conventional to define different Bessel functions for these two orders (e.g., so that the Bessel functions are mostly smooth functions of &alpha;). Bessel functions are also known as <b>Cylinder functions</b> or <b>Cylindrical harmonics</b> because they are found in the solution to <!--del_lnk--> Laplace's equation in <!--del_lnk--> cylindrical coordinates.</p>
+       <h2><span class="mw-headline" id="Applications">Applications</span></h2>
+       <p>Bessel's equation arises when finding separable solutions to <!--del_lnk--> Laplace's equation and the <!--del_lnk--> Helmholtz equation in <!--del_lnk--> cylindrical or <a class="mw-redirect" href="../../wp/s/Spherical_coordinate_system.htm" title="Spherical coordinates">spherical coordinates</a>. Bessel functions are therefore especially important for many problems of <!--del_lnk--> wave propagation, static potentials, and so on. In solving problems in cylindrical coordinate systems, one obtains Bessel functions of integer order (&alpha; = <i>n</i>); in spherical problems, one obtains half-integer orders (&alpha; = <i>n</i>+&frac12;). For example:</p>
+       <ul>
+        <li><a class="mw-redirect" href="../../wp/e/Electromagnetic_radiation.htm" title="Electromagnetic waves">electromagnetic waves</a> in a cylindrical <!--del_lnk--> waveguide</li>
+        <li><!--del_lnk--> heat conduction in a cylindrical object.</li>
+        <li>modes of vibration of a thin circular (or annular) <!--del_lnk--> artificial membrane.</li>
+        <li>diffusion problems on a lattice.</li>
+       </ul>
+       <p>Bessel functions also have useful properties for other problems, such as signal processing (e.g., see <!--del_lnk--> FM synthesis, <!--del_lnk--> Kaiser window, or <!--del_lnk--> Bessel filter).</p>
+       <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+       <p>Since this is a second-order differential equation, there must be two <!--del_lnk--> linearly independent solutions. Depending upon the circumstances, however, various formulations of these solutions are convenient, and the different variations are described below.</p>
+       <h3><span class="mw-headline" id="Bessel_functions_of_the_first_kind_:">Bessel functions of the first kind&nbsp;: <img alt="J_\alpha" class="tex" src="../../images/208/20833.png" /></span></h3>
+       <p>Bessel functions of the first kind, denoted as <i>J</i><sub>&alpha;</sub>(<i>x</i>), are solutions of Bessel's differential equation that are finite at the origin (<i>x</i> = 0) for non-negative integer &alpha;, and diverge as <i>x</i> approaches zero for negative non-integer &alpha;. The solution type (e.g. integer or non-integer) and normalization of <i>J</i><sub>&alpha;</sub>(x) are defined by its <a href="../../wp/b/Bessel_function.htm#Properties" title="Bessel function">properties</a> below. For integer order solutions, it is possible to define the function by its <a href="../../wp/t/Taylor_series.htm" title="Taylor series">Taylor series</a> expansion around <i>x</i> = 0:</p>
+       <dl>
+        <dd><img alt=" J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma(m+\alpha+1)} {\left({\frac{x}{2}}\right)}^{2m+\alpha} " class="tex" src="../../images/208/20834.png" /></dd>
+       </dl>
+       <p>where <img alt="\Gamma(z)" class="tex" src="../../images/183/18345.png" /> is the <!--del_lnk--> gamma function, a generalization of the <a href="../../wp/f/Factorial.htm" title="Factorial">factorial</a> function to non-integer values. For non-integer &alpha;, a more general <a href="../../wp/p/Power_series.htm" title="Power series">power series</a> expansion is required. The graphs of Bessel functions look roughly like oscillating sine or cosine functions that decay proportionally to 1/&radic;<i>x</i> (see also their asymptotic forms below), although their roots are not generally periodic, except asymptotically for large <i>x</i>. (The Taylor series indicates that <img alt="-J_1(x)" class="tex" src="../../images/208/20835.png" /> is the derivative of <img alt="J_0(x)" class="tex" src="../../images/208/20836.png" />, much like <img alt="-\sin" class="tex" src="../../images/208/20837.png" /> is the derivative of <img alt="\cos" class="tex" src="../../images/208/20838.png" />; more generally, the derivative of <img alt="J_n(x)" class="tex" src="../../images/208/20839.png" /> can be expressed in terms of <img alt="J_{n\pm 1}(x)" class="tex" src="../../images/208/20840.png" /> by the identities <a href="../../wp/b/Bessel_function.htm#Properties" title="Bessel function">below</a>.)</p>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/208/20841.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/208/20841.png"  width="300" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/208/20841.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Plot of Bessel function of the first kind, J<sub>&alpha;</sub>(x), for integer orders &alpha;=0,1,2.</div>
+        </div>
+       </div>
+       <p>For non-integer &alpha;, the functions <img alt="J_\alpha (x)" class="tex" src="../../images/208/20847.png" /> and <img alt="J_{-\alpha} (x)" class="tex" src="../../images/208/20848.png" /> are linearly independent, and are therefore the two solutions of the differential equation. On the other hand, for integer order <img alt="\alpha" class="tex" src="../../images/63/6355.png" />, the following relationship is valid:</p>
+       <dl>
+        <dd><img alt="J_{-n}(x) = (-1)^n J_{n}(x).\," class="tex" src="../../images/208/20849.png" /></dd>
+       </dl>
+       <p>This means that the two solutions are no longer linearly independent. In this case, the second linearly independent solution is then found to be the Bessel function of the second kind, as discussed below.</p>
+       <h4><span class="mw-headline" id="Bessel.27s_integrals">Bessel's integrals</span></h4>
+       <p>Another definition of the Bessel function, for integer values of <img alt=" n " class="tex" src="../../images/62/6224.png" />, is possible using an integral representation:</p>
+       <dl>
+        <dd><img alt="J_n(x) = \frac{1}{\pi} \int_{0}^{\pi} \cos (n \tau - x \sin \tau) d\tau." class="tex" src="../../images/208/20850.png" /></dd>
+       </dl>
+       <p>This was the approach that Bessel used, and from this definition he derived several properties of the function.</p>
+       <p>Another integral representation is:</p>
+       <dl>
+        <dd><img alt="J_n (x) = \frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{-i(n \tau - x \sin \tau)} d\tau" class="tex" src="../../images/208/20851.png" /></dd>
+       </dl>
+       <h4><span class="mw-headline" id="Relation_to_hypergeometric_series">Relation to hypergeometric series</span></h4>
+       <p>The Bessel functions can be expressed in terms of the <!--del_lnk--> hypergeometric series as</p>
+       <dl>
+        <dd><img alt="J_\alpha(z)=\frac{(z/2)^\alpha}{\Gamma(\alpha+1)}  \;_0F_1 (\alpha+1; -z^2/4)." class="tex" src="../../images/208/20852.png" /></dd>
+       </dl>
+       <p>This expression is related to the development of Bessel functions in terms of the <!--del_lnk--> Bessel-Clifford function.</p>
+       <h3><span class="mw-headline" id="Bessel_functions_of_the_second_kind_:">Bessel functions of the second kind&nbsp;: <img alt="Y_\alpha" class="tex" src="../../images/208/20853.png" /></span></h3>
+       <p>The Bessel functions of the second kind, denoted by <i>Y</i><sub>&alpha;</sub>(<i>x</i>), are solutions of the Bessel differential equation. They are singular (<!--del_lnk--> infinite) at the origin (<i>x</i> = 0).</p>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/208/20854.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/208/20854.png"  width="300" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/208/20854.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Plot of Bessel function of the second kind, Y<sub>&alpha;</sub>(x), for integer orders &alpha;=0,1,2.</div>
+        </div>
+       </div>
+       <p><i>Y</i><sub>&alpha;</sub>(<i>x</i>) is sometimes also called the <b>Neumann function</b>, and is occasionally denoted instead by <i>N</i><sub>&alpha;</sub>(<i>x</i>). For non-integer &alpha;, it is related to <i>J</i><sub>&alpha;</sub>(<i>x</i>) by:</p>
+       <dl>
+        <dd><img alt="Y_\alpha(x) = \frac{J_\alpha(x) \cos(\alpha\pi) - J_{-\alpha}(x)}{\sin(\alpha\pi)}." class="tex" src="../../images/208/20861.png" /></dd>
+       </dl>
+       <p>In the case of integer order <i>n</i>, the function is defined by taking the limit as a non-integer &alpha; tends to <i>n':</i></p>
+       <dl>
+        <dd><img alt="Y_n(x) = \lim_{\alpha \to n} Y_\alpha(x)," class="tex" src="../../images/208/20862.png" /></dd>
+       </dl>
+       <p>which has the result (in integral form)</p>
+       <dl>
+        <dd><img alt="Y_n(x) = 
+   \frac{1}{\pi} \int_{0}^{\pi} \sin(x \sin\theta - n\theta)d\theta
+
+ - \frac{1}{\pi} \int_{0}^{\infty} 
+          \left[ e^{n t} + (-1)^n e^{-n t} \right] 
+          e^{-x \sinh t} dt. " class="tex" src="../../images/208/20863.png" /></dd>
+       </dl>
+       <p>For the case of non-integer &alpha;, the definition of <i>Y</i><sub>&alpha;</sub>(x) is redundant (as is clear from its definition above). On the other hand, when &alpha; is an integer, <i>Y</i><sub><i>&alpha;</i></sub>(x) is the second linearly independent solution of Bessel's equation; moreover, as was similarly the case for the functions of the first kind, the following relationship is valid:</p>
+       <dl>
+        <dd><img alt="Y_{-n}(x) = (-1)^n Y_n(x).\," class="tex" src="../../images/208/20864.png" /></dd>
+       </dl>
+       <p>Both <i>J</i><sub>&alpha;</sub>(<i>x</i>) and <i>Y</i><sub>&alpha;</sub>(<i>x</i>) are <!--del_lnk--> holomorphic functions of <i>x</i> on the <a href="../../wp/c/Complex_plane.htm" title="Complex plane">complex plane</a> cut along the negative real axis. When &alpha; is an integer, there is no <!--del_lnk--> branch point, and the Bessel functions are <!--del_lnk--> entire functions of <i>x</i>. If <i>x</i> is held fixed, then the Bessel functions are entire functions of &alpha;.</p>
+       <h3><span class="mw-headline" id="Hankel_functions_:">Hankel functions&nbsp;: <img alt="H_\alpha" class="tex" src="../../images/208/20865.png" /></span></h3>
+       <p>Another important formulation of the two linearly independent solutions to Bessel's equation are the <b>Hankel functions</b> <i>H</i><sub>&alpha;</sub><sup>(1)</sup>(<i>x</i>) and <i>H</i><sub>&alpha;</sub><sup>(2)</sup>(<i>x</i>), defined by:</p>
+       <dl>
+        <dd><img alt="H_\alpha^{(1)}(x) = J_\alpha(x) + i Y_\alpha(x)" class="tex" src="../../images/208/20866.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="H_\alpha^{(2)}(x) = J_\alpha(x) - i Y_\alpha(x)" class="tex" src="../../images/208/20867.png" /></dd>
+       </dl>
+       <p>where <i>i</i> is the <a href="../../wp/i/Imaginary_unit.htm" title="Imaginary unit">imaginary unit</a>. These linear combinations are also known as <b>Bessel functions of the third kind</b>; they are two linearly independent solutions of Bessel's differential equation. The Hankel functions of the first and second kind are used to express outward- and inward-propagating cylindrical wave solutions of the cylindrical wave equation, respectively (or vice versa, depending on the <!--del_lnk--> sign convention for the <!--del_lnk--> frequency). They are named after <!--del_lnk--> Hermann Hankel.</p>
+       <p>Using the previous relationships they can be expressed as:</p>
+       <dl>
+        <dd><img alt="H_{\alpha}^{(1)} (x) = \frac{J_{-\alpha} (x) - e^{-\alpha \pi i} J_\alpha (x)}{i \sin (\alpha \pi)}" class="tex" src="../../images/208/20868.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="H_{\alpha}^{(2)} (x) = \frac{J_{-\alpha} (x) - e^{\alpha \pi i} J_\alpha (x)}{- i \sin (\alpha \pi)}" class="tex" src="../../images/208/20869.png" /></dd>
+       </dl>
+       <p>if &alpha; is an integer, the limit has to be calculated. The following relationships are valid, whether &alpha; is an integer or not:</p>
+       <dl>
+        <dd><img alt="H_{-\alpha}^{(1)} (x)= e^{\alpha \pi i} H_{\alpha}^{(1)} (x) " class="tex" src="../../images/208/20870.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="H_{-\alpha}^{(2)} (x)= e^{-\alpha \pi i} H_{\alpha}^{(2)} (x) " class="tex" src="../../images/208/20871.png" /></dd>
+       </dl>
+       <h3><span class="mw-headline" id="Modified_Bessel_functions_:">Modified Bessel functions&nbsp;: <img alt="I_\alpha, K_\alpha" class="tex" src="../../images/208/20872.png" /></span></h3>
+       <p>The Bessel functions are valid even for <a href="../../wp/c/Complex_number.htm" title="Complex number">complex</a> arguments <i>x</i>, and an important special case is that of a purely imaginary argument. In this case, the solutions to the Bessel equation are called the <b>modified Bessel functions</b> (or occasionally the <b>hyperbolic Bessel functions</b>) of the first and second kind, and are defined by:</p>
+       <dl>
+        <dd><img alt="I_\alpha(x) = i^{-\alpha} J_\alpha(ix) \!" class="tex" src="../../images/208/20873.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="K_\alpha(x) = \frac{\pi}{2} \frac{I_{-\alpha} (x) - I_\alpha (x)}{\sin (\alpha \pi)} = \frac{\pi}{2} i^{\alpha+1} H_\alpha^{(1)}(ix) \!" class="tex" src="../../images/208/20874.png" /></dd>
+       </dl>
+       <p>These are chosen to be real-valued for real arguments <i>x</i>. The series expansion for <i>I<sub>&alpha;</sub></i>(<i>x</i>) is thus similar to that for <i>J<sub>&alpha;</sub></i>(<i>x</i>), but without the alternating (-1)<sup><i>m</i></sup> factor.</p>
+       <p><i>I<sub>&alpha;</sub></i>(<i>x</i>) and <i>K<sub>&alpha;</sub></i>(<i>x</i>) are the two linearly independent solutions to the modified Bessel's equation:</p>
+       <dl>
+        <dd><img alt="x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} - (x^2 + \alpha^2)y = 0." class="tex" src="../../images/208/20875.png" /></dd>
+       </dl>
+       <p>Unlike the ordinary Bessel functions, which are oscillating as functions of a real argument, <i>I</i><sub>&alpha;</sub> and <i>K</i><sub>&alpha;</sub> are <a href="../../wp/e/Exponential_growth.htm" title="Exponential growth">exponentially growing</a> and <!--del_lnk--> decaying functions, respectively. Like the ordinary Bessel function <i>J</i><sub>&alpha;</sub>, the function <i>I</i><sub>&alpha;</sub> goes to zero at <i>x</i>=0 for &alpha; > 0 and is finite at <i>x</i>=0 for &alpha;=0. Analogously, <i>K</i><sub>&alpha;</sub> diverges at <i>x</i>=0.</p>
+       <table align="center">
+        <tr>
+         <td>
+          <div class="thumb tnone">
+           <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/208/20876.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/208/20876.png"  width="300" /></a><div class="thumbcaption">
+             <div class="magnify"><a class="internal" href="../../images/208/20876.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Modified Bessel functions of 1st kind, I<sub>&alpha;</sub>(x), for &alpha;=0,1,2,3</div>
+           </div>
+          </div>
+         </td>
+         <td>
+          <div class="thumb tnone">
+           <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/208/20884.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/208/20884.png"  width="300" /></a><div class="thumbcaption">
+             <div class="magnify"><a class="internal" href="../../images/208/20884.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Modified Bessel functions of 2nd kind, K<sub>&alpha;</sub>(x), for &alpha;=0,1,2,3</div>
+           </div>
+          </div>
+         </td>
+        </tr>
+       </table>
+       <p>
+        <br /> The <b>modified Bessel function of the second kind</b> has also been called by the now-rare names:</p>
+       <ul>
+        <li>Basset function</li>
+        <li>modified Bessel function of the third kind</li>
+        <li>MacDonald function</li>
+       </ul>
+       <h3><span class="mw-headline" id="Spherical_Bessel_functions_:">Spherical Bessel functions&nbsp;: <img alt="j_n, y_n" class="tex" src="../../images/208/20892.png" /></span></h3>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/208/20893.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/208/20893.png"  width="300" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/208/20893.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Spherical Bessel functions of 1st kind, j<sub>n</sub>(x), for n=0,1,2</div>
+        </div>
+       </div>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:302px;"><a class="image" href="../../images/209/20900.png.htm"><img alt="" class="thumbimage" height="228" src="../../images/209/20900.png"  width="300" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/209/20900.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Spherical Bessel functions of 2nd kind, y<sub>n</sub>(x), for n=0,1,2</div>
+        </div>
+       </div>
+       <p>When solving the <!--del_lnk--> Helmholtz equation in spherical coordinates by separation of variables, the radial equation has the form:</p>
+       <dl>
+        <dd><img alt="x^2 \frac{d^2 y}{dx^2} + 2x \frac{dy}{dx} + [x^2 - n(n+1)]y = 0." class="tex" src="../../images/209/20907.png" /></dd>
+       </dl>
+       <p>The two linearly independent solutions to this equation are called the <b>spherical Bessel functions</b> <i>j</i><sub><i>n</i></sub> and <i>y</i><sub><i>n</i></sub>, and are related to the ordinary Bessel functions <i>J</i><sub><i>n</i></sub> and <i>Y</i><sub><i>n</i></sub> by:</p>
+       <dl>
+        <dd><img alt="j_n(x) = \sqrt{\frac{\pi}{2x}} J_{n+1/2}(x)," class="tex" src="../../images/209/20908.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="y_n(x) = \sqrt{\frac{\pi}{2x}} Y_{n+1/2}(x) = (-1)^{n+1} \sqrt{\frac{\pi}{2x}} J_{-n-1/2}(x)." class="tex" src="../../images/209/20909.png" /></dd>
+       </dl>
+       <p><img alt="y_n" class="tex" src="../../images/209/20910.png" /> is also denoted <img alt="n_n" class="tex" src="../../images/209/20911.png" /> or <!--del_lnk--> &eta;<sub>n</sub>; some authors call these functions the <b>spherical Neumann functions</b>.</p>
+       <p>The spherical Bessel functions can also be written as:</p>
+       <dl>
+        <dd><img alt="j_n(x) = (-x)^n \left(\frac{1}{x}\frac{d}{dx}\right)^n\,\frac{\sin x}{x} ," class="tex" src="../../images/209/20912.png" /></dd>
+        <dd><img alt="y_n(x) = -(-x)^n \left(\frac{1}{x}\frac{d}{dx}\right)^n\,\frac{\cos x}{x}." class="tex" src="../../images/209/20913.png" /></dd>
+       </dl>
+       <p>The first spherical Bessel function <img alt="j_0(x)" class="tex" src="../../images/208/20896.png" /> is also known as the (unnormalized) <!--del_lnk--> sinc function. The first few spherical Bessel functions are:</p>
+       <dl>
+        <dd><img alt="j_0(x)=\frac{\sin x} {x}" class="tex" src="../../images/209/20914.png" /></dd>
+        <dd><img alt="j_1(x)=\frac{\sin x} {x^2}- \frac{\cos x} {x}" class="tex" src="../../images/209/20915.png" /></dd>
+        <dd><img alt="j_2(x)=\left(\frac{3} {x^2} - 1 \right)\frac{\sin x}{x} - \frac{3\cos x} {x^2}" class="tex" src="../../images/209/20916.png" /></dd>
+       </dl>
+       <p>and</p>
+       <dl>
+        <dd><img alt="y_0(x)=-j_{-1}(x)=-\,\frac{\cos x} {x}" class="tex" src="../../images/209/20917.png" /></dd>
+        <dd><img alt="y_1(x)=j_{-2}(x)=-\,\frac{\cos x} {x^2}- \frac{\sin x} {x}" class="tex" src="../../images/209/20918.png" /></dd>
+        <dd><img alt="y_2(x)=-j_{-3}(x)=\left(-\,\frac{3}{x^2}+1 \right)\frac{\cos x}{x}- \frac{3 \sin x} {x^2}." class="tex" src="../../images/209/20919.png" /></dd>
+       </dl>
+       <p>There are also spherical analogues of the Hankel functions:</p>
+       <dl>
+        <dd><img alt="h_n^{(1)}(x) = j_n(x) + i y_n(x)" class="tex" src="../../images/209/20920.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="h_n^{(2)}(x) = j_n(x) - i y_n(x)." class="tex" src="../../images/209/20921.png" /></dd>
+       </dl>
+       <p>In fact, there are simple closed-form expressions for the Bessel functions of <!--del_lnk--> half-integer order in terms of the standard <a class="mw-redirect" href="../../wp/t/Trigonometric_functions.htm" title="Trigonometric function">trigonometric functions</a>, and therefore for the spherical Bessel functions. In particular, for non-negative integers <i>n</i>:</p>
+       <dl>
+        <dd><img alt="h_n^{(1)}(x) = (-i)^{n+1} \frac{e^{ix}}{x} \sum_{m=0}^n \frac{i^m}{m!(2x)^m} \frac{(n+m)!}{(n-m)!}" class="tex" src="../../images/209/20922.png" /></dd>
+       </dl>
+       <p>and <i>h</i><sub><i>n</i></sub><sup>(2)</sup> is the complex-conjugate of this (for real <i>x</i>). It follows, for example, that <i>j</i><sub>0</sub>(<i>x</i>) = sin(<i>x</i>)/<i>x</i> and <i>y</i><sub>0</sub>(<i>x</i>) = -cos(<i>x</i>)/<i>x</i>, and so on.</p>
+       <h3><span class="mw-headline" id="Riccati-Bessel_functions_:">Riccati-Bessel functions&nbsp;: <img alt="S_n, C_n, \zeta_n" class="tex" src="../../images/209/20923.png" /></span></h3>
+       <p>Riccati-Bessel functions only slightly differ from spherical Bessel functions:</p>
+       <dl>
+        <dd><img alt="S_n(x)=x j_n(x)=\sqrt{\pi x/2}J_{n+1/2}(x)" class="tex" src="../../images/209/20924.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="C_n(x)=-x y_n(x)=-\sqrt{\pi x/2}Y_{n+1/2}(x)" class="tex" src="../../images/209/20925.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="\zeta_n(x)=x h_n^{(2)}(x)=\sqrt{\pi x/2}H_{n+1/2}^{(2)}(x)=S_n(x)+iC_n(x)" class="tex" src="../../images/209/20926.png" /></dd>
+       </dl>
+       <p>They satisfy the differential equation:</p>
+       <dl>
+        <dd><img alt="x^2 \frac{d^2 y}{dx^2} + [x^2 - n (n+1)] y = 0" class="tex" src="../../images/209/20927.png" /></dd>
+       </dl>
+       <p>This differential equation, and the Riccati-Bessel solutions, arises in the problem of scattering of electromagnetic waves by a sphere, known as <!--del_lnk--> Mie scattering after the first published solution by Mie (1908). See e.g. Du (2004) for recent developments and references.</p>
+       <p>Following <!--del_lnk--> Debye (1909), the notation <img alt="\psi_n,\chi_n" class="tex" src="../../images/209/20928.png" /> is sometimes used instead of <img alt="S_n,C_n" class="tex" src="../../images/209/20929.png" />.</p>
+       <h2><span class="mw-headline" id="Asymptotic_forms">Asymptotic forms</span></h2>
+       <p>The Bessel functions have the following <!--del_lnk--> asymptotic forms for non-negative &alpha;. For small arguments <img alt="0 < x \ll \sqrt{\alpha + 1}" class="tex" src="../../images/209/20930.png" />, one obtains:</p>
+       <dl>
+        <dd><img alt="J_\alpha(x) \rightarrow \frac{1}{\Gamma(\alpha+1)} \left( \frac{x}{2} \right) ^\alpha " class="tex" src="../../images/209/20931.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="Y_\alpha(x) \rightarrow  \left\{ \begin{matrix}
+  \frac{2}{\pi} \left[ \ln (x/2) + \gamma \right]  &amp; \mbox{if } \alpha=0 \\ \\
+  -\frac{\Gamma(\alpha)}{\pi} \left( \frac{2}{x} \right) ^\alpha &amp; \mbox{if } \alpha > 0 
+\end{matrix} \right." class="tex" src="../../images/209/20932.png" /></dd>
+       </dl>
+       <p>where &gamma; is the <!--del_lnk--> Euler-Mascheroni constant (0.5772...) and &Gamma; denotes the <!--del_lnk--> gamma function. For large arguments <img alt="x \gg |\alpha^2 - 1/4|" class="tex" src="../../images/209/20933.png" />, they become:</p>
+       <dl>
+        <dd><img alt="J_\alpha(x) \rightarrow \sqrt{\frac{2}{\pi x}} 
+        \cos \left( x-\frac{\alpha\pi}{2} - \frac{\pi}{4} \right)" class="tex" src="../../images/209/20934.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="Y_\alpha(x) \rightarrow \sqrt{\frac{2}{\pi x}} 
+        \sin \left( x-\frac{\alpha\pi}{2} - \frac{\pi}{4} \right)." class="tex" src="../../images/209/20935.png" /></dd>
+       </dl>
+       <p>(For &alpha;=1/2 these formulas are exact; see the spherical Bessel functions above.) Asymptotic forms for the other types of Bessel function follow straightforwardly from the above relations. For example, for large <img alt="x \gg |\alpha^2 - 1/4|" class="tex" src="../../images/209/20933.png" />, the modified Bessel functions become:</p>
+       <dl>
+        <dd><img alt="I_\alpha(x) \rightarrow \frac{1}{\sqrt{2\pi x}} e^x," class="tex" src="../../images/209/20936.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="K_\alpha(x) \rightarrow \sqrt{\frac{\pi}{2x}} e^{-x}." class="tex" src="../../images/209/20937.png" /></dd>
+       </dl>
+       <p>while for small arguments <img alt="0 < x \ll \sqrt{\alpha + 1}" class="tex" src="../../images/209/20930.png" />, they become:</p>
+       <dl>
+        <dd><img alt="I_\alpha(x) \rightarrow \frac{1}{\Gamma(\alpha+1)} \left( \frac{x}{2} \right) ^\alpha " class="tex" src="../../images/209/20938.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="K_\alpha(x) \rightarrow  \left\{ \begin{matrix}
+  - \ln (x/2) - \gamma   &amp; \mbox{if } \alpha=0 \\ \\
+  \frac{\Gamma(\alpha)}{2} \left( \frac{2}{x} \right) ^\alpha &amp; \mbox{if } \alpha > 0 
+\end{matrix} \right." class="tex" src="../../images/209/20939.png" /></dd>
+       </dl>
+       <h2><span class="mw-headline" id="Properties">Properties</span></h2>
+       <p>For integer order &alpha; = <i>n</i>, <i>J</i><sub><i>n</i></sub> is often defined via a <!--del_lnk--> Laurent series for a generating function:</p>
+       <dl>
+        <dd><img alt="e^{(x/2)(t-1/t)} = \sum_{n=-\infty}^\infty J_n(x) t^n," class="tex" src="../../images/209/20940.png" /></dd>
+       </dl>
+       <p>an approach used by <!--del_lnk--> P. A. Hansen in 1843. (This can be generalized to non-integer order by <!--del_lnk--> contour integration or other methods.) Another important relation for integer orders is the <b><!--del_lnk--> Jacobi-Anger identity</b>:</p>
+       <dl>
+        <dd><img alt="e^{iz \cos \phi} = \sum_{n=-\infty}^\infty i^n J_n(z) e^{in\phi}," class="tex" src="../../images/209/20941.png" /></dd>
+       </dl>
+       <p>which is used to expand a <!--del_lnk--> plane wave as a sum of cylindrical waves, or to find the <!--del_lnk--> Fourier series of a tone modulated <!--del_lnk--> FM signal.</p>
+       <p>The functions <i>J</i><sub>&alpha;</sub>, <i>Y</i><sub>&alpha;</sub>, <i>H</i><sub>&alpha;</sub><sup>(1)</sup>, and <i>H</i><sub>&alpha;</sub><sup>(2)</sup> all satisfy the <!--del_lnk--> recurrence relations:</p>
+       <dl>
+        <dd><img alt="Z_{\alpha-1}(x) + Z_{\alpha+1}(x) = \frac{2\alpha}{x} Z_\alpha(x)" class="tex" src="../../images/209/20942.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="Z_{\alpha-1}(x) - Z_{\alpha+1}(x) = 2\frac{dZ_\alpha}{dx}" class="tex" src="../../images/209/20943.png" /></dd>
+       </dl>
+       <p>where <i>Z</i> denotes <i>J</i>, <i>Y</i>, <i>H</i><sup>(1)</sup>, or <i>H</i><sup>(2)</sup>. (These two identities are often combined, e.g. added or subtracted, to yield various other relations.) In this way, for example, one can compute Bessel functions of higher orders (or higher derivatives) given the values at lower orders (or lower derivatives). In particular, it follows that:</p>
+       <dl>
+        <dd><img alt="\left( \frac{d}{x dx} \right)^m \left[ x^\alpha Z_{\alpha} (x) \right] = x^{\alpha - m} Z_{\alpha - m} (x)" class="tex" src="../../images/209/20944.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="\left( \frac{d}{x dx} \right)^m \left[ \frac{Z_\alpha (x)}{x^\alpha} \right] = (-1)^m \frac{Z_{\alpha + m} (x)}{x^{\alpha + m}}" class="tex" src="../../images/209/20945.png" /></dd>
+       </dl>
+       <p><i>Modified</i> Bessel functions follow similar relations&nbsp;:</p>
+       <dl>
+        <dd><img alt="e^{(x/2)(t+1/t)} = \sum_{n=-\infty}^\infty I_n(x) t^n," class="tex" src="../../images/209/20946.png" /></dd>
+       </dl>
+       <p>and</p>
+       <dl>
+        <dd><img alt="e^{z \cos \theta} = I_0(z) + 2\sum_{n=1}^\infty  I_n(z) \cos(n\theta)," class="tex" src="../../images/209/20947.png" /></dd>
+       </dl>
+       <p>The recurrence relation reads</p>
+       <dl>
+        <dd><img alt="C_{\alpha-1}(x) - C_{\alpha+1}(x) = \frac{2\alpha}{x} C_\alpha(x)" class="tex" src="../../images/209/20948.png" /></dd>
+       </dl>
+       <dl>
+        <dd><img alt="C_{\alpha-1}(x) + C_{\alpha+1}(x) = 2\frac{dC_\alpha}{dx}" class="tex" src="../../images/209/20949.png" /></dd>
+       </dl>
+       <p>where <i>C</i><sub>&alpha;</sub> denotes <i>I</i><sub>&alpha;</sub> or <i>e</i><sup>&alpha;&pi;<i>i</i></sup><i>K</i><sub>&alpha;</sub>. These recurrence relations are useful for discrete diffusion problems.</p>
+       <p>Because Bessel's equation becomes <!--del_lnk--> Hermitian (self-adjoint) if it is divided by <i>x</i>, the solutions must satisfy an orthogonality relationship for appropriate boundary conditions. In particular, it follows that:</p>
+       <dl>
+        <dd><img alt="\int_0^1 x J_\alpha(x u_{\alpha,m}) J_\alpha(x u_{\alpha,n}) dx
+= \frac{\delta_{m,n}}{2} [J_{\alpha+1}(u_{\alpha,m})]^2
+= \frac{\delta_{m,n}}{2} [J_{\alpha}'(u_{\alpha,m})]^2," class="tex" src="../../images/209/20950.png" /></dd>
+       </dl>
+       <p>where &alpha; > -1, &delta;<sub><i>m</i>,<i>n</i></sub> is the <!--del_lnk--> Kronecker delta, and <i>u</i><sub>&alpha;,m</sub> is the <i>m</i>-th <!--del_lnk--> zero of <i>J</i><sub>&alpha;</sub>(<i>x</i>). This orthogonality relation can then be used to extract the coefficients in the <!--del_lnk--> Fourier-Bessel series, where a function is expanded in the basis of the functions <i>J</i><sub>&alpha;</sub>(<i>x</i> <i>u</i><sub>&alpha;,m</sub>) for fixed &alpha; and varying <i>m</i>. (An analogous relationship for the spherical Bessel functions follows immediately.)</p>
+       <p>Another orthogonality relation is the <i>closure equation</i>:</p>
+       <dl>
+        <dd><img alt="\int_0^\infty x J_\alpha(ux) J_\alpha(vx) dx = \frac{1}{u} \delta(u - v)" class="tex" src="../../images/209/20951.png" /></dd>
+       </dl>
+       <p>for &alpha; > -1/2 and where &delta; is the <!--del_lnk--> Dirac delta function. This property is used to construct an arbitrary function from a series of Bessel functions by means of the <!--del_lnk--> Hankel transform. For the spherical Bessel functions the orthogonality relation is:</p>
+       <dl>
+        <dd><img alt="\int_0^\infty x^2 j_\alpha(ux) j_\alpha(vx) dx = \frac{\pi}{2u^2} \delta(u - v)" class="tex" src="../../images/209/20952.png" /></dd>
+       </dl>
+       <p>for &alpha; > 0.</p>
+       <p>Another important property of Bessel's equations, which follows from <!--del_lnk--> Abel's identity, involves the <!--del_lnk--> Wronskian of the solutions:</p>
+       <dl>
+        <dd><img alt="A_\alpha(x) \frac{dB_\alpha}{dx} - \frac{dA_\alpha}{dx} B_\alpha(x) = \frac{C_\alpha}{x}," class="tex" src="../../images/209/20953.png" /></dd>
+       </dl>
+       <p>where <i>A</i><sub>&alpha;</sub> and <i>B</i><sub>&alpha;</sub> are any two solutions of Bessel's equation, and <i>C</i><sub>&alpha;</sub> is a constant independent of <i>x</i> (which depends on &alpha; and on the particular Bessel functions considered). For example, if <i>A</i><sub>&alpha;</sub> = <i>J</i><sub>&alpha;</sub> and <i>B</i><sub>&alpha;</sub> = <i>Y</i><sub>&alpha;</sub>, then <i>C</i><sub>&alpha;</sub> is 2/&pi;. This also holds for the modified Bessel functions; for example, if <i>A</i><sub>&alpha;</sub> = <i>I</i><sub>&alpha;</sub> and <i>B</i><sub>&alpha;</sub> = <i>K</i><sub>&alpha;</sub>, then <i>C</i><sub>&alpha;</sub> is -1.</p>
+       <p>(There are a large number of other known integrals and identities that are not reproduced here, but which can be found in the references.)</p>
+       <h2><span class="mw-headline" id="Multiplication_theorem">Multiplication theorem</span></h2>
+       <p>The Bessel functions obey a <!--del_lnk--> multiplication theorem</p>
+       <dl>
+        <dd><img alt="\lambda^{-\nu} J_\nu (\lambda z) = 
+\sum_{n=0}^\infty \frac{1}{n!} 
+\left(\frac{(1-\lambda^2)z}{2}\right)^n
+J_{\nu+n}(z)
+" class="tex" src="../../images/209/20954.png" /></dd>
+       </dl>
+       <p>where <img alt="\lambda" class="tex" src="../../images/64/6494.png" /> and <img alt="\nu" class="tex" src="../../images/65/6511.png" /> may be taken as arbitrary complex numbers. A similar form may be given for <img alt="Y_\nu(z)" class="tex" src="../../images/209/20955.png" /> and <i>etc.</i> See </p>
+       <p>
+        <br />
+       </p>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Bessel_function&amp;oldid=207920326"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=207920326 . </div>
+   </div>
+  </div>
+ </body>
+</html>

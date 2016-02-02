@@ -1,0 +1,21 @@
+
+3. How long did it take to run the process for each of these?
+Local:
+97 seconds
+real	1m37.776s
+user	1m41.892s
+sys	0m4.052s
+
+AWS EMR:
+288 seconds (not counting time waiting for EC2 instances)
+real	13m54.331s
+user	0m2.104s
+sys	0m0.116s
+
+
+4. How many address tags are there in the input?
+2042
+
+
+5. Does the local version and EMR version give the same answer?
+Yes, both give 2042. Local stored "address" in part-00000 and EMR stored in part-00002.

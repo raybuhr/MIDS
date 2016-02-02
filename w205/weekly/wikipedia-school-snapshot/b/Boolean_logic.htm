@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Boolean logic</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Boolean_logic.htm" rel="canonical" />
+  <link href="http://www.soschildrensvillages.org.uk/wikipedia-for-schools-license" rel="license" />
+  <meta content="Find out about Boolean logic on the Wikipedia for Schools from SOS Children" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Boolean_logic skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Boolean logic</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.Mathematics.htm">Mathematics</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Did you know...</h4><p>SOS believes education gives a better chance in life to children in the developing world too. SOS Children has looked after children in Africa for forty years. Can you <a href="../../wp/s/Sponsor_Africa.htm">help their work in Africa</a>?</p></div></div>
+       <p><b>Boolean logic</b> is a complete <!--del_lnk--> system for <a href="../../wp/l/Logic.htm" title="Logic">logical</a> <!--del_lnk--> operations. It was named after <!--del_lnk--> George Boole, who first defined an <a href="../../wp/a/Algebraic_structure.htm" title="Algebraic structure">algebraic system</a> of logic in the mid <a href="../../wp/1/19th_century.htm" title="19th century">19th century</a>. Boolean logic has many applications in electronics, computer hardware and software, and is the base of <!--del_lnk--> digital electronics. In <a href="../../wp/1/1938.htm" title="1938">1938</a>, <!--del_lnk--> Claude Shannon showed how electric circuits with relays were a model for Boolean logic. This fact soon proved enormously consequential with the emergence of the electronic <a href="../../wp/c/Computer.htm" title="Computer">computer</a>.</p>
+       <p><i>Using the <!--del_lnk--> algebra of sets, this article contains a basic introduction to <!--del_lnk--> sets, Boolean operations, <a href="../../wp/v/Venn_diagram.htm" title="Venn diagram">Venn diagrams</a>, <!--del_lnk--> truth tables, and Boolean applications. The <!--del_lnk--> Boolean algebra article discusses a type of <a href="../../wp/a/Algebraic_structure.htm" title="Algebraic structure">algebraic structure</a> that satisfies the axioms of Boolean logic. The <a class="mw-redirect" href="../../wp/b/Binary_number.htm" title="Binary arithmetic">binary arithmetic</a> article discusses the use of <a class="mw-redirect" href="../../wp/b/Binary_number.htm" title="Binary numeral system">binary</a> numbers in <a href="../../wp/c/Computer.htm" title="Computer">computer</a> systems.</i></p>
+       <h2><span class="mw-headline" id="Set_logic_versus_Boolean_logic">Set logic versus Boolean logic</span></h2>
+       <p>Sets can contain any elements. We will first start out by discussing general set logic, then restrict ourselves to Boolean logic, where elements (or "bits") each contain only two possible values, called various names, such as "true" and "false", "yes" and "no", "on" and "off", or "1" and "0".</p>
+       <h2><span class="mw-headline" id="Terms">Terms</span></h2>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:292px;"><a class="image" href="../../images/74/7459.png.htm"><img alt="" class="thumbimage" height="207" src="../../images/74/7459.png"  width="290" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/74/7459.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Venn diagram showing the intersection of sets "A AND B" (in violet/dark shading), the union of sets "A OR B" (all the colored/shaded regions), and the exclusive OR case "set A XOR B" (all the colored regions except the violet/only the lightly shaded regions). The "universe" is represented by all the area within the rectangular frame.</div>
+        </div>
+       </div>
+       <p>Let <i>X</i> be a set:</p>
+       <ul>
+        <li>An <b>element</b> is one member of a set. This is denoted by <img alt="\in" class="tex" src="../../images/74/7467.png" />. If it's not an element of the set, this is denoted by <img alt="\notin" class="tex" src="../../images/74/7468.png" />.</li>
+       </ul>
+       <ul>
+        <li>The <b>universe</b> is the set <i>X</i>, sometimes denoted by 1. Note that this use of the word universe means <i>"all elements being considered"</i>, which are not necessarily the same as <i>"all elements there are"</i>.</li>
+       </ul>
+       <ul>
+        <li>The <b>empty set</b> or <b>null set</b> is the set of no elements, denoted by <img alt="\varnothing" class="tex" src="../../images/74/7469.png" /> and sometimes 0.</li>
+       </ul>
+       <ul>
+        <li>A <b>unary operator</b> applies to a single set. There is one unary operator, called logical <b>NOT</b>. It works by taking the <!--del_lnk--> complement.</li>
+       </ul>
+       <ul>
+        <li>A <b>binary operator</b> applies to two sets. The basic binary operators are logical <b>OR</b> and logical <b>AND</b>. They perform the <!--del_lnk--> union and <a href="../../wp/i/Intersection_%2528set_theory%2529.htm" title="Intersection (set theory)">intersection</a> of sets. There are also other derived binary operators, such as <b>XOR</b> (exclusive OR).</li>
+       </ul>
+       <ul>
+        <li>A <b>subset</b> is denoted by <img alt="A \subseteq B" class="tex" src="../../images/74/7470.png" /> and means every element in set A is also in set B.</li>
+       </ul>
+       <ul>
+        <li>A <b>proper subset</b> is denoted by <img alt="A \subset B" class="tex" src="../../images/74/7471.png" /> and means every element in set A is also in set B and the two sets are not equal.</li>
+       </ul>
+       <ul>
+        <li>A <b>superset</b> is denoted by <img alt="A \supseteq B" class="tex" src="../../images/74/7472.png" /> and means every element in set B is also in set A.</li>
+       </ul>
+       <ul>
+        <li>A <b>proper superset</b> is denoted by <img alt="A \supset B" class="tex" src="../../images/74/7473.png" /> and means every element in set B is also in set A and the two sets are not equal.</li>
+       </ul>
+       <h2><span class="mw-headline" id="Example">Example</span></h2>
+       <div class="floatright"><a class="image" href="../../images/74/7474.png.htm"><img alt="Boolean multiples of 2 3 5.svg" height="307" src="../../images/74/7474.png"  width="480" /></a></div>
+       <p>Let's imagine that set A contains all even numbers (multiples of two) in "the universe" (defined in the example to the right as all integers between 0 and 30 inclusive) and set B contains all multiples of three in "the universe". Then the <b>intersection</b> of the two sets (all elements in sets A AND B) would be all multiples of six in "the universe".</p>
+       <p>The complement of set A (all elements NOT in set A) would be all odd numbers in "the universe".</p>
+       <h3><span class="mw-headline" id="Chaining_operations_together">Chaining operations together</span></h3>
+       <p>While at most two sets are joined in any Boolean operation, the new set formed by that operation can then be joined with other sets utilizing additional Boolean operations. Using the previous example, we can define a new set C as the set of all multiples of five in "the universe". Thus "sets A AND B AND C" would be all multiples of 30 in "the universe". If more convenient, we may consider set AB to be the intersection of sets A and B, or the set of all multiples of six in "the universe". Then we can say "sets AB AND C" are the set of all multiples of 30 in "the universe". We could then take it a step further, and call this result set ABC.</p>
+       <h3><span class="mw-headline" id="Use_of_parentheses">Use of parentheses</span></h3>
+       <p>While any number of logical ANDs (or any number of logical ORs) may be chained together without ambiguity, the combination of ANDs and ORs and NOTs can lead to ambiguous cases. In such cases, parentheses may be used to clarify the order of operations. As always, the operations within the innermost pair is performed first, followed by the next pair out, etc., until all operations within parentheses have been completed. Then any operations outside the parentheses are performed.</p>
+       <h3><span class="mw-headline" id="Application_to_binary_values">Application to binary values</span></h3>
+       <p>In this example we've used <a class="mw-redirect" href="../../wp/n/Natural_number.htm" title="Natural numbers">natural numbers</a>, while in Boolean logic binary numbers are used. The universe, for example, could contain just two elements, "0" and "1" (or "true" and "false", "yes" and "no", "on" or "off", etc.). We could also combine binary values together to get binary words, such as, in the case of two digits, "00", "01", "10", and "11". Applying set logic to those values, we could have a set of all values where the first digit is "0" ("00" and "01") and the set of all values where the first and second digits are different ("01" and "10"). The intersection of the two sets would then be the single element, "01". This could be shown by the following Boolean expression, where "1st" is the first digit and "2nd" is the second digit:</p>
+       <p><b>(NOT 1st) AND (1st NOT 2nd)</b></p>
+       <h2><span class="mw-headline" id="Properties">Properties</span></h2>
+       <p>Let's define symbols for the two primary binary operations as <img alt="\land / \cap" class="tex" src="../../images/74/7479.png" /> (logical AND/set intersection) and <img alt="\lor / \cup" class="tex" src="../../images/74/7480.png" /> (logical OR/set union), and for the single unary operation <img alt="\lnot" class="tex" src="../../images/74/7481.png" /> / ~ (logical NOT/set complement). We will also use the values 0 (logical FALSE/the empty set) and 1 (logical TRUE/the universe). The following properties apply to both Boolean logic and set logic (although only the notation for Boolean logic is displayed here):</p>
+       <dl>
+        <dd>
+         <table cellpadding="5">
+          <tr>
+           <td><img alt="a \lor (b \lor c) = (a \lor b) \lor c " class="tex" src="../../images/74/7482.png" /></td>
+           <td><img alt="a \land (b \land c) = (a \land b) \land c " class="tex" src="../../images/74/7483.png" /></td>
+           <td><a class="mw-redirect" href="../../wp/a/Associative_property.htm" title="Associativity">associativity</a></td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor b = b \lor a " class="tex" src="../../images/74/7484.png" /></td>
+           <td><img alt="a \land  b = b \land a " class="tex" src="../../images/74/7485.png" /></td>
+           <td><a class="mw-redirect" href="../../wp/c/Commutative_property.htm" title="Commutativity">commutativity</a></td>
+          </tr>
+          <tr>
+           <td><img alt="a  \lor (a \land b) = a " class="tex" src="../../images/74/7486.png" /></td>
+           <td><img alt="a \land (a \lor b) = a " class="tex" src="../../images/74/7487.png" /></td>
+           <td><!--del_lnk--> absorption</td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor  (b \land c) = (a \lor b) \land (a \lor c) " class="tex" src="../../images/74/7488.png" /></td>
+           <td><img alt="a \land  (b \lor c) = (a \land b) \lor (a \land c) " class="tex" src="../../images/74/7489.png" /></td>
+           <td><!--del_lnk--> distributivity</td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor  \lnot a = 1 " class="tex" src="../../images/74/7490.png" /></td>
+           <td><img alt="a \land \lnot a = 0 " class="tex" src="../../images/74/7491.png" /></td>
+           <td><!--del_lnk--> complements</td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor a = a" class="tex" src="../../images/74/7492.png" /></td>
+           <td><img alt="a \land a = a " class="tex" src="../../images/74/7493.png" /></td>
+           <td><!--del_lnk--> idempotency</td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor 0 = a " class="tex" src="../../images/74/7494.png" /></td>
+           <td><img alt="a \land 1 = a " class="tex" src="../../images/74/7495.png" /></td>
+           <td rowspan="2"><!--del_lnk--> boundedness</td>
+          </tr>
+          <tr>
+           <td><img alt="a \lor 1 = 1 " class="tex" src="../../images/74/7496.png" /></td>
+           <td><img alt="a \land 0 = 0 " class="tex" src="../../images/74/7497.png" /></td>
+          </tr>
+          <tr>
+           <td><img alt="\lnot 0 = 1 " class="tex" src="../../images/74/7498.png" /></td>
+           <td><img alt="\lnot 1 = 0 " class="tex" src="../../images/74/7499.png" /></td>
+           <td>0 and 1 are <!--del_lnk--> complements</td>
+          </tr>
+          <tr>
+           <td><img alt="\lnot (a \lor b) = \lnot a  \land \lnot b" class="tex" src="../../images/75/7500.png" /></td>
+           <td><img alt="\lnot (a \land b) = \lnot a  \lor \lnot b" class="tex" src="../../images/75/7501.png" /></td>
+           <td><!--del_lnk--> de Morgan's laws</td>
+          </tr>
+          <tr>
+           <td><img alt=" \lnot \lnot a = a " class="tex" src="../../images/75/7502.png" /></td>
+           <td>
+           </td>
+           <td><!--del_lnk--> involution</td>
+          </tr>
+         </table>
+        </dd>
+       </dl>
+       <p>The first three properties define a <!--del_lnk--> lattice; the first five define a <!--del_lnk--> Boolean algebra. The remaining five are a consequence of the first five.</p>
+       <h2><span class="mw-headline" id="Truth_tables">Truth tables</span></h2>
+       <p>For Boolean logic using only two values, 0 and 1, the INTERSECTION and UNION of those values may be defined using <!--del_lnk--> truth tables such as these:</p>
+       <table>
+        <tr>
+         <td width="80">
+         </td>
+         <td>
+          <table border="1" cellpadding="4" cellspacing="0">
+           <tr>
+            <th><img alt="\cap" class="tex" src="../../images/75/7503.png" /></th>
+            <th>0</th>
+            <th>1</th>
+           </tr>
+           <tr>
+            <th>0</th>
+            <td>0</td>
+            <td>0</td>
+           </tr>
+           <tr>
+            <th>1</th>
+            <td>0</td>
+            <td>1</td>
+           </tr>
+          </table>
+         </td>
+         <td width="40">
+         </td>
+         <td>
+          <table border="1" cellpadding="4" cellspacing="0">
+           <tr>
+            <th><img alt="\cup" class="tex" src="../../images/75/7504.png" /></th>
+            <th>0</th>
+            <th>1</th>
+           </tr>
+           <tr>
+            <th>0</th>
+            <td>0</td>
+            <td>1</td>
+           </tr>
+           <tr>
+            <th>1</th>
+            <td>1</td>
+            <td>1</td>
+           </tr>
+          </table>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li>More complex truth tables involving multiple inputs, and other Boolean operations, may also be created.</li>
+       </ul>
+       <ul>
+        <li>Truth tables have applications in <a href="../../wp/l/Logic.htm" title="Logic">logic</a>, interpreting 0 as FALSE, 1 as TRUE, <img alt="\cap" class="tex" src="../../images/75/7503.png" /> as AND, <img alt="\cup" class="tex" src="../../images/75/7504.png" /> as OR, and &not; as NOT.</li>
+       </ul>
+       <h2><span class="mw-headline" id="Other_notations">Other notations</span></h2>
+       <p><a href="../../wp/m/Mathematician.htm" title="Mathematician">Mathematicians</a> and <!--del_lnk--> engineers often use plus (+) for OR and a product sign (<img alt="\cdot" class="tex" src="../../images/75/7505.png" />) for AND. OR and AND are somewhat analogous to addition and multiplication in other <a href="../../wp/a/Algebraic_structure.htm" title="Algebraic structure">algebraic structures</a>, and this notation makes it very easy to get <!--del_lnk--> sum of products form for normal algebra. NOT may be represented by a line drawn above the expression being negated (<img alt="\overline{x}" class="tex" src="../../images/75/7506.png" />).</p>
+       <p><!--del_lnk--> Programmers will often use a pipe symbol (|) for OR, an ampersand (&amp;) for AND, and a tilde (~) for NOT. In many <a href="../../wp/p/Programming_language.htm" title="Programming language">programming languages</a>, these symbols stand for <!--del_lnk--> bitwise operations. "||", "&amp;&amp;", and "!" are used for variants of these operations.</p>
+       <p>Another notation uses "meet" for AND and "join" for OR. However, this can lead to confusion, as the term "join" is also commonly used for any Boolean operation which combines sets together, which includes both AND and OR.</p>
+       <h2><span class="mw-headline" id="Basic_mathematics_use_of_Boolean_terms">Basic mathematics use of Boolean terms</span></h2>
+       <ul>
+        <li>In the case of simultaneous equations, they are connected with an implied logical AND:</li>
+       </ul>
+       <dl>
+        <dd>
+         <dl>
+          <dd>x + y = 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>AND</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>x - y = 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <ul>
+        <li>The same applies to simultaneous inequalities:</li>
+       </ul>
+       <dl>
+        <dd>
+         <dl>
+          <dd>x + y < 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>AND</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>x - y < 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <ul>
+        <li>The greater than or equals sign (<img alt="\ge" class="tex" src="../../images/75/7507.png" />) and less than or equals sign (<img alt="\le" class="tex" src="../../images/75/7508.png" />) may be assumed to contain a logical OR:</li>
+       </ul>
+       <dl>
+        <dd>
+         <dl>
+          <dd>X < 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>OR</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>X = 2</dd>
+         </dl>
+        </dd>
+       </dl>
+       <ul>
+        <li>The plus/minus sign (<img alt="\pm" class="tex" src="../../images/75/7509.png" />), as in the case of the solution to a square root problem, may be taken as logical OR:</li>
+       </ul>
+       <dl>
+        <dd>
+         <dl>
+          <dd>WIDTH = 3</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>OR</dd>
+         </dl>
+        </dd>
+       </dl>
+       <dl>
+        <dd>
+         <dl>
+          <dd>WIDTH = -3</dd>
+         </dl>
+        </dd>
+       </dl>
+       <h2><span class="mw-headline" id="English_language_use_of_Boolean_terms">English language use of Boolean terms</span></h2>
+       <p>Care should be taken when converting an English sentence into a formal Boolean statement. Many English sentences have imprecise meanings, e.g. "All that glitters is <b>not</b> gold," which could mean that "nothing that glitters is gold" or "some things which glitter are not gold".</p>
+       <p>AND and OR can also be used interchangeably in English, in certain cases:</p>
+       <ul>
+        <li>"I always carry an umbrella for when it rains <b>and</b> snows."</li>
+       </ul>
+       <ul>
+        <li>"I always carry an umbrella for when it rains <b>or</b> snows."</li>
+       </ul>
+       <p>Sometimes the English words AND and OR have the opposite meaning in Boolean logic:</p>
+       <ul>
+        <li>"Give me all the red <b>and</b> blue berries" usually means "Give me all berries that are red <b>or</b> blue". An alternative phrasing for standard written English: "Give me all berries that are red as well as all berries that are blue".</li>
+       </ul>
+       <p>Also note that the word OR in English may correspond with either logical OR or logical XOR, depending on the context:</p>
+       <ul>
+        <li>"I start to sweat when the humidity <b>or</b> temperature is high." (logical OR)</li>
+       </ul>
+       <ul>
+        <li>"You want ice cream and candy? You may have ice cream <b>or</b> candy." (logical XOR)</li>
+       </ul>
+       <p>The combination AND/OR is sometimes used in English to specify a logical OR, when just using the word OR alone might have been mistaken as meaning logical XOR:</p>
+       <ul>
+        <li>"I'm having chicken <b>and/or</b> beef for dinner." (logical OR). An alternative phrasing for standard written English: "I'm having chicken, or beef, or both, for dinner."</li>
+       </ul>
+       <ul>
+        <li>The use of the "and/or" <!--del_lnk--> virgule is generally disfavored in formal written English. Such usage may introduce critical imprecision in legal instruments, research findings, and <!--del_lnk--> specifications for computer programs or electronic circuits.</li>
+       </ul>
+       <p>A case where this is an issue is when specifications for a computer program or electronic circuit are supplied as an English paragraph describing their function. For example, the statement: "the program should verify that the applicant has checked the male <b>or</b> female box", should be taken as an XOR, and a check added to ensure that one, and only one, box is selected. In other cases, the interpretation of English may be less certain, and the author of the specification may need to be consulted to determine their true intent.</p>
+       <h2><span class="mw-headline" id="Applications">Applications</span></h2>
+       <h3><span class="mw-headline" id="Digital_electronic_circuit_design">Digital electronic circuit design</span></h3>
+       <p>Boolean logic is also used for circuit design in <a href="../../wp/e/Electrical_engineering.htm" title="Electrical engineering">electrical engineering</a>; here 0 and 1 may represent the two different states of one <!--del_lnk--> bit in a <!--del_lnk--> digital circuit, typically high and low <!--del_lnk--> voltage. Circuits are described by expressions containing variables, and two such expressions are equal for all values of the variables if, and only if, the corresponding circuits have the same input-output behavior. Furthermore, every possible input-output behaviour can be modeled by a suitable Boolean expression.</p>
+       <p>Basic <!--del_lnk--> logic gates such as AND, OR, and NOT gates may be used alone, or in conjunction with NAND, NOR, and XOR gates, to control digital electronics and circuitry. Whether these gates are wired in <!--del_lnk--> series or parallel controls the precedence of the operations.</p>
+       <h3><span class="mw-headline" id="Database_applications">Database applications</span></h3>
+       <p><!--del_lnk--> Relational databases use <!--del_lnk--> SQL, or other database-specific languages, to perform queries, which may contain Boolean logic. For this application, each record in a table may be considered to be an "element" of a "set". For example, in SQL, these <!--del_lnk--> SELECT statements are used to retrieve data from tables in the database:</p><pre>
+   SELECT * FROM EMPLOYEES WHERE LAST_NAME = 'Smith' AND FIRST_NAME = 'John' ;
+</pre> <pre>
+   SELECT * FROM EMPLOYEES WHERE LAST_NAME = 'Smith' OR  FIRST_NAME = 'John' ;
+</pre> <pre>
+   SELECT * FROM EMPLOYEES WHERE NOT LAST_NAME = 'Smith' ;
+</pre><p>Parentheses may be used to explicitly specify the order in which Boolean operations occur, when multiple operations are present:</p><pre>
+   SELECT * FROM EMPLOYEES WHERE (NOT LAST_NAME = 'Smith') AND (FIRST_NAME = 'John' OR FIRST_NAME = 'Mary') ;
+</pre><p>Multiple sets of nested parentheses may also be used, where needed.</p>
+       <p>Any Boolean operation (or operations) which combines two (or more) tables together is referred to as a <b>join</b>, in relational database terminology.</p>
+       <p>In the field of <!--del_lnk--> Electronic Medical Records, some software applications use Boolean logic to query their patient databases, in what has been named <!--del_lnk--> Concept Processing technology.</p>
+       <h3><span class="mw-headline" id="Search_engine_queries">Search engine queries</span></h3>
+       <p>Search engine queries also employ Boolean logic. For this application, each web page on the Internet may be considered to be an "element" of a "set". The following examples use a syntax supported by <a href="../../wp/g/Google.htm" title="Google">Google</a>.</p>
+       <ul>
+        <li>Doublequotes are used to combine whitespace-separated words into a single search term.</li>
+        <li>Whitespace is used to specify logical AND, as it is the default operator for joining search terms:</li>
+       </ul><pre>
+   "Search term 1" "Search term 2"
+</pre><ul>
+        <li>The OR keyword is used for logical OR:</li>
+       </ul><pre>
+   "Search term 1" OR "Search term 2"
+</pre><ul>
+        <li>The minus sign is used for logical NOT (AND NOT):</li>
+       </ul><pre>
+   "Search term 1" -"Search term 2"
+</pre><p>
+        <br />
+       </p>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Boolean_logic&amp;oldid=194646149"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=194646149 . </div>
+   </div>
+  </div>
+ </body>
+</html>

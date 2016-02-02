@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Architecture of Windows NT</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/a/Architecture_of_Windows_NT.htm" rel="canonical" />
+  <link href="http://www.sos-schools.org/wikipedia-for-schools/license" rel="license" />
+  <meta content="A Wikipedia for Schools article about Architecture of Windows NT. Content checked by SOS Children's Villages" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Architecture_of_Windows_NT skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Architecture of Windows NT</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.IT.Software.htm">Software</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Did you know...</h4><p>This Wikipedia selection is available offline from SOS Children for distribution in the developing world. See <a href="http://www.soschildren.org/sponsor-a-child">http://www.soschildren.org/sponsor-a-child</a> to find out about child sponsorship.</p></div></div>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:277px;"><a class="image" href="../../images/1194/119443.png.htm"><img alt="" class="thumbimage" height="353" src="../../images/1194/119443.png"  width="275" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/1194/119443.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> The Windows NT operating system family's <!--del_lnk--> architecture consists of two layers (<!--del_lnk--> user mode and <!--del_lnk--> kernel mode), with many different modules within both of these layers.</div>
+        </div>
+       </div>
+       <p>The <b>architecture of <!--del_lnk--> Windows NT</b>, a line of <!--del_lnk--> operating systems produced and sold by <a href="../../wp/m/Microsoft.htm" title="Microsoft">Microsoft</a>, is a layered design that consists of two main components, <!--del_lnk--> user mode and <!--del_lnk--> kernel mode. It is a <!--del_lnk--> preemptive, <!--del_lnk--> reentrant operating system, which has been designed to work with <!--del_lnk--> uniprocessor and <!--del_lnk--> symmetrical multi processor (SMP)-based computers. To process <!--del_lnk--> input/output (I/O) requests, they use packet-driven I/O, which utilizes <!--del_lnk--> I/O request packets (IRPs) and <!--del_lnk--> asynchronous I/O. Starting with <a href="../../wp/w/Windows_2000.htm" title="Windows 2000">Windows 2000</a>, Microsoft began making <!--del_lnk--> 64-bit versions of Windows available&mdash;before this, these operating systems only existed in <!--del_lnk--> 32-bit versions.</p>
+       <p>Programs and subsystems in user mode are limited in terms of what system resources they have access to, while the kernel mode has unrestricted access to the system memory and external devices. The Windows NT <!--del_lnk--> kernel is known as a <!--del_lnk--> hybrid kernel. The architecture comprises a <a href="#Kernel">simple kernel</a>, <!--del_lnk--> hardware abstraction layer (HAL), drivers, and a range of services (collectively named <a href="#Executive">Executive</a>), which all exist in kernel mode.</p>
+       <p>User mode in Windows NT is made of subsystems capable of passing I/O requests to the appropriate kernel mode <!--del_lnk--> software drivers by using the I/O manager. Two subsystems make up the user mode layer of Windows NT: the Environment subsystem (which runs applications written for many different types of operating systems), and the Integral subsystem operates system specific functions on behalf of the environment subsystem. Kernel mode in Windows NT has full access to the hardware and system resources of the computer. The kernel mode stops user mode services and applications from accessing critical areas of the operating system that they should not have access to.</p>
+       <p>The Executive interfaces, with all the user mode subsystems, deals with I/O, object management, security and process management. The kernel sits between the Hardware Abstraction Layer and the Executive to provide <i>multiprocessor synchronization</i>, thread and interrupt scheduling and dispatching, and trap handling and exception dispatching. The kernel is also responsible for initializing device drivers at bootup. Kernel mode drivers exist in three levels: highest level drivers, intermediate drivers and low level drivers. <!--del_lnk--> Windows Driver Model (WDM) exists in the intermediate layer and was mainly designed to be binary and source compatible between <!--del_lnk--> Windows 98 and <a href="../../wp/w/Windows_2000.htm" title="Windows 2000">Windows 2000</a>. The lowest level drivers are either legacy Windows NT device drivers that control a device directly or can be a <!--del_lnk--> PnP hardware bus.</p>
+       <h2><span class="mw-headline" id="User_mode">User mode</span></h2>
+       <p>The user mode is made up of subsystems which can pass I/O requests to the appropriate kernel mode drivers via the I/O manager (which exists in kernel mode). Two subsystems make up the user mode layer of Windows NT: the <i>Environment subsystem</i> and the <i>Integral subsystem</i>.</p>
+       <p>The environment subsystem was designed to run applications written for many different types of operating systems. None of the environment subsystems can directly access hardware, and must request access to memory resources through the Virtual Memory Manager that runs in kernel mode. Also, applications run at a lower priority than kernel mode processes.</p>
+       <p>There are three main environment subsystems: the <!--del_lnk--> Win32 subsystem, an <!--del_lnk--> OS/2 subsystem and a <!--del_lnk--> POSIX subsystem.</p>
+       <ul>
+        <li>The Win32 environment subsystem can run 32-bit Windows applications. It contains the console as well as text window support, shutdown and hard-error handling for all other environment subsystems. It also supports <!--del_lnk--> Virtual DOS Machines (VDMs), which allow <!--del_lnk--> MS-DOS and <!--del_lnk--> 16-bit Windows (<!--del_lnk--> Win16) applications to run on Windows NT. There is a specific MS-DOS VDM which runs in its own address space and which emulates an <!--del_lnk--> Intel 80486 running MS-DOS 5.0. Win16 programs, however, run in a Win16 VDM. Each program, by default, runs in the same process, thus using the same address space, and the Win16 VDM gives each program its own <!--del_lnk--> thread to run on. However, Windows NT does allow users to run a Win16 program in a separate Win16 VDM, which allows the program to be preemptively multitasked as Windows NT will pre-empt the whole VDM process, which only contains one running application. The Win32 environment subsystem process (<!--del_lnk--> csrss.exe) also includes the window management functionality, sometimes referred to as a "<!--del_lnk--> window manager". It handles input events (such as from the keyboard and mouse), then passes messages to the applications that need to receive this input. Each application is responsible for drawing or refreshing its own windows and menus, in response to these messages.</li>
+        <li>The OS/2 environment subsystem supports 16-bit character-based OS/2 applications and emulates OS/2 1.x, but not 32-bit or graphical OS/2 applications as used with OS/2 2.x or later.</li>
+        <li>The POSIX environment subsystem supports applications that are strictly written to either the POSIX.1 standard or the related <!--del_lnk--> ISO/<!--del_lnk--> IEC standards. The POSIX subsystem has been an area of recent active development and is a major feature of <!--del_lnk--> Windows Compute Cluster Server 2003.</li>
+       </ul>
+       <p>The integral subsystem looks after operating-system specific functions on behalf of the environment subsystem. It consists of a <i>security subsystem</i>, a <i>workstation service</i> and a <i>server service</i>. The security subsystem deals with security tokens, grants or denies access to user accounts based on resource permissions, handles login requests and initiates login authentication, and determines which system resources need to be audited by Windows NT. It also looks after <!--del_lnk--> Active Directory. The workstation service is an API to the network redirector, which provides the computer access to the network. The server service is an API that allows the computer to provide network services.</p>
+       <h2><span class="mw-headline" id="Kernel_mode">Kernel mode</span></h2>
+       <p>Windows NT <!--del_lnk--> kernel mode has full access to the hardware and system resources of the computer and runs code in a protected memory area. It controls access to scheduling, thread prioritization, memory management and the interaction with hardware. The kernel mode stops user mode services and applications from accessing critical areas of the operating system that they should not have access to; user mode processes must ask the kernel mode to perform such operations on their behalf.</p>
+       <p>While the <!--del_lnk--> x86 architecture supports four different privilege levels (numbered 0 to 3), only the two extreme privilege levels are used. Usermode programs are run with CPL 3, and the kernel runs with CPL 0. These two levels are often referred to as "ring 3" and "ring 0", respectively. Such a design decision had been done to achieve code portability to <!--del_lnk--> RISC platforms that only support two privilege levels, though this breaks compatibility with <!--del_lnk--> OS/2 applications that contain I/O privilege segments that attempt to directly access hardware.</p>
+       <p>Kernel mode consists of <i>executive services</i>, which is itself made up of many modules that do specific tasks, <i>kernel drivers</i>, a <i><!--del_lnk--> kernel</i> and a <i>Hardware Abstraction Layer</i>, or HAL.</p>
+       <h3><span class="mw-headline" id="Executive">Executive</span></h3>
+       <p>The Windows Executive services make up the low-level kernel-mode portion, and are contained in the file <!--del_lnk--> NTOSKRNL.EXE. It deals with I/O, object management, security and process management. These are divided into several <i>subsystems</i>, among which are <i>Cache Manager</i>, <i>Configuration Manager</i>, <i>I/O Manager</i>, <i><!--del_lnk--> Local Procedure Call (LPC)</i>, <i>Memory Manager</i>, <i><!--del_lnk--> Object Manager</i>, <i>Process Structure</i> and <i>Security Reference Monitor (SRM)</i>. Grouped together, the components can be called <i>Executive services</i> (internal name <i>Ex</i>). <i>System Services</i> (internal name <i>Nt</i>), i.e., <!--del_lnk--> system calls, are implemented at this level, too, except very few that call directly into the kernel layer for better performance.</p>
+       <p>The term "service" in this context generally refers to a callable routine, or set of callable routines. This is distinct from the concept of a "service process," which is a user mode component somewhat analogous to a <!--del_lnk--> daemon in <!--del_lnk--> Unix-like operating systems.</p>
+       <div class="thumb tright">
+       </div>
+       <dl>
+        <dt>Object Manager</dt>
+        <dd>The <i><!--del_lnk--> Object Manager</i> (internal name <i>Ob</i>) is an executive subsystem that all other executive subsystems, especially system calls, must pass through to gain access to Windows NT resources&mdash;essentially making it a resource management infrastructure service. The object manager is used to reduce the duplication of object resource management functionality in other executive subsystems, which could potentially lead to bugs and make development of Windows NT harder. To the object manager, each resource is an object, whether that resource is a physical resource (such as a file system or peripheral) or a logical resource (such as a file). Each object has a structure or <i>object type</i> that the object manager must know about.</dd>
+       </dl>
+       <dl>
+        <dd>Object creation is a process in two phases, <i>creation</i> and <i>insertion</i>. <i>Creation</i> causes the allocation of an empty object and the reservation of any resources required by the object manager, such as an (optional) name in the namespace. If creation was successful, the subsystem responsible for the creation fills in the empty object. Finally, if the subsystem deems the initialization successful, it instructs the object manager to <i>insert</i> the object, which makes it accessible through its (optional) name or a <!--del_lnk--> cookie called a <i>handle</i>. From then on, the lifetime of the object is handled by the object manager, and it's up to the subsystem to keep the object in a working condition until being signaled by the object manager to dispose of it.</dd>
+       </dl>
+       <dl>
+        <dd>Handles are identifiers that represent a reference to a kernel resource through an opaque value. Similarly, opening an object through its name is subject to security checks, but acting through an existing, open handle is only limited to the level of access requested when the object was opened or created.</dd>
+       </dl>
+       <dl>
+        <dd>Object types define the object procedures and any data specific to the object. In this way, the object manager allows Windows NT to be an <!--del_lnk--> object oriented operating system, as object types can be thought of as polymorphic <!--del_lnk--> classes that define <!--del_lnk--> objects. Most subsystems, though, with a notable exception in the I/O Manager, rely on the default implementation for all object type procedures.</dd>
+       </dl>
+       <dl>
+        <dd>Each instance of an object that is created stores its name, parameters that are passed to the object creation function, security attributes and a pointer to its object type. The object also contains an object close procedure and a reference count to tell the object manager how many other objects in the system reference that object and thereby determines whether the object can be destroyed when a close request is sent to it. Every named object exists in a hierarchical object <!--del_lnk--> namespace.</dd>
+       </dl>
+       <dl>
+        <dt>Cache Controller</dt>
+        <dd>Closely coordinates with the Memory Manager, I/O Manager and I/O drivers to provide a common cache for regular file I/O. Uniquely, the Windows Cache Manager operates on file blocks (rather than device blocks), for consistent operation between local and remote files, and ensures a certain degree of coherency with <!--del_lnk--> memory-mapped views of files, since cache blocks are a special case of memory-mapped views and cache misses a special case of page faults.</dd>
+       </dl>
+       <dl>
+        <dt>Configuration Manager</dt>
+        <dd>Implements the <!--del_lnk--> Windows registry.</dd>
+       </dl>
+       <dl>
+        <dt>I/O Manager</dt>
+        <dd>Allows devices to communicate with user-mode subsystems. It translates user-mode read and write commands into read or write IRPs which it passes to device drivers. It accepts <!--del_lnk--> file system I/O requests and translates them into device specific calls, and can incorporate low-level device drivers that directly manipulate hardware to either read input or write output. It also includes a cache manager to improve disk performance by caching read requests and write to the disk in the background.</dd>
+       </dl>
+       <dl>
+        <dt>Local Procedure Call (LPC)</dt>
+        <dd>Provides inter-process communication ports with connection semantics. LPC ports are used by user-mode subsystems to communicate with their clients, by Executive subsystems to communicate with user-mode subsystems, and as the basis for the local transport for <!--del_lnk--> MSRPC.</dd>
+       </dl>
+       <dl>
+        <dt>Memory Manager</dt>
+        <dd>Manages <!--del_lnk--> virtual memory, controlling memory protection and the <!--del_lnk--> paging of memory in and out of physical memory to secondary storage, and implements a general-purpose allocator of physical memory. It also implements a parser of PE executables that lets an executable be mapped or unmapped in a single, atomic step.</dd>
+       </dl>
+       <dl>
+        <dd>Starting from Windows NT Server 4.0, Terminal Server Edition, the memory manager implements a so-called <i>session space</i>, a range of kernel-mode memory that is subject to context switching just like user-mode memory. This lets multiple instances of the kernel-mode Win32 subsystem and GDI drivers run side-by-side, despite shortcomings in their initial design. Each session space is shared by several processes, collectively referred to as a "session".</dd>
+        <dd>To ensure a degree of isolation between sessions without introducing a new object type, the association between processes and sessions is handled by the Security Reference Monitor, as an attribute of a security subject (token), and it can only be changed while holding special privileges.</dd>
+        <dd>The relatively unsophisticated and ad-hoc nature of sessions is due to the fact they weren't part of the initial design, and had to be developed, with minimal disruption to the main line, by a third party (<!--del_lnk--> Citrix) as a prerequisite for their <!--del_lnk--> terminal server product for Windows NT, called <!--del_lnk--> WinFrame. Starting with Windows Vista, though, sessions finally became a proper aspect of the Windows architecture. No longer a memory manager construct that creeps into user mode indirectly through Win32, they were expanded into a pervasive abstraction affecting most Executive subsystems. As a matter of fact, regular use of Windows Vista always results in a multi-session environment.</dd>
+       </dl>
+       <dl>
+        <dt>Process Structure</dt>
+        <dd>Handles <!--del_lnk--> process and <!--del_lnk--> thread creation and termination, and it implements the concept of <i>Job</i>, a group of processes that can be terminated as a whole, or be placed under shared restrictions (such a total maximum of allocated memory, or CPU time). Job objects were introduced in <a href="../../wp/w/Windows_2000.htm" title="Windows 2000">Windows 2000</a>.</dd>
+       </dl>
+       <dl>
+        <dt>PnP Manager</dt>
+        <dd>Handles <!--del_lnk--> Plug and Play and supports device detection and installation at boot time. It also has the responsibility to stop and start devices on demand&mdash;this can happen when a bus (such as <!--del_lnk--> USB or <!--del_lnk--> FireWire) gains a new device and needs to have a device driver loaded to support it. Its bulk is actually implemented in user mode, in the <i>Plug and Play Service</i>, which handles the often complex tasks of installing the appropriate drivers, notifying services and applications of the arrival of new devices, and displaying GUI to the user.</dd>
+       </dl>
+       <dl>
+        <dt>Power Manager</dt>
+        <dd>Deals with power events (power-off, stand-by, hibernate, etc.) and notifies affected drivers with special IRPs (<i>Power IRPs</i>).</dd>
+       </dl>
+       <dl>
+        <dt>Security Reference Monitor (SRM)</dt>
+        <dd>The primary authority for enforcing the security rules of the security integral subsystem. It determines whether an object or resource can be accessed, via the use of <!--del_lnk--> access control lists (ACLs), which are themselves made up of access control entries (ACEs). ACEs contain a <!--del_lnk--> security identifier (SID) and a list of operations that the ACE gives a select group of trustees&mdash;a user account, group account, or login session&mdash;permission (allow, deny, or audit) to that resource.</dd>
+       </dl>
+       <dl>
+        <dt>GDI</dt>
+        <dd>The <!--del_lnk--> Graphics Device Interface is responsible for tasks such as drawing lines and curves, rendering fonts and handling palettes. The <!--del_lnk--> Windows NT 3.x series of releases had placed the GDI component in the user-mode <!--del_lnk--> Client/Server Runtime Subsystem, but this was moved into kernel mode with Windows NT 4.0 to improve graphics performance.</dd>
+       </dl>
+       <h3><span class="mw-headline" id="Kernel">Kernel</span></h3>
+       <p>The kernel sits between the HAL and the Executive and provides multiprocessor synchronization, thread and interrupt scheduling and dispatching, and trap handling and exception dispatching; it is also responsible for initializing device drivers at bootup that are necessary to get the operating system up and running. That is, the kernel performs almost all the tasks of a traditional <!--del_lnk--> microkernel; the strict distinction between Executive and Kernel is the most prominent remnant of the original microkernel design, and historical design documentation consistently refers to the kernel component as "the microkernel".</p>
+       <p>The kernel often interfaces with the process manager. The level of abstraction is such that the kernel never calls into the process manager, only the other way around (save for a handful of corner cases, still never to the point of a functional dependence).</p>
+       <h3><span class="mw-headline" id="Kernel-mode_drivers">Kernel-mode drivers</span></h3>
+       <p>Windows NT uses kernel-mode <!--del_lnk--> device drivers to enable it to interact with <!--del_lnk--> hardware devices. Each of the drivers has well defined system routines and internal routines that it exports to the rest of the operating system. All devices are seen by user mode code as a file object in the I/O manager, though to the I/O manager itself the devices are seen as device objects, which it defines as either file, device or driver objects. Kernel mode drivers exist in three levels: highest level drivers, intermediate drivers and low level drivers. The highest level drivers, such as file system drivers for <!--del_lnk--> FAT and <!--del_lnk--> NTFS, rely on intermediate drivers. Intermediate drivers consist of function drivers&mdash;or main driver for a device&mdash;that are optionally sandwiched between lower and higher level filter drivers. The function driver then relies on a bus driver&mdash;or a driver that services a <!--del_lnk--> bus controller, adapter, or bridge&mdash;which can have an optional bus filter driver that sits between itself and the function driver. Intermediate drivers rely on the lowest level drivers to function. The <!--del_lnk--> Windows Driver Model (WDM) exists in the intermediate layer. The lowest level drivers are either legacy Windows NT device drivers that control a device directly or can be a PnP hardware bus. These lower level drivers directly control hardware and do not rely on any other drivers.</p>
+       <h3><span class="mw-headline" id="Hardware_abstraction_layer">Hardware abstraction layer</span></h3>
+       <p>The Windows NT <!--del_lnk--> hardware abstraction layer, or HAL, is a layer between the physical hardware of the computer and the rest of the operating system. It was designed to hide differences in hardware and therefore provide a consistent platform on which the kernel is run. The HAL includes hardware-specific code that controls I/O interfaces, <!--del_lnk--> interrupt controllers and multiple processors.</p>
+       <p>However, despite its purpose and designated place within the architecture, the HAL isn't a layer that sits entirely below the kernel, the way the kernel sits below the Executive: all known HAL implementations depend in some measure on the kernel, or even the Executive. In practice, this means that kernel and HAL variants come in matching sets that are specifically engineered to work together.</p>
+       <p>In particular hardware abstraction does <i>not</i> involve abstracting the instruction set, which generally falls under the wider concept of <!--del_lnk--> portability. Abstracting the instruction set, when necessary (such as for handling the several revisions to the <!--del_lnk--> x86 instruction set, or emulating a missing math coprocessor), is performed by the kernel, or via <!--del_lnk--> platform virtualization.</p>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Architecture_of_Windows_NT&amp;oldid=526841565"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=526841565 . </div>
+   </div>
+  </div>
+ </body>
+</html>

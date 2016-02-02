@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Brute-force attack</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Brute-force_attack.htm" rel="canonical" />
+  <meta content="An article about Brute-force attack hand selected for the Wikipedia for Schools by SOS Children" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Brute-force_attack skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Brute-force attack</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.IT.Cryptography.htm">Cryptography</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Did you know...</h4><p>This content from Wikipedia has been selected by SOS Children for suitability in schools around the world. <a href="../../wp/s/Soschildrensvillages.htm">Click here</a> for more information on SOS Children.</p></div></div>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:262px;"><a class="image" href="../../images/1525/152502.jpg.htm"><img alt="" class="thumbimage" height="272" src="../../images/1525/152502.jpg"  width="260" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/1525/152502.jpg.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> The <!--del_lnk--> EFF's US$250,000 DES <!--del_lnk--> cracking machine contained over 1,800 custom chips and could brute-force a DES key in a matter of days. The photograph shows a DES Cracker circuit board fitted on both sides with 64 Deep Crack chips.</div>
+        </div>
+       </div>
+       <p>In <a href="../../wp/c/Cryptography.htm" title="Cryptography">cryptography</a>, a <b>brute-force attack</b>, or <b>exhaustive key search</b>, is a <!--del_lnk--> cryptanalytic attack that can, in theory, be used against any encrypted data (except for data encrypted in an <!--del_lnk--> information-theoretically secure manner). Such an attack might be utilized when it is not possible to take advantage of other weaknesses in an encryption system (if any exist) that would make the task easier. It consists of systematically checking all possible <!--del_lnk--> keys until the correct key is found. In the worst case, this would involve traversing the entire <!--del_lnk--> search space.</p>
+       <p>The <!--del_lnk--> key length used in the cipher determines the practical feasibility of performing a brute-force attack, with longer keys exponentially more difficult to crack than shorter ones. A cipher with a key length of <i>N</i> bits can be broken in a worst-case time proportional to 2<sup><i>N</i></sup> and an average time of half that. Brute-force attacks can be made less effective by <!--del_lnk--> obfuscating the data to be encoded, something that makes it more difficult for an attacker to recognise when he/she has cracked the code. One of the measures of the strength of an encryption system is how long it would theoretically take an attacker to mount a successful brute-force attack against it.</p>
+       <p>Brute-force attacks are an application of <!--del_lnk--> brute-force search, the general problem-solving technique of enumerating all candidates and checking each one.</p>
+       <h2> <span class="mw-headline" id="Theoretical_limits">Theoretical limits</span></h2>
+       <p>The resources required for a brute-force attack grow <a href="../../wp/e/Exponential_growth.htm" title="Exponential growth">exponentially</a> with increasing <!--del_lnk--> key size, not linearly. Although US export regulations <!--del_lnk--> historically restricted key lengths to 56-bit <!--del_lnk--> symmetric keys (e.g. <a href="../../wp/d/Data_Encryption_Standard.htm" title="Data Encryption Standard">Data Encryption Standard</a>), these restrictions are no longer in place, so modern symmetric algorithms typically use computationally stronger 128- to 256-bit keys.</p>
+       <p>There is a physical argument that a 128-bit symmetric key is computationally secure against brute-force attack. The so-called <!--del_lnk--> Landauer limit implied by the laws of physics sets a lower limit on the energy required to perform a computation of <span class="texhtml"><i>kT</i> &nbsp;<span style="font-weight:bold;">&middot;</span> ln 2</span> per bit erased in a computation, where <i>T</i> is the temperature of the computing device in <a href="../../wp/k/Kelvin.htm" title="Kelvin">kelvins</a>, <i>k</i> is the <!--del_lnk--> Boltzmann constant, and the <a href="../../wp/n/Natural_logarithm.htm" title="Natural logarithm">natural logarithm</a> of 2 is about 0.693. No irreversible computing device can use less energy than this, even in principle. Thus, in order to simply flip through the possible values for a 128-bit symmetric key (ignoring doing the actual computing to check it) would theoretically require 2<sup>128</sup> &minus; 1 bit flips on a conventional processor. If it is assumed that the calculation occurs near room temperature (~300 K) the Von Neumann-Landauer Limit can be applied to estimate the energy required as ~10<sup>18</sup> <!--del_lnk--> joules, which is equivalent to consuming 30 <!--del_lnk--> gigawatts of power for one year. This is equal to 30&times;10<sup>9</sup> W&times;365&times;24&times;3600 s = 9.46&times;10<sup>17</sup> J or 262.7 TWh (<!--del_lnk--> more than 1/100th of the world energy production). The full actual computation&mdash;checking each key to see if you have found a solution&mdash;would consume many times this amount.</p>
+       <p>However, this argument assumes that the register values are changed using conventional set and clear operations which inevitably generate <!--del_lnk--> entropy. It has been shown that computational hardware can be designed not to encounter this theoretical obstruction (see <!--del_lnk--> reversible computing), though no such computers are known to have been constructed.</p>
+       <div class="thumb tleft">
+        <div class="thumbinner" style="width:222px;"><a class="image" href="../../images/1525/152507.jpg.htm"><img alt="" class="thumbimage" height="193" src="../../images/1525/152507.jpg"  width="220" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/1525/152507.jpg.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div> Modern <!--del_lnk--> GPUs are well-suited to the repetitive tasks associated with hardware-based password cracking</div>
+        </div>
+       </div>
+       <p>As commercial available successors of governmental ASICs Solution also known as <!--del_lnk--> custom hardware attack, today two emerging technologies have proven their capability in the brute-force attack of certain ciphers. One is modern <!--del_lnk--> graphics processing unit (GPU) technology, the other is the <!--del_lnk--> field-programmable gate array (FPGA) technology. GPUs benefit from their wide availability and price-performance benefit, FPGAs from their energy efficiency per cryptographic operation. Both technologies try to transport the benefits of parallel processing to brute-force attacks. In case of GPUs some hundreds, in the case of FPGA some thousand processing units making them much better suited to cracking passwords than conventional processors. Various publications in the fields of cryptographic analysis have proved the energy efficiency of today&rsquo;s FPGA technology, for example, the <!--del_lnk--> COPACOBANA FPGA Cluster computer consumes the same energy as a single PC (600&nbsp;W), but performs like 2,500 PCs for certain algorithms. A number of firms provide hardware-based FPGA cryptographic analysis solutions from a single FPGA <!--del_lnk--> PCI Express card up to dedicated FPGA computers. <!--del_lnk--> WPA and <!--del_lnk--> WPA2 encryption have successfully been brute-force attacked by reducing the workload by a factor of 50 in comparison to conventional CPUs and some hundred in case of FPGAs.</p>
+       <div class="thumb tnone">
+       </div>
+       <p><!--del_lnk--> AES permits the use of 256-bit keys. Breaking a symmetric 256-bit key by brute force requires 2<sup>128</sup> times more computational power than a 128-bit key. A device that could check a billion billion (10<sup>18</sup>) AES keys per second (if such a device could ever be made - as of 2012, supercomputers have computing capacities of 20 Peta-FLOPS, see <!--del_lnk--> Titan. So 50 supercomputers would be required to process (10<sup>18</sup>) operations per second) would in theory require about 3&times;10<sup>51</sup> years to exhaust the 256-bit key space.</p>
+       <p>An underlying assumption of a brute-force attack is that the complete keyspace was used to generate keys, something that relies on an effective <!--del_lnk--> random number generator, and that there are no defects in the algorithm or its implementation. For example, a number of systems that were originally thought to be impossible to crack by brute force have nevertheless been <!--del_lnk--> cracked because the <!--del_lnk--> key space to search through was found to be much smaller than originally thought, because of a lack of entropy in their <!--del_lnk--> pseudorandom number generators. These include <!--del_lnk--> Netscape's implementation of <!--del_lnk--> SSL (famously cracked by <!--del_lnk--> Ian Goldberg and <!--del_lnk--> David Wagner in 1995) and a <!--del_lnk--> Debian/<!--del_lnk--> Ubuntu edition of <!--del_lnk--> OpenSSL discovered in 2008 to be flawed. A similar lack of implemented entropy lead to the breaking of <a href="../../wp/e/Enigma_machine.htm" title="Enigma machine">Enigma's</a> code.</p>
+       <h2> <span class="mw-headline" id="Credential_recycling">Credential recycling</span></h2>
+       <p>Credential recycling refers to the <!--del_lnk--> hacking practice to re-use username and password combinations gathered in previous brute-force attacks. A special form of credential recycling is <!--del_lnk--> pass the hash, where <!--del_lnk--> unsalted hashed credentials are stolen and re-used without first being brute forced.</p>
+       <h2> <span class="mw-headline" id="Unbreakable_codes">Unbreakable codes</span></h2>
+       <p>Certain types of encryption, by their mathematical properties, cannot be defeated by brute force. An example of this is <!--del_lnk--> one-time pad cryptography, where every <!--del_lnk--> cleartext bit has a corresponding key from a truly random sequence of key bits. A 140 character one-time-pad&ndash;encoded string subjected to a brute-force attack would eventually reveal every 140 character string possible, including the correct answer - but of all the answers given, there would be no way of knowing which was the correct one. Defeating such a system, as was done by the <!--del_lnk--> Venona project, generally relies not on pure cryptography, but upon mistakes in its implementation: the key pads not being truly random, intercepted keypads, operators making mistakes - or other errors.</p>
+       <h2> <span class="mw-headline" id="Countermeasures">Countermeasures</span></h2>
+       <p>In case of an offline attack where the attacker has access to the encrypted material, he can try key combinations at his leisure without the risk of discovery or interference. However database and directory administrators can take countermeasures against online attacks, for example by limiting the number of attempts that a password can be tried, by introducing time delays between successive attempts, increasing the answer's complexity (e.g. requiring a <!--del_lnk--> CAPTCHA answer or verification code sent via cellphone), and/or locking accounts out after unsuccessful logon attempts. Website administrators may prevent a particular IP address from trying more than a predetermined number of password attempts against any account on the site.</p>
+       <h2> <span class="mw-headline" id="Reverse_brute-force_attack">Reverse brute-force attack</span></h2>
+       <p>In a <b>reverse brute-force attack</b>, a single (usually common) password is tested against multiple usernames or encrypted files. The process may be repeated for a select few passwords. In such a strategy, the attacker is generally not targeting a specific user. Reverse brute-force attacks can be mitigated by establishing a password policy that disallows common passwords.</p>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Brute-force_attack&amp;oldid=542850441"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=542850441 . </div>
+   </div>
+  </div>
+ </body>
+</html>

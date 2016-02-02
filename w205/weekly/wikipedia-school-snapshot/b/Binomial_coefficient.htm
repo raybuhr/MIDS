@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Binomial coefficient</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Binomial_coefficient.htm" rel="canonical" />
+  <meta content="Binomial coefficient on the Wikipedia for Schools" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Binomial_coefficient skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Binomial coefficient</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.Mathematics.htm">Mathematics</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Background to the schools Wikipedia</h4><p>SOS Children, <a href="../../wp/s/Sos_Schools.htm">an education charity</a>, organised this selection. <a href="../../wp/s/Soschildrensvillages.htm">Click here</a> for more information on SOS Children.</p></div></div>
+       <p>In <a href="../../wp/m/Mathematics.htm" title="Mathematics">mathematics</a>, particularly in <a href="../../wp/c/Combinatorics.htm" title="Combinatorics">combinatorics</a>, a <b>binomial coefficient</b> is a <!--del_lnk--> coefficient of any of the terms in the expansion of the <!--del_lnk--> binomial (<i>x</i>+<i>y</i>)<sup><i>n</i></sup>. Colloquially given, say there are <i>n</i> pizza toppings to select from, if one wishes to bake a pizza with exactly <i>k</i> different toppings, then the binomial coefficient expresses how many different types of such <i>k</i>-topping pizzas are possible.</p>
+       <h2><span class="mw-headline" id="Definition">Definition</span></h2>
+       <p>Given a non-negative integer <i>n</i> and an integer <i>k</i>, the binomial coefficient is defined to be the natural number</p>
+       <dl>
+        <dd><img alt="
+  {n \choose k} = \frac{n \cdot (n-1) \cdots (n-k+1)}
+  {k \cdot (k-1) \cdots 1} = \frac{n!}{k!(n-k)!} \quad \mbox{if}\ n\geq k\geq 0 \qquad (1) " class="tex" src="../../images/196/19675.png" /></dd>
+       </dl>
+       <p>and</p>
+       <dl>
+        <dd><img alt=" {n \choose k} = 0 \quad \mbox{if } k<0 \mbox{ or } k>n" class="tex" src="../../images/196/19676.png" /></dd>
+       </dl>
+       <p>where <i>n</i>! denotes the <a href="../../wp/f/Factorial.htm" title="Factorial">factorial</a> of <i>n</i>.</p>
+       <p>According to <!--del_lnk--> Nicholas J. Higham, the <img alt=" {n \choose k} " class="tex" src="../../images/196/19677.png" /> notation was introduced by <!--del_lnk--> Albert von Ettinghausen in <a href="../../wp/1/1826.htm" title="1826">1826</a>, although these numbers were already known centuries before that (see <a href="../../wp/p/Pascal%2527s_triangle.htm" title="Pascal's triangle">Pascal's triangle</a>). Alternative notations include C(<i>n</i>, <i>k</i>), <sub><i>n</i></sub><i>C</i><sub><i>k</i></sub> or <img alt="C^{k}_{n}" class="tex" src="../../images/196/19678.png" />, in all of which the C stands for <!--del_lnk--> combination or <i>choose</i>. Indeed, another name for the binomial coefficient is <b>choose function</b>, and the binomial coefficient of <i>n</i> and <i>k</i> is often read as "<i>n</i> choose <i>k</i>".</p>
+       <p>The binomial coefficients are the <!--del_lnk--> coefficients in the expansion of the binomial (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> (hence the name):</p>
+       <dl>
+        <dd><img alt=" (x+y)^n = \sum_{k=0}^{n} {n \choose k} x^{n-k} y^k. \qquad (2) " class="tex" src="../../images/196/19679.png" /></dd>
+       </dl>
+       <p>This is generalized by the <!--del_lnk--> binomial theorem, which allows the exponent <i>n</i> to be negative or a non-integer. See the article on <!--del_lnk--> combination.</p>
+       <h3><span class="mw-headline" id="Combinatorial_interpretation">Combinatorial interpretation</span></h3>
+       <p>The importance of the binomial coefficients (and the motivation for the alternate name 'choose') lies in the fact that <img alt="{\tbinom n k}" class="tex" src="../../images/196/19680.png" /> is the number of ways that <i>k</i> objects can be chosen from among <i>n</i> objects, regardless of order. More formally,</p>
+       <dl>
+        <dd><img alt="{\tbinom n k}" class="tex" src="../../images/196/19680.png" /> is the number of <i>k</i>-element subsets of an <i>n</i>-element set. <img alt="\qquad (1a)" class="tex" src="../../images/196/19681.png" /></dd>
+       </dl>
+       <p>In fact, this property is often chosen as an <b>alternative definition</b> of the binomial coefficient, since from (1a) one may derive (1) as a corollary by a straightforward <!--del_lnk--> combinatorial proof. For a colloquial demonstration, note that in the formula</p>
+       <dl>
+        <dd><img alt=" {n \choose k} = \frac{n \cdot (n-1) \cdots (n-k+1)}{k \cdot (k-1) \cdots 1}, " class="tex" src="../../images/196/19682.png" /></dd>
+       </dl>
+       <p>the numerator gives the number of ways to fill the <i>k</i> slots using the <i>n</i> options, where the slots are distinguishable from one another. Thus a pizza with mushrooms added before chicken is considered to be different from a pizza with chicken added before mushrooms. The denominator eliminates these repetitions because if the <i>k</i> slots are indistinguishable, then all of the <i>k</i>! ways of arranging them are considered identical.</p>
+       <p>On the context of computer science, it also helps to see <img alt="{\tbinom n k}" class="tex" src="../../images/196/19680.png" /> as the number of strings consisting of ones and zeros with <i>k</i> ones and <i>n</i>&minus;<i>k</i> zeros. For each <i>k</i>-element subset, K, of an <i>n</i>-element set, N, the <!--del_lnk--> indicator function, 1<sub>K</sub>&nbsp;: N->{0,1}, where 1<sub>K</sub>(<i>x</i>) = 1 whenever <i>x</i> in K and 0 otherwise, produces a unique bit string of length <i>n</i> with exactly <i>k</i> ones by feeding 1<sub>K</sub> with the <i>n</i> elements in a specific order.</p>
+       <h2><span class="mw-headline" id="Example">Example</span></h2>
+       <dl>
+        <dd><img alt=" {7 \choose 3} = \frac{7!}{3!(7-3)!}
+= \frac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{(3 \cdot 2 \cdot 1)(4 \cdot 3 \cdot 2 \cdot 1)} 
+= \frac{7\cdot 6 \cdot 5}{3\cdot 2\cdot 1} 
+= 35." class="tex" src="../../images/196/19683.png" /></dd>
+       </dl>
+       <p>The calculation of the binomial coefficient is conveniently arranged like this: ((((5/1)&middot;6)/2)&middot;7)/3, alternately dividing and multiplying with increasing integers. Each division produces an integer result which is itself a binomial coefficient.</p>
+       <h2><span class="mw-headline" id="Derivation_from_binomial_expansion">Derivation from binomial expansion</span></h2>
+       <p>For exponent 1, (<i>x</i>+<i>y</i>)<sup>1</sup> is <i>x</i>+<i>y</i>. For exponent 2, (<i>x</i>+<i>y</i>)<sup>2</sup> is (<i>x</i>+<i>y</i>)(<i>x</i>+<i>y</i>), which forms terms as follows. The first factor supplies either an <i>x</i> or a <i>y</i>; likewise for the second factor. Thus to form <i>x</i><sup>2</sup>, the only possibility is to choose <i>x</i> from both factors; likewise for <i>y</i><sup>2</sup>. However, the <i>xy</i> term can be formed by <i>x</i> from the first and <i>y</i> from the second factor, or <i>y</i> from the first and <i>x</i> from the second factor; thus it acquires a coefficient of 2. Proceeding to exponent 3, (<i>x</i>+<i>y</i>)<sup>3</sup> reduces to (<i>x</i>+<i>y</i>)<sup>2</sup>(<i>x</i>+<i>y</i>), where we already know that (<i>x</i>+<i>y</i>)<sup>2</sup>= <i>x</i><sup>2</sup>+2<i>xy</i>+<i>y</i><sup>2</sup>, giving an initial expansion of (<i>x</i>+<i>y</i>)(<i>x</i><sup>2</sup>+2<i>xy</i>+<i>y</i><sup>2</sup>). Again the extremes, <i>x</i><sup>3</sup> and <i>y</i><sup>3</sup> arise in a unique way. However, the <i>x</i><sup>2</sup><i>y</i> term is either 2<i>xy</i> times <i>x</i> or <i>x</i><sup>2</sup> times <i>y</i>, for a coefficient of 3; likewise <i>xy</i><sup>2</sup> arises in two ways, summing the coefficients 1 and 2 to give 3.</p>
+       <p>This suggests an <!--del_lnk--> induction. Thus for exponent <i>n</i>, each term has <!--del_lnk--> total degree (sum of exponents) <i>n</i>, with <i>n</i>&minus;<i>k</i> factors of <i>x</i> and <i>k</i> factors of <i>y</i>. If <i>k</i> is 0 or <i>n</i>, the term arises in only one way, and we get the terms <i>x</i><sup>n</sup> and <i>y</i><sup>n</sup>. If <i>k</i> is neither 0 nor <i>n</i>, then the term arises in two ways, from x<sup>n-k-1</sup>y<sup>k</sup> &times; x and from x<sup>n-k</sup>y<sup>k-1</sup> &times; y. For example, <i>x</i><sup>2</sup><i>y</i><sup>2</sup> is both <i>xy</i><sup>2</sup> times <i>x</i> and <i>x</i><sup>2</sup><i>y</i> times <i>y</i>, thus its coefficient is 3 (the coefficient of <i>xy</i><sup>2</sup>) + 3 (the coefficient of <i>x</i><sup>2</sup><i>y</i>). This is the origin of Pascal's triangle, discussed below.</p>
+       <p>Another perspective is that to form <i>x</i><sup><i>n</i>&minus;<i>k</i></sup><i>y</i><sup><i>k</i></sup> from <i>n</i> factors of (<i>x</i>+<i>y</i>), we must choose <i>y</i> from <i>k</i> of the factors and <i>x</i> from the rest. To count the possibilities, consider all <i>n</i>! <a href="../../wp/p/Permutation.htm" title="Permutation">permutations</a> of the factors. Represent each permutation as a shuffled list of the numbers from 1 to <i>n</i>. Select an <i>x</i> from the first <i>n</i>&minus;<i>k</i> factors listed, and a <i>y</i> from the remaining <i>k</i> factors; in this way each permutation contributes to the term <i>x</i><sup><i>n</i>&minus;<i>k</i></sup><i>y</i><sup><i>k</i></sup>. For example, the list &#x3008;<u>4,1</u>,<u style="text-decoration:overline">2,3</u>&#x3009; selects <i>x</i> from factors 4 and 1, and selects <i>y</i> from factors 2 and 3, as one way to form the term <i>x</i><sup>2</sup><i>y</i><sup>2</sup>.</p>
+       <dl>
+        <dd>(<u><i>x</i></u> +<sup>1</sup> <i>y</i>)(<i>x</i> +<sup>2</sup> <u style="text-decoration:overline"><i>y</i></u>)(<i>x</i> +<sup>3</sup> <u style="text-decoration:overline"><i>y</i></u>)(<u><i>x</i></u> +<sup>4</sup> <i>y</i>)</dd>
+       </dl>
+       <p>But the distinct list &#x3008;<u>1,4</u>,<u style="text-decoration:overline">3,2</u>&#x3009; makes exactly the same selection; the binomial coefficient formula must remove this redundancy. The <i>n</i>&minus;<i>k</i> factors for <i>x</i> have (<i>n</i>&minus;<i>k</i>)! permutations, and the <i>k</i> factors for <i>y</i> have <i>k</i>! permutations. Therefore <i>n</i>!/(<i>n</i>&minus;<i>k</i>)!<i>k</i>! is the number of truly distinct ways to form the term <i>x</i><sup><i>n</i>&minus;<i>k</i></sup><i>y</i><sup><i>k</i></sup>.</p>
+       <p>A simpler explanation follows: One can pick a random element out of <img alt="n" class="tex" src="../../images/62/6224.png" /> in exactly <img alt="n" class="tex" src="../../images/62/6224.png" /> ways, a second random element in <img alt=" (n-1)" class="tex" src="../../images/196/19684.png" /> ways, and so forth. Thus, <img alt="k" class="tex" src="../../images/87/8733.png" /> elements can be picked out of <i>n</i> in <img alt=" n\cdot (n-1) \cdot \ldots \cdot (n-k+1) " class="tex" src="../../images/196/19685.png" /> ways. In this calculation, however, each order-independent selection occurs <img alt="k!" class="tex" src="../../images/196/19686.png" /> times, as a list of <img alt="k" class="tex" src="../../images/87/8733.png" /> elements can be permuted in so many ways. Thus eq. (1) is obtained.</p>
+       <h2><span class="mw-headline" id="Pascal.27s_triangle">Pascal's triangle</span></h2>
+       <p><!--del_lnk--> Pascal's rule is the important <!--del_lnk--> recurrence relation</p>
+       <dl>
+        <dd><img alt=" {n \choose k} +  {n \choose k+1} = {n+1 \choose k+1}, \qquad (3) " class="tex" src="../../images/196/19687.png" /></dd>
+       </dl>
+       <p>which follows directly from the definition:</p>
+       <dl>
+        <dd><img alt="\begin{align} {n \choose k} + {n \choose k+1} 
+ &amp;{}= \frac{n!}{k!(n-k)!} + \frac{n!}{(k+1)!(n-(k+1))!} \\
+ &amp;{} = \left(\frac{n!(k+1)}{k!(n-k)!(k+1)} + \frac{n!(n-k)}{(k+1)!(n-(k+1))!(n-k)}\right)\\
+ &amp;{} = \left(\frac{n!(k+1 + n-k)}{(k+1)!(n-k)!}\right) \\
+ &amp;{} = \frac{(n+1)!}{(k+1)!((n+1)-(k+1))!} \\
+ &amp;{} = {n+1 \choose k+1}
+\end{align} " class="tex" src="../../images/196/19688.png" /></dd>
+       </dl>
+       <p>The recurrence relation just proved can be used to prove by <!--del_lnk--> mathematical induction that C(<i>n</i>, <i>k</i>) is a natural number for all <i>n</i> and <i>k</i>, a fact that is not immediately obvious from the definition.</p>
+       <p>Pascal's rule also gives rise to <a href="../../wp/p/Pascal%2527s_triangle.htm" title="Pascal's triangle">Pascal's triangle</a>:</p>
+       <dl>
+        <dd>
+         <table>
+          <tr>
+           <td>0:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>1:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>2:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>2</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>3:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>3</td>
+           <td>
+           </td>
+           <td>3</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>4:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>4</td>
+           <td>
+           </td>
+           <td>6</td>
+           <td>
+           </td>
+           <td>4</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>5:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>5</td>
+           <td>
+           </td>
+           <td>10</td>
+           <td>
+           </td>
+           <td>10</td>
+           <td>
+           </td>
+           <td>5</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>6:</td>
+           <td>
+           </td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>6</td>
+           <td>
+           </td>
+           <td>15</td>
+           <td>
+           </td>
+           <td>20</td>
+           <td>
+           </td>
+           <td>15</td>
+           <td>
+           </td>
+           <td>6</td>
+           <td>
+           </td>
+           <td>1</td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>7:</td>
+           <td>
+           </td>
+           <td>1&nbsp;</td>
+           <td>
+           </td>
+           <td>7&nbsp;</td>
+           <td>
+           </td>
+           <td>21</td>
+           <td>
+           </td>
+           <td>35</td>
+           <td>
+           </td>
+           <td>35</td>
+           <td>
+           </td>
+           <td>21</td>
+           <td>
+           </td>
+           <td>7&nbsp;</td>
+           <td>
+           </td>
+           <td>1&nbsp;</td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>8:</td>
+           <td>1&nbsp;</td>
+           <td>
+           </td>
+           <td>8&nbsp;</td>
+           <td>
+           </td>
+           <td>28</td>
+           <td>
+           </td>
+           <td>56</td>
+           <td>
+           </td>
+           <td>70</td>
+           <td>
+           </td>
+           <td>56</td>
+           <td>
+           </td>
+           <td>28</td>
+           <td>
+           </td>
+           <td>8&nbsp;</td>
+           <td>
+           </td>
+           <td>1&nbsp;</td>
+          </tr>
+         </table>
+        </dd>
+       </dl>
+       <p>Row number <i>n</i> contains the numbers C(<i>n</i>, <i>k</i>) for <i>k</i> = 0,&hellip;,<i>n</i>. It is constructed by starting with ones at the outside and then always adding two adjacent numbers and writing the sum directly underneath. This method allows the quick calculation of binomial coefficients without the need for fractions or multiplications. For instance, by looking at row number 5 of the triangle, one can quickly read off that</p>
+       <dl>
+        <dd>(<i>x</i> + <i>y</i>)<sup>5</sup> = <b>1</b> <i>x</i><sup>5</sup> + <b>5</b> <i>x</i><sup>4</sup><i>y</i> + <b>10</b> <i>x</i><sup>3</sup><i>y</i><sup>2</sup> + <b>10</b> <i>x</i><sup>2</sup><i>y</i><sup>3</sup> + <b>5</b> <i>x</i> <i>y</i><sup>4</sup> + <b>1</b> <i>y</i><sup>5</sup>.</dd>
+       </dl>
+       <p>The differences between elements on other diagonals are the elements in the previous diagonal, as a consequence of the recurrence relation (3) above.</p>
+       <p>In the 1303 AD treatise <i>Precious Mirror of the Four Elements</i>, <!--del_lnk--> Zhu Shijie mentioned the triangle as an ancient method for evaluating binomial coefficients indicating that the method was known to <!--del_lnk--> Chinese mathematicians five centuries before <a href="../../wp/b/Blaise_Pascal.htm" title="Blaise Pascal">Pascal</a>.</p>
+       <h2><span class="mw-headline" id="Combinatorics_and_statistics">Combinatorics and statistics</span></h2>
+       <p>Binomial coefficients are of importance in <a href="../../wp/c/Combinatorics.htm" title="Combinatorics">combinatorics</a>, because they provide ready formulas for certain frequent counting problems:</p>
+       <ul>
+        <li>Every <!--del_lnk--> set with <i>n</i> elements has <img alt=" \mathrm{C}(n, k)" class="tex" src="../../images/196/19689.png" /> different subsets having <i>k</i> elements each (these are called <!--del_lnk--> <i>k</i>-combinations).</li>
+        <li>The number of <!--del_lnk--> strings of length <i>n</i> containing <i>k</i> ones and <i>n</i>&nbsp;&minus;&nbsp;<i>k</i> zeros is <img alt=" \mathrm{C}(n, k)." class="tex" src="../../images/196/19690.png" /></li>
+        <li>There are <img alt=" \mathrm{C}(n+1, k)" class="tex" src="../../images/196/19691.png" /> strings consisting of <i>k</i> ones and <i>n</i> zeros such that no two ones are adjacent.</li>
+        <li>The number of sequences consisting of <i>n</i> <a href="../../wp/n/Natural_number.htm" title="Natural number">natural numbers</a> whose sum equals <i>k</i> is <img alt=" \mathrm{C}(n+k-1, k)" class="tex" src="../../images/196/19692.png" />; this is also the number of ways to choose <i>k</i> elements from a set of <i>n</i> if repetitions are allowed.</li>
+        <li>The <!--del_lnk--> Catalan numbers have an easy formula involving binomial coefficients; they can be used to count various structures, such as <!--del_lnk--> trees and parenthesized expressions.</li>
+       </ul>
+       <p>The binomial coefficients also occur in the formula for the <a href="../../wp/b/Binomial_distribution.htm" title="Binomial distribution">binomial distribution</a> in <a href="../../wp/s/Statistics.htm" title="Statistics">statistics</a> and in the formula for a <!--del_lnk--> B&eacute;zier curve.</p>
+       <h2><span class="mw-headline" id="Formulas_involving_binomial_coefficients">Formulas involving binomial coefficients</span></h2>
+       <p>One has that</p>
+       <dl>
+        <dd><img alt=" {n \choose k}= {n \choose n-k},\qquad\qquad(4)" class="tex" src="../../images/196/19693.png" /></dd>
+       </dl>
+       <p>This follows immediately from the definition or can be seen from expansion (2) by using (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> = (<i>y</i> + <i>x</i>)<sup><i>n</i></sup>, and is reflected in the numerical "symmetry" of <a href="../../wp/p/Pascal%2527s_triangle.htm" title="Pascal's triangle">Pascal's triangle</a>.</p>
+       <p>Another formula is</p>
+       <dl>
+        <dd><img alt=" \sum_{k=0}^{n} {n \choose k} = 2^n, \qquad\qquad(5)" class="tex" src="../../images/196/19694.png" /></dd>
+       </dl>
+       <p>it is obtained from expansion (2) using <i>x</i> = <i>y</i> = 1. This is equivalent to saying that the elements in one row of Pascal's triangle always add up to two raised to an integer power. A combinatorial proof of this fact is given by counting subsets of size 0, size 1, size 2, and so on up to size <i>n</i> of a set <i>S</i> of <i>n</i> elements. Since we count the number of subsets of size <i>i</i> for 0 &le; <i>i</i> &le; <i>n</i>, this sum must be equal to the number of subsets of <i>S</i>, which is known to be 2<sup><i>n</i></sup>.</p>
+       <p>The formula</p>
+       <dl>
+        <dd><img alt=" \sum_{k=1}^{n} {k} {n \choose k} = {n} 2^{n-1} \qquad(6)" class="tex" src="../../images/196/19695.png" /></dd>
+       </dl>
+       <p>follows from expansion (2), after <a href="../../wp/d/Derivative.htm" title="Derivative">differentiating</a> with respect to either <i>x</i> or <i>y</i> and then substituting <i>x</i> = <i>y</i> = 1.</p>
+       <p><!--del_lnk--> Vandermonde's identity</p>
+       <dl>
+        <dd><img alt=" \sum_{j} {m\choose j} {{n-m} \choose {k-j}} = {n \choose k} \qquad (7a) " class="tex" src="../../images/196/19696.png" /></dd>
+       </dl>
+       <p>is found by expanding (1+<i>x</i>)<sup><i>m</i></sup> (1+<i>x</i>)<sup><i>n-m</i></sup> = (1+<i>x</i>)<sup><i>n</i></sup> with (2). As C(<i>n</i>, <i>k</i>) is zero if <i>k</i> > <i>n</i>, the sum is finite for integer n and m. Equation (7a) generalizes equation (3). It holds for arbitrary, complex-valued <img alt="m" class="tex" src="../../images/70/7070.png" /> and <img alt="n" class="tex" src="../../images/62/6224.png" />, the <!--del_lnk--> Chu-Vandermonde identity.</p>
+       <p>A related formula is</p>
+       <dl>
+        <dd><img alt=" \sum_{m} {m\choose j} {n-m\choose k-j}= {n+1\choose k+1}. \qquad (7b) " class="tex" src="../../images/196/19697.png" /></dd>
+       </dl>
+       <p>While equation (7a) is true for all values of <i>m</i>, equation (7b) is true for all values of <i>j</i>.</p>
+       <p>From expansion (7a) using <i>n</i>=2<i>m</i>, <i>k</i> = <i>m</i>, and (4), one finds</p>
+       <dl>
+        <dd><img alt=" \sum_{j=0}^{m} {m \choose j}^2 = {{2m} \choose m}. \qquad (8)" class="tex" src="../../images/196/19698.png" /></dd>
+       </dl>
+       <p>Denote by <i>F</i>(<i>n</i>&nbsp;+&nbsp;1) the <a href="../../wp/f/Fibonacci_number.htm" title="Fibonacci number">Fibonacci numbers</a>. We obtain a formula about the diagonals of Pascal's triangle</p>
+       <dl>
+        <dd><img alt=" \sum_{k=0}^{n} {{n-k} \choose k} = \mathrm{F}(n+1). \qquad (9) " class="tex" src="../../images/196/19699.png" /></dd>
+       </dl>
+       <p>This can be proved by <!--del_lnk--> induction using (3).</p>
+       <p>Also using (3) and induction, one can show that</p>
+       <dl>
+        <dd><img alt=" \sum_{j=k}^{n} {j \choose k} = {{n+1} \choose {k+1}}. \qquad (10) " class="tex" src="../../images/197/19700.png" /></dd>
+       </dl>
+       <p>Again by (3) and induction, one can show that for <i>k</i> = 0, ... , <i>n</i> - 1</p>
+       <dl>
+        <dd><img alt=" \sum_{j=0}^{k} (-1)^j{n \choose j} = (-1)^k{{n-1} \choose k} \qquad(11)" class="tex" src="../../images/197/19701.png" /></dd>
+       </dl>
+       <p>as well as</p>
+       <dl>
+        <dd><img alt=" \sum_{j=0}^{n} (-1)^j{n \choose j} = 0 \qquad(12)" class="tex" src="../../images/197/19702.png" /></dd>
+       </dl>
+       <p>which is itself a special case of the result that for any integer <i>a</i> = 1, ..., <i>n</i> - 1,</p>
+       <dl>
+        <dd><img alt=" \sum_{j=0}^{n} (-1)^j{n \choose j}j^a = 0. " class="tex" src="../../images/197/19703.png" /></dd>
+       </dl>
+       <p>which can be shown by differentiating (2) <i>a</i> times and setting x=-1 and y=1.</p>
+       <h2><span class="mw-headline" id="Combinatorial_identities_involving_binomial_coefficients">Combinatorial identities involving binomial coefficients</span></h2>
+       <p>We present some identities that have combinatorial proofs. We have, for example,</p>
+       <dl>
+        <dd><img alt="\sum_{k=q}^{n} {n \choose k}{k \choose q} = 2^{n-q} {n \choose q}.\qquad(13)" class="tex" src="../../images/197/19704.png" /></dd>
+       </dl>
+       <p>for <img alt="{n} \geq {q}." class="tex" src="../../images/197/19705.png" /> The combinatorial proof goes as follows: the left side counts the number of ways of selecting a subset of <img alt="[n]" class="tex" src="../../images/197/19706.png" /> of at least <i>q</i> elements, and marking <i>q</i> elements among those selected. The right side counts the same parameter, because there are <img alt="\mathrm{C}(n, q)" class="tex" src="../../images/197/19707.png" /> ways of choosing a set of <i>q</i> marks and they occur in all subsets that additionally contain some subset of the remaining elements, of which there are <img alt="2^{n-q}." class="tex" src="../../images/197/19708.png" /> This reduces to (6) when <img alt="q=1." class="tex" src="../../images/197/19709.png" /></p>
+       <p>The identity (8) also has a combinatorial proof. The identity reads</p>
+       <dl>
+        <dd><img alt="\sum_{k=0}^n {n\choose k}^2 = {2n\choose n}." class="tex" src="../../images/197/19710.png" /></dd>
+       </dl>
+       <p>Suppose you have <img alt="2n" class="tex" src="../../images/197/19711.png" /> empty squares arranged in a row and you want to mark (select) <i>n</i> of them. There are <img alt="C(2n, n)" class="tex" src="../../images/197/19712.png" /> ways to do this. On the other hand, you may select your <i>n</i> squares by selecting <i>k</i> squares from among the first <i>n</i> and <img alt="n-k" class="tex" src="../../images/197/19713.png" /> squares from the remaining <i>n</i> squares. This gives</p>
+       <dl>
+        <dd><img alt="\sum_{k=0}^{n} {n \choose k} {n \choose n-k} = {{2n} \choose n}." class="tex" src="../../images/197/19714.png" /></dd>
+       </dl>
+       <p>Now apply (4) to get the result.</p>
+       <h2><span class="mw-headline" id="Generating_functions">Generating functions</span></h2>
+       <p>If we didn't know about binomial coefficients we could derive them using the labelled case of the <!--del_lnk--> Fundamental Theorem of Combinatorial Enumeration. This is done by <i>defining</i> <img alt="C(n, k)" class="tex" src="../../images/197/19715.png" /> to be the number of ways of partitioning <img alt="[n]" class="tex" src="../../images/197/19706.png" /> into two subsets, the first of which has size <i>k</i>. These partitions form a combinatorial class with the specification</p>
+       <dl>
+        <dd><img alt="\mathfrak{S}_2(\mathfrak{P}(\mathcal{Z})) =
+\mathfrak{P}(\mathcal{Z}) \mathfrak{P}(\mathcal{Z})." class="tex" src="../../images/197/19716.png" /></dd>
+       </dl>
+       <p>Hence the exponential <!--del_lnk--> generating function <i>B</i> of the sum function of the binomial coefficients is given by</p>
+       <dl>
+        <dd><img alt=" B(z) = \exp{z} \exp{z} = \exp(2z)\,." class="tex" src="../../images/197/19717.png" /></dd>
+       </dl>
+       <p>This immediately yields</p>
+       <dl>
+        <dd><img alt=" \sum_{k=0}^{n} {n \choose k} = n! [z^n] \exp (2z) = 2^n," class="tex" src="../../images/197/19718.png" /></dd>
+       </dl>
+       <p>as expected. We mark the first subset with <img alt="\mathcal{U}" class="tex" src="../../images/197/19719.png" /> in order to obtain the binomial coefficients themselves, giving</p>
+       <dl>
+        <dd><img alt=" \mathfrak{P}(\mathcal{U} \; \mathcal{Z}) \mathfrak{P}(\mathcal{Z})." class="tex" src="../../images/197/19720.png" /></dd>
+       </dl>
+       <p>This yields the bivariate generating function</p>
+       <dl>
+        <dd><img alt="B(z, u) = \exp uz \exp z\,." class="tex" src="../../images/197/19721.png" /></dd>
+       </dl>
+       <p>Extracting coefficients, we find that</p>
+       <dl>
+        <dd><img alt="{n \choose k} = n! [u^k] [z^n] \exp uz \exp z =
+n! [z^n] \frac{z^k}{k!} \exp z" class="tex" src="../../images/197/19722.png" /></dd>
+       </dl>
+       <p>or</p>
+       <dl>
+        <dd><img alt="
+\frac{n!}{k!} [z^{n-k}] \exp z =
+\frac{n!}{k! \, (n-k)!}," class="tex" src="../../images/197/19723.png" /></dd>
+       </dl>
+       <p>again as expected. This derivation is included here because it closely parallels that of the <!--del_lnk--> Stirling numbers of the first and second kind, and hence lends support to the binomial-style notation that is used for these numbers.</p>
+       <h2><span class="mw-headline" id="Divisors_of_binomial_coefficients">Divisors of binomial coefficients</span></h2>
+       <p>The <a href="../../wp/p/Prime_number.htm" title="Prime number">prime</a> divisors of C(<i>n</i>, <i>k</i>) can be interpreted as follows: if <i>p</i> is a prime number and <i>p</i><sup><i>r</i></sup> is the highest power of <i>p</i> which divides C(<i>n</i>, <i>k</i>), then <i>r</i> is equal to the number of natural numbers <i>j</i> such that the <!--del_lnk--> fractional part of <i>k</i>/<i>p</i><sup><i>j</i></sup> is bigger than the fractional part of <i>n</i>/<i>p</i><sup><i>j</i></sup>. In particular, C(<i>n</i>, <i>k</i>) is always divisible by <i>n</i>/<a href="../../wp/g/Greatest_common_divisor.htm" title="Greatest common divisor">gcd</a>(<i>n</i>,<i>k</i>).</p>
+       <p>A somewhat surprising result by <!--del_lnk--> David Singmaster (1974) is that any integer divides <!--del_lnk--> almost all binomial coefficients. More precisely, fix an integer <i>d</i> and let <i>f</i>(<i>N</i>) denote the number of binomial coefficients C(<i>n</i>, <i>k</i>) with <i>n</i> < <i>N</i> such that <i>d</i> divides C(<i>n</i>, <i>k</i>). Then</p>
+       <dl>
+        <dd><img alt=" \lim_{N\to\infty} \frac{f(N)}{N(N+1)/2} = 1. " class="tex" src="../../images/197/19724.png" /></dd>
+       </dl>
+       <p>Since the number of binomial coefficients C(<i>n</i>, <i>k</i>) with <i>n</i> < <i>N</i> is <i>N</i>(<i>N</i>+1) / 2, this implies that the density of binomial coefficients divisible by <i>d</i> goes to 1.</p>
+       <h2><span class="mw-headline" id="Bounds_for_binomial_coefficients">Bounds for binomial coefficients</span></h2>
+       <p>The following bounds for C(<i>n</i>, <i>k</i>) hold:</p>
+       <ul>
+        <li><img alt=" {n \choose k}  \le \frac{n^k}{k!} " class="tex" src="../../images/197/19725.png" /></li>
+       </ul>
+       <ul>
+        <li><img alt=" {n \choose k}  \le \left(\frac{n\cdot e}{k}\right)^k " class="tex" src="../../images/197/19726.png" /></li>
+       </ul>
+       <ul>
+        <li><img alt=" {n \choose k}  \ge \left(\frac{n}{k}\right)^k" class="tex" src="../../images/197/19727.png" /></li>
+       </ul>
+       <h2><span class="mw-headline" id="Generalizations">Generalizations</span></h2>
+       <h3><span class="mw-headline" id="Generalization_to_multinomials">Generalization to multinomials</span></h3>
+       <p>Binomial coefficients can be generalized to <b>multinomial coefficients</b>. They are defined to be the number:</p>
+       <dl>
+        <dd><img alt="{n\choose k_1,k_2,\ldots,k_r} =\frac{n!}{k_1!k_2!\cdots k_r!}" class="tex" src="../../images/197/19728.png" /></dd>
+       </dl>
+       <p>where</p>
+       <dl>
+        <dd><img alt="\sum_{i=1}^rk_i=n" class="tex" src="../../images/197/19729.png" /></dd>
+       </dl>
+       <p>While the binomial coefficients represent the coefficients of (<i>x</i>+<i>y</i>)<sup><i>n</i></sup>, the multinomial coefficients represent the coefficients of the polynomial</p>
+       <dl>
+        <dd>(<i>x</i><sub>1</sub> + <i>x</i><sub>2</sub> + ... + <i>x</i><sub><i>r</i></sub>)<sup><i>n</i></sup>.</dd>
+       </dl>
+       <p>See <!--del_lnk--> multinomial theorem. The case <i>k</i> = 2 gives binomial coefficients:</p>
+       <dl>
+        <dd><img alt="{n\choose k_1,k_2}={n\choose k_1, n-k_1}={n\choose k_1}= {n\choose k_2}" class="tex" src="../../images/197/19730.png" /></dd>
+       </dl>
+       <p>The combinatorial interpretation of multinomial coefficients is distribution of <i>n</i> distinguishable elements over <i>r</i> (distinguishable) containers, each containing exactly <i>k<sub>i</sub></i> elements, where <i>i</i> is the index of the container.</p>
+       <p>Multinomial coefficients have many properties similar to these of binomial coefficients, for example the recurrence relation:</p>
+       <dl>
+        <dd><img alt="{n\choose k_1,k_2,\ldots,k_r} ={n-1\choose k_1-1,k_2,\ldots,k_r}+{n-1\choose k_1,k_2-1,\ldots,k_r}+\ldots+{n-1\choose k_1,k_2,\ldots,k_r-1}" class="tex" src="../../images/197/19731.png" /></dd>
+       </dl>
+       <p>and symmetry:</p>
+       <dl>
+        <dd><img alt="{n\choose k_1,k_2,\ldots,k_r} ={n\choose k_{\sigma_1},k_{\sigma_2},\ldots,k_{\sigma_r}}" class="tex" src="../../images/197/19732.png" /></dd>
+       </dl>
+       <p>where <img alt="(\sigma_i)" class="tex" src="../../images/197/19733.png" /> is a permutation of (1,2,...,<i>r</i>).</p>
+       <h3><span class="mw-headline" id="Generalization_to_negative_integers">Generalization to negative integers</span></h3>
+       <p>If <img alt="k \geq 0" class="tex" src="../../images/102/10250.png" />, then <img alt=" {n \choose k} = \frac{n(n-1) \dots (n-k+1)}{1 . 2  \dots k}= (-1)^k {-n+k-1 \choose k}" class="tex" src="../../images/197/19734.png" /> extends to all <img alt=" n " class="tex" src="../../images/62/6224.png" />.</p>
+       <p>The binomial coefficient extends to <img alt="k \leq 0" class="tex" src="../../images/197/19735.png" /> via</p>
+       <dl>
+        <dd><img alt="
+{n \choose k}= 
+\begin{cases}
+(-1)^{n-k} {-k-1 \choose n-k} \quad \mbox{if } n \geq k,\\
+(-1)^{n-k} {-k-1 \choose -n-1} \quad \mbox{if } n \leq -1.
+\end{cases}" class="tex" src="../../images/197/19736.png" /></dd>
+       </dl>
+       <p>Notice in particular, that</p>
+       <dl>
+        <dd><img alt="{n \choose k}=0 \quad \mbox{iff } 
+\begin{cases}
+n \geq 0 \mbox{ and } n < k, \\
+n \geq 0 \mbox{ and } k < 0, \\
+n < 0  \mbox{ and } n < k < 0.
+\end{cases}" class="tex" src="../../images/197/19737.png" /></dd>
+       </dl>
+       <p>
+        <br /> This gives rise to the Pascal Hexagon or Pascal Windmill.</p>
+       <ul>
+        <li><span class="citation book">Hilton, Holton and Pedersen (1997). <i>Mathematical Reflections</i>. Springer. <!--del_lnk--> ISBN 0-387-94770-1.</span></li>
+       </ul>
+       <h3><span class="mw-headline" id="Generalization_to_real_and_complex_argument">Generalization to real and complex argument</span></h3>
+       <p>The binomial coefficient <img alt="{z\choose k}" class="tex" src="../../images/197/19738.png" /> can be defined for any <a href="../../wp/c/Complex_number.htm" title="Complex number">complex number</a> <i>z</i> and any <a href="../../wp/n/Natural_number.htm" title="Natural number">natural number</a> <i>k</i> as follows:</p>
+       <dl>
+        <dd><img alt="{z\choose k} = \prod_{n=1}^{k}{z-k+n\over n}= \frac{z(z-1)(z-2)\cdots (z-k+1)}{k!}. \qquad (14) " class="tex" src="../../images/197/19739.png" /></dd>
+       </dl>
+       <p>This generalization is known as the <b>generalized binomial coefficient</b> and is used in the formulation of the <!--del_lnk--> binomial theorem and satisfies properties (3) and (7).</p>
+       <p>For fixed <i>k</i>, the expression <img alt="f(z)={z\choose k}" class="tex" src="../../images/197/19740.png" /> is a <a href="../../wp/p/Polynomial.htm" title="Polynomial">polynomial</a> in <i>z</i> of degree <i>k</i> with <a href="../../wp/r/Rational_number.htm" title="Rational number">rational</a> coefficients.</p>
+       <p><i>f</i>(<i>z</i>) is the unique polynomial of degree <i>k</i> satisfying</p>
+       <dl>
+        <dd><i>f</i>(0) = <i>f</i>(1) = ... = <i>f</i>(<i>k</i> &minus; 1) = 0 and <i>f</i>(<i>k</i>) = 1.</dd>
+       </dl>
+       <p>Any polynomial <i>p</i>(<i>z</i>) of degree <i>d</i> can be written in the form</p>
+       <dl>
+        <dd><img alt=" p(z) = \sum_{k=0}^{d} a_k {z\choose k}. " class="tex" src="../../images/197/19741.png" /></dd>
+       </dl>
+       <p>This is important in the theory of <!--del_lnk--> difference equations and <!--del_lnk--> finite differences, and can be seen as a discrete analog of <a href="../../wp/t/Taylor%2527s_theorem.htm" title="Taylor's theorem">Taylor's theorem</a>. It is closely related to <!--del_lnk--> Newton's polynomial. Alternating sums of this form may be expressed as the <!--del_lnk--> N&ouml;rlund-Rice integral.</p>
+       <p>In particular, one can express the product of binomial coefficients as such a linear combination:</p>
+       <dl>
+        <dd><img alt=" {x\choose m} {x\choose n} = \sum_{k=0}^m {m+n-k\choose k,m-k,n-k} {x\choose m+n-k}" class="tex" src="../../images/197/19742.png" /></dd>
+       </dl>
+       <p>where the connection coefficients are <!--del_lnk--> multinomial coefficients. In terms of labelled combinatorial objects, the connection coefficients represent the number of ways to assign <i>m+n-k</i> labels to a pair of labelled combinatorial objects of weight <i>m</i> and <i>n</i> respectively, that have had their first <i>k</i> labels identified, or glued together, in order to get a new labelled combinatorial object of weight <i>m+n-k</i>. (That is, to separate the labels into 3 portions to be applied to the glued part, the unglued part of the first object, and the unglued part of the second object.) In this regard, binomial coefficients are to exponential generating series what <!--del_lnk--> falling factorials are to ordinary generating series.</p>
+       <h4><span class="mw-headline" id="Newton.27s_binomial_series">Newton's binomial series</span></h4>
+       <p>Newton's <!--del_lnk--> binomial series, named after <a class="mw-redirect" href="../../wp/i/Isaac_Newton.htm" title="Sir Isaac Newton">Sir Isaac Newton</a>, is one of the simplest <!--del_lnk--> Newton series:</p>
+       <dl>
+        <dd><img alt=" (1+z)^{\alpha} = \sum_{n=0}^{\infty}{\alpha\choose n}z^n = 1+{\alpha\choose1}z+{\alpha\choose 2}z^2+\cdots." class="tex" src="../../images/197/19743.png" /></dd>
+       </dl>
+       <p>The identity can be obtained by showing that both sides satisfy the differential equation (1+<i>z</i>) <i>f'</i>(<i>z</i>) = &alpha; <i>f</i>(<i>z</i>).</p>
+       <p>The <!--del_lnk--> radius of convergence of this series is 1. An alternative expression is</p>
+       <dl>
+        <dd><img alt="\frac{1}{(1-z)^{\alpha+1}} = \sum_{n=0}^{\infty}{n+\alpha \choose n}z^n" class="tex" src="../../images/197/19744.png" /></dd>
+       </dl>
+       <p>where the identity</p>
+       <dl>
+        <dd><img alt="{n \choose k} = (-1)^k {k-n-1 \choose k}" class="tex" src="../../images/197/19745.png" /></dd>
+       </dl>
+       <p>is applied.</p>
+       <p>The formula for the binomial series was etched onto Newton's gravestone in <a href="../../wp/w/Westminster_Abbey.htm" title="Westminster Abbey">Westminster Abbey</a> in <!--del_lnk--> 1727.</p>
+       <h3><span class="mw-headline" id="Generalization_to_q-series">Generalization to <i>q</i>-series</span></h3>
+       <p>The binomial coefficient has a <!--del_lnk--> q-analog generalization known as the <!--del_lnk--> Gaussian binomial.</p>
+       <h3><span class="mw-headline" id="Generalization_to_infinite_cardinals">Generalization to infinite cardinals</span></h3>
+       <p>The definition of the binomial coefficient can be generalized to <a class="mw-redirect" href="../../wp/c/Cardinal_number.htm" title="Cardinal Number">infinite cardinals</a> by defining:</p>
+       <dl>
+        <dd><img alt="{\alpha \choose \beta} = | \{ B \subseteq A&nbsp;: |B| = \beta \} |" class="tex" src="../../images/197/19746.png" /></dd>
+       </dl>
+       <p>where A is some set with <!--del_lnk--> cardinality <img alt="\alpha" class="tex" src="../../images/63/6355.png" />. One can show that the generalized binomial coefficient is well-defined, in the sense that no matter what set we choose to represent the cardinal number <img alt="\alpha" class="tex" src="../../images/63/6355.png" />, <img alt="{\alpha \choose \beta}" class="tex" src="../../images/197/19747.png" /> will remain the same. For finite cardinals, this definition coincides with the standard definition of the binomial coefficient.</p>
+       <p>Assuming the <!--del_lnk--> Axiom of Choice, one can show that <img alt="{\alpha \choose \alpha} = 2^{\alpha}" class="tex" src="../../images/197/19748.png" /> for any infinite cardinal <img alt="\alpha" class="tex" src="../../images/63/6355.png" />.</p>
+       <h2><span class="mw-headline" id="Binomial_coefficient_in_programming_languages">Binomial coefficient in programming languages</span></h2>
+       <p>The notation <img alt=" {n \choose k} " class="tex" src="../../images/196/19677.png" /> is convenient in handwriting but inconvenient for <a href="../../wp/t/Typewriter.htm" title="Typewriter">typewriters</a> and <!--del_lnk--> computer terminals. Many <a href="../../wp/p/Programming_language.htm" title="Programming language">programming languages</a> do not offer a standard <!--del_lnk--> subroutine for computing the binomial coefficient, but for example the <!--del_lnk--> J programming language uses the exclamation mark: k&nbsp;! n .</p>
+       <p>Naive implementations, such as the following snippet in <a href="../../wp/c/C_%2528programming_language%2529.htm" title="C (programming language)">C</a>:</p><pre>
+int choose(int n, int k)  {
+    return factorial(n) / (factorial(k) * factorial(n - k));
+} 
+</pre><p>are prone to overflow errors, severely restricting the range of input values. A direct implementation of the first definition works well:</p><pre>
+unsigned long long choose(unsigned n, unsigned k) {
+    if (k > n)
+        return 0;
+
+    if (k > n/2)
+        k = n-k; // faster
+
+    long double accum = 1;
+    for (unsigned i = 0; i++ < k;)
+         accum = accum * (n-k+i) / i;
+
+    return accum + 0.5; // avoid rounding error
+}
+</pre><p>Using <!--del_lnk--> Pascal's rule <img alt="{n\choose k} = {n-1\choose k-1} + {n-1\choose k}" class="tex" src="../../images/197/19749.png" />, the algorithm for the binomial coefficient may be written in <!--del_lnk--> recursive form:</p><pre>
+    function choose(n: integer, k:integer): integer
+        if k = 0 or k = n then
+            choose = 1
+        else
+            choose = choose(n-1, k-1) + choose(n-1, k)
+        end if
+    end function
+</pre></div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Binomial_coefficient&amp;oldid=205936848"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=205936848 . </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <title>Bayesian inference</title>
+  <meta charset="UTF-8" />
+  
+  
+  <link href="../../disclaimer.htm" rel="copyright" />
+  <link rel="stylesheet" href="../../css/en-shared.css" />
+  <!--[if IE 6]><link rel="stylesheet" href="../../css/IE60Fixes.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="../../css/IE70Fixes.css" media="screen" /><![endif]-->
+  <meta content="" name="ResourceLoaderDynamicStyles" />
+  <link rel="stylesheet" href="../../css/en-site-vector.css" />
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}.editsection{display:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:79e96594f03002bbea98f74c22274594 */</style>
+  <link href="http://schools-wikipedia.org/wp/b/Bayesian_inference.htm" rel="canonical" />
+  <link href="http://www.sos-schools.org/wikipedia-for-schools" rel="author" />
+  <meta content="Bayesian inference on the Wikipedia for Schools" name="description" />
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Bayesian_inference skin-monobook action-view">
+  <div id="globalWrapper">
+   <div id="column-content">
+    <div class="mw-body-primary" id="content" role="main"><a id="top"></a><a id="badge" href="../../disclaimer.htm"><img alt="Checked content" src="../../checked-content.png" width="150" height="70" /></a><h1 class="firstHeading" id="firstHeading" lang="en"><span dir="auto">Bayesian inference</span></h1>
+     <div class="mw-body" id="bodyContent">
+      <div id="siteSub">Related subjects: <a href="../index/subject.Mathematics.htm">Mathematics</a></div>
+      <!-- start content -->
+      <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="thumb tleft" id="sitebackground"><div style="width:152px;" class="thumbinner"><h4>Background Information</h4><p>This Wikipedia selection is available offline from SOS Children for distribution in the developing world. Sponsoring children <a href="../../wp/s/Sponsorachild_A.htm">helps children in the developing world</a> to learn too.</p></div></div>
+       <p><b>Bayesian inference</b> is <!--del_lnk--> statistical inference in which evidence or observations are used to update or to newly infer the <a href="../../wp/p/Probability.htm" title="Probability">probability</a> that a hypothesis may be true. The name "Bayesian" comes from the frequent use of <!--del_lnk--> Bayes' theorem in the inference process. Bayes' theorem was derived from the work of the Reverend <!--del_lnk--> Thomas Bayes.</p>
+       <h2><span class="mw-headline" id="Evidence_and_changing_beliefs">Evidence and changing beliefs</span></h2>
+       <p>Bayesian inference uses aspects of the <!--del_lnk--> scientific method, which involves collecting <!--del_lnk--> evidence that is meant to be consistent or inconsistent with a given <!--del_lnk--> hypothesis. As evidence accumulates, the degree of belief in a hypothesis ought to change. With enough evidence, it should become very high or very low. Thus, proponents of Bayesian inference say that it can be used to discriminate between conflicting hypotheses: hypotheses with very high support should be accepted as true and those with very low support should be rejected as false. However, detractors say that this inference method may be biased due to initial beliefs that one needs to hold before any evidence is ever collected.</p>
+       <p>Bayesian inference uses a numerical estimate of the degree of belief in a hypothesis before evidence has been observed and calculates a numerical estimate of the degree of belief in the hypothesis after evidence has been observed. Bayesian inference usually relies on degrees of belief, or subjective probabilities, in the induction process and does not necessarily claim to provide an objective method of induction. Nonetheless, some Bayesian statisticians believe probabilities can have an objective value and therefore Bayesian inference can provide an objective method of induction. See <!--del_lnk--> scientific method.</p>
+       <p>Bayes' theorem adjusts probabilities given new evidence in the following way:</p>
+       <dl>
+        <dd><img alt="P(H|E) = \frac{P(E|H)\;P(H)}{P(E)}" class="tex" src="../../images/180/18053.png" /></dd>
+       </dl>
+       <p>where</p>
+       <ul>
+        <li><img alt="H" class="tex" src="../../images/122/12216.png" /> represents a specific hypothesis, which may or may not be some <!--del_lnk--> null hypothesis.</li>
+        <li><img alt="P(H)" class="tex" src="../../images/180/18054.png" /> is called the <i><!--del_lnk--> prior probability</i> of <img alt="H" class="tex" src="../../images/122/12216.png" /> that was inferred before new evidence, <img alt="E" class="tex" src="../../images/87/8728.png" />, became available.</li>
+        <li><img alt="P(E|H)" class="tex" src="../../images/180/18055.png" /> is called the <i><!--del_lnk--> conditional probability</i> of seeing the evidence <img alt="E" class="tex" src="../../images/87/8728.png" /> if the hypothesis <img alt="H" class="tex" src="../../images/122/12216.png" /> happens to be true. It is also called a <i><!--del_lnk--> likelihood function</i> when it is considered as a function of <img alt="H" class="tex" src="../../images/122/12216.png" /> for fixed <img alt="E" class="tex" src="../../images/87/8728.png" />.</li>
+        <li><img alt="P(E)" class="tex" src="../../images/180/18056.png" /> is called the <i><!--del_lnk--> marginal probability</i> of <img alt="E" class="tex" src="../../images/87/8728.png" />: the <i>a priori</i> probability of witnessing the new evidence <img alt="E" class="tex" src="../../images/87/8728.png" /> under all possible hypotheses. It can be calculated as the sum of the product of all probabilities of any complete set of mutually exclusive hypotheses and corresponding conditional probabilities: <img alt="P(E) = \sum  P(E|H_i)P(H_i)" class="tex" src="../../images/180/18057.png" />.</li>
+        <li><img alt="P(H|E)" class="tex" src="../../images/180/18058.png" /> is called the <i><!--del_lnk--> posterior probability</i> of <img alt="H" class="tex" src="../../images/122/12216.png" /> given <img alt="E" class="tex" src="../../images/87/8728.png" />.</li>
+       </ul>
+       <p>The factor <img alt="P(E|H) / P(E)" class="tex" src="../../images/180/18059.png" /> represents the impact that the evidence has on the belief in the hypothesis. If it is likely that the evidence <img alt="E" class="tex" src="../../images/87/8728.png" /> would be observed when the hypothesis under consideration is true, but unlikely that <img alt="E" class="tex" src="../../images/87/8728.png" /> would have been the outcome of the observation, then this factor will be large. Multiplying the prior probability of the hypothesis by this factor would result in a larger posterior probability of the hypothesis given the evidence. Conversely, if it is unlikely that the evidence <img alt="E" class="tex" src="../../images/87/8728.png" /> would be observed if the hypothesis under consideration is true, but <i>a priori</i> likely that <img alt="E" class="tex" src="../../images/87/8728.png" /> would be observed, then the factor would reduce the posterior probability for <img alt="H" class="tex" src="../../images/122/12216.png" />. Under Bayesian inference, Bayes' theorem therefore measures how much new evidence should alter a belief in a hypothesis.</p>
+       <p>Bayesian statisticians argue that even when people have very different prior subjective probabilities, new evidence from repeated observations will tend to bring their posterior subjective probabilities closer together. However, others argue that when people hold widely different prior subjective probabilities their posterior subjective probabilities may never converge even with repeated collection of evidence. These critics argue that worldviews which are completely different initially can remain completely different over time despite a large accumulation of evidence.</p>
+       <p>Multiplying the prior probability <img alt="P(H)" class="tex" src="../../images/180/18054.png" /> by the factor <img alt="P(E|H) / P(E)" class="tex" src="../../images/180/18059.png" /> will never yield a probability that is greater than 1, since <img alt="P(E)" class="tex" src="../../images/180/18056.png" /> is at least as great as <img alt="P(E \cap H)" class="tex" src="../../images/180/18060.png" /> (where <img alt="\cap" class="tex" src="../../images/75/7503.png" /> denotes "and"), which equals <img alt="P(E|H)\,P(H)" class="tex" src="../../images/180/18061.png" /> (see <!--del_lnk--> joint probability).</p>
+       <p>The probability of <img alt="E" class="tex" src="../../images/87/8728.png" /> given <img alt="H" class="tex" src="../../images/122/12216.png" />, <img alt="P(E|H)" class="tex" src="../../images/180/18055.png" />, can be represented as a function of its second argument with its first argument held fixed. Such a function is called a <!--del_lnk--> likelihood function; it is a function of <img alt="H" class="tex" src="../../images/122/12216.png" /> alone, with <img alt="E" class="tex" src="../../images/87/8728.png" /> treated as a <!--del_lnk--> parameter. A ratio of two likelihood functions is called a likelihood ratio, <img alt="\Lambda " class="tex" src="../../images/180/18062.png" />. For example,</p>
+       <dl>
+        <dd><img alt="\Lambda_E = \frac{L(H|E)}{L(\mathrm{not}\,H|E)} = \frac{P(E|H)}{P(E|\mathrm{not}\,H)} " class="tex" src="../../images/180/18063.png" />,</dd>
+       </dl>
+       <p>where the dependence of <img alt="\Lambda_E" class="tex" src="../../images/180/18064.png" /> on <img alt="H" class="tex" src="../../images/122/12216.png" /> is suppressed for simplicity (as <img alt="E" class="tex" src="../../images/87/8728.png" /> might have been, except we will need to use that parameter below).</p>
+       <p>Since <img alt="H" class="tex" src="../../images/122/12216.png" /> and not-<img alt="H" class="tex" src="../../images/122/12216.png" /> are mutually exclusive and span all possibilities, the sum previously given for the marginal probability reduces to <img alt="P(E) = P(E|H)\,P(H)+P(E|\mathrm{not}\,H)\,P(\mathrm{not}\,H) " class="tex" src="../../images/180/18065.png" />. As a result, we can rewrite Bayes' theorem as</p>
+       <dl>
+        <dd><img alt="P(H|E) = \frac{P(E|H)\,P(H)}{P(E|H)\,P(H)+ P(E|\mathrm{not}\,H)\,P(\mathrm{not}\,H)} = \frac{\Lambda_E P(H)}{\Lambda_E P(H) +P(\mathrm{not}\,H)}" class="tex" src="../../images/180/18066.png" />.</dd>
+       </dl>
+       <p>We could then exploit the identity <img alt="P(\mathrm{not}\,H) = 1 - P(H)" class="tex" src="../../images/180/18067.png" /> to exhibit <img alt="P(H|E)" class="tex" src="../../images/180/18058.png" /> as a function of just <img alt="P(H)" class="tex" src="../../images/180/18054.png" /> (and <img alt="\Lambda_E" class="tex" src="../../images/180/18064.png" />, which is computed directly from the evidence).</p>
+       <p>With two <!--del_lnk--> independent pieces of evidence <img alt="E_1" class="tex" src="../../images/180/18068.png" /> and <img alt="E_2" class="tex" src="../../images/180/18069.png" />, Bayesian inference can be applied iteratively. We could use the first piece of evidence to calculate an initial posterior probability, and then use that posterior probability as a new prior probability to calculate a second posterior probability given the second piece of evidence. Bayes' theorem applied iteratively yields</p>
+       <dl>
+        <dd><img alt="P(H|E_1 \cap E_2) = \frac{P(E_2|H)\;P(E_1|H)\,P(H)}{P(E_2)\;P(E_1)}" class="tex" src="../../images/180/18070.png" /></dd>
+       </dl>
+       <p>Using likelihood ratios, we find that</p>
+       <dl>
+        <dd><img alt="P(H|E_1 \cap E_2) = \frac{\Lambda_1 \Lambda_2 P(H)}{[\Lambda_1 P(H) + P(\mathrm{not}\,H)]\;[\Lambda_2 P(H) + P(\mathrm{not}\,H)]} " class="tex" src="../../images/180/18071.png" />,</dd>
+       </dl>
+       <p>This iteration of Bayesian inference could be extended with more independent pieces of evidence.</p>
+       <p>Bayesian inference is used to calculate probabilities for decision making under uncertainty. Besides the probabilities, a <!--del_lnk--> loss function should be evaluated to take into account the relative impact of the alternatives.</p>
+       <h2><span class="mw-headline" id="Simple_examples_of_Bayesian_inference">Simple examples of Bayesian inference</span></h2>
+       <h3><span class="mw-headline" id="From_which_bowl_is_the_cookie.3F">From which bowl is the cookie?</span></h3>
+       <p>To illustrate, suppose there are two full bowls of cookies. Bowl #1 has 10 chocolate chip and 30 plain cookies, while bowl #2 has 20 of each. Our friend Fred picks a bowl at random, and then picks a cookie at random. We may assume there is no reason to believe Fred treats one bowl differently from another, likewise for the cookies. The cookie turns out to be a plain one. How probable is it that Fred picked it out of bowl #1?</p>
+       <p>Intuitively, it seems clear that the answer should be more than a half, since there are more plain cookies in bowl #1. The precise answer is given by Bayes' theorem. Let <img alt="H_1" class="tex" src="../../images/180/18072.png" /> correspond to bowl #1, and <img alt="H_2" class="tex" src="../../images/180/18073.png" /> to bowl #2. It is given that the bowls are identical from Fred's point of view, thus <img alt="P(H_1)=P(H_2)" class="tex" src="../../images/180/18074.png" />, and the two must add up to 1, so both are equal to 0.5. The event <img alt="E" class="tex" src="../../images/87/8728.png" /> is the observation of a plain cookie. From the contents of the bowls, we know that <img alt="P(E|H_1) = 30/40 = 0.75" class="tex" src="../../images/180/18075.png" /> and <img alt="P(E|H_2) = 20/40 = 0.5" class="tex" src="../../images/180/18076.png" />. Bayes' formula then yields</p>
+       <dl>
+        <dd><img alt="
+
+\begin{matrix} P(H_1|E) &amp;=&amp; \frac{P(E|H_1)\,P(H_1)}{P(E|H_1)\,P(H_1)\;+\;P(E|H_2)\,P(H_2)} \\  \\  \ &amp; =&amp; \frac{0.75 \times 0.5}{0.75 \times 0.5 + 0.5 \times 0.5} \\  \\  \ &amp; =&amp; 0.6 \end{matrix}
+" class="tex" src="../../images/180/18077.png" /></dd>
+       </dl>
+       <p>Before we observed the cookie, the probability we assigned for Fred having chosen bowl #1 was the prior probability, <img alt="P(H_1)" class="tex" src="../../images/180/18078.png" />, which was 0.5. After observing the cookie, we must revise the probability to <img alt="P(H_1|E)" class="tex" src="../../images/180/18079.png" />, which is 0.6.</p>
+       <h3><span class="mw-headline" id="False_positives_in_a_medical_test">False positives in a medical test</span></h3>
+       <p><!--del_lnk--> False positives result when a test falsely or incorrectly reports a positive result. For example, a medical test for a <a href="../../wp/d/Disease.htm" title="Disease">disease</a> may return a positive result indicating that patient has a disease even if the patient does not have the disease. We can use Bayes' theorem to determine the probability that a positive result is in fact a false positive. We find that if a disease is rare, then the majority of positive results may be false positives, even if the test is accurate.</p>
+       <p>Suppose that a test for a disease generates the following results:</p>
+       <ul>
+        <li>If a tested patient has the disease, the test returns a positive result 99% of the time, or with probability 0.99</li>
+        <li>If a tested patient does not have the disease, the test returns a positive result 5% of the time, or with probability 0.05.</li>
+       </ul>
+       <p>Naively, one might think that only 5% of positive test results are false, but that is quite wrong, as we shall see.</p>
+       <p>Suppose that only 0.1% of the population has that disease, so that a randomly selected patient has a 0.001 prior probability of having the disease.</p>
+       <p>We can use Bayes' theorem to calculate the probability that a positive test result is a false positive.</p>
+       <p>Let <i>A</i> represent the condition in which the patient has the disease, and <i>B</i> represent the evidence of a positive test result. Then, probability that the patient actually has the disease given the positive test result is</p>
+       <dl>
+        <dd><img alt="\begin{matrix} P(A | B) &amp;=&amp; \frac{P(B | A) P(A)}{P(B | A)P(A) + P(B |\mathrm{not}\,A)P(\mathrm{not}\,A)} \\ \\
+
+ &amp;= &amp;\frac{0.99\times 0.001}{0.99 \times 0.001 + 0.05\times 0.999}  \\ ~\\ &amp;\approx &amp;0.019 .\end{matrix}" class="tex" src="../../images/180/18080.png" /></dd>
+       </dl>
+       <p>and hence the probability that a positive result is a false positive is about <img alt="1-0.019 = 0.98" class="tex" src="../../images/180/18081.png" />, or 98%.</p>
+       <p>Despite the apparent high accuracy of the test, the incidence of the disease is so low that the vast majority of patients who test positive do not have the disease. Nonetheless, the fraction of patients who test positive who do have the disease (.019) is 19 times the fraction of people who have not yet taken the test who have the disease (.001). Thus the test is not useless, and re-testing may improve the reliability of the result.</p>
+       <p>In order to reduce the problem of false positives, a test should be very accurate in reporting a <i>negative</i> result when the patient does not have the disease. If the test reported a negative result in patients without the disease with probability 0.999, then</p>
+       <dl>
+        <dd><img alt="P(A|B) = \frac{0.99\times 0.001}{0.99 \times 0.001 + 0.001\times 0.999} \approx 0.5 " class="tex" src="../../images/180/18082.png" />,</dd>
+       </dl>
+       <p>so that <img alt="1-0.5 = 0.5" class="tex" src="../../images/180/18083.png" /> now is the probability of a false positive.</p>
+       <p>On the other hand, <!--del_lnk--> false negatives result when a test falsely or incorrectly reports a negative result. For example, a medical test for a <a href="../../wp/d/Disease.htm" title="Disease">disease</a> may return a negative result indicating that patient does not have a disease even though the patient actually has the disease. We can also use Bayes' theorem to calculate the probability of a false negative. In the first example above,</p>
+       <dl>
+        <dd><img alt="\begin{matrix} P(A |\mathrm{not}\,B) &amp;=&amp; \frac{P(\mathrm{not}\,B | A) P(A)}{P(\mathrm{not}\,B | A)P(A) + P(\mathrm{not}\,B |\mathrm{not}\,A)P(\mathrm{not}\,A)} \\ \\
+
+ &amp;= &amp;\frac{0.01\times 0.001}{0.01 \times 0.001 + 0.95\times 0.999}\, ,\\ ~\\ &amp;\approx &amp;0.0000105\, .\end{matrix}" class="tex" src="../../images/180/18084.png" /></dd>
+       </dl>
+       <p>The probability that a negative result is a false negative is about 0.0000105 or 0.00105%. When a disease is rare, false negatives will not be a major problem with the test.</p>
+       <p>But if 60% of the population had the disease, then the probability of a false negative would be greater. With the above test, the probability of a false negative would be</p>
+       <dl>
+        <dd><img alt="\begin{matrix} P(A |\mathrm{not}\,B) &amp;=&amp; \frac{P(\mathrm{not}\,B | A) P(A)}{P(\mathrm{not}\,B | A)P(A) + P(\mathrm{not}\,B |\mathrm{not}\,A)P(\mathrm{not}\,A)} \\ \\
+
+ &amp;= &amp;\frac{0.01\times 0.6}{0.01 \times 0.6 + 0.95\times 0.4}\, ,\\ ~\\ &amp;\approx &amp;0.0155\, .\end{matrix}" class="tex" src="../../images/180/18085.png" /></dd>
+       </dl>
+       <p>The probability that a negative result is a false negative rises to 0.0155 or 1.55%.</p>
+       <h3><span class="mw-headline" id="In_the_courtroom">In the courtroom</span></h3>
+       <p>Bayesian inference can be used in a court setting by an individual juror to coherently accumulate the evidence for and against the guilt of the defendant, and to see whether, in totality, it meets their personal threshold for 'beyond a reasonable doubt'.</p>
+       <ul>
+        <li>Let <img alt="G" class="tex" src="../../images/104/10404.png" /> denote the event that the defendant is guilty.</li>
+       </ul>
+       <ul>
+        <li>Let <img alt="E" class="tex" src="../../images/87/8728.png" /> denote the event that the defendant's DNA matches DNA found at the crime scene.</li>
+       </ul>
+       <ul>
+        <li>Let <img alt="P(E|G)" class="tex" src="../../images/180/18086.png" /> denote the probability of seeing event <img alt="E" class="tex" src="../../images/87/8728.png" /> if the defendant actually is guilty. (Usually this would be taken to be unity.)</li>
+       </ul>
+       <ul>
+        <li>Let <img alt="P(G|E)" class="tex" src="../../images/180/18087.png" /> denote the probability that the defendant is guilty assuming the DNA match (event <img alt="E" class="tex" src="../../images/87/8728.png" />).</li>
+       </ul>
+       <ul>
+        <li>Let <img alt="P(G)" class="tex" src="../../images/180/18088.png" /> denote the juror's personal estimate of the probability that the defendant is guilty, based on the evidence <i>other than</i> the DNA match. This could be based on his responses under questioning, or previously presented evidence.</li>
+       </ul>
+       <p>Bayesian inference tells us that if we can assign a probability p(G) to the defendant's guilt before we take the DNA evidence into account, then we can revise this probability to the conditional probability <img alt="P(G | E)" class="tex" src="../../images/180/18087.png" />, since</p>
+       <dl>
+        <dd><img alt="P(G | E) = \frac{P(G) P(E | G)}{P(E)}" class="tex" src="../../images/180/18089.png" /></dd>
+       </dl>
+       <p>Suppose, on the basis of other evidence, a juror decides that there is a 30% chance that the defendant is guilty. Suppose also that the forensic testimony was that the probability that a person chosen at random would have DNA that matched that at the crime scene is 1 in a million, or 10<sup>&minus;6</sup>.</p>
+       <p>The event E can occur in two ways. Either the defendant is guilty (with prior probability 0.3) and thus his DNA is present with probability 1, or he is innocent (with prior probability 0.7) and he is unlucky enough to be one of the 1 in a million matching people.</p>
+       <p>Thus the juror could coherently revise his opinion to take into account the <!--del_lnk--> DNA evidence as follows:</p>
+       <dl>
+        <dd><img alt="P(G | E) = (0.3 \times 1.0) /(0.3 \times 1.0 + 0.7 \times 10^{-6}) = 0.99999766667" class="tex" src="../../images/180/18090.png" />.</dd>
+       </dl>
+       <p>The benefit of adopting a Bayesian approach is that it gives the juror a formal mechanism for combining the evidence presented. The approach can be applied successively to all the pieces of evidence presented in court, with the posterior from one stage becoming the prior for the next.</p>
+       <p>The juror would still have to have a prior estimate for the guilt probability before the first piece of evidence is considered. It has been suggested that this could reasonably be the guilt probability of a random person taken from the qualifying population. Thus, for a crime known to have been committed by an adult male living in a town containing 50,000 adult males, the appropriate initial prior probability might be 1/50,000.</p>
+       <div class="thumb tright">
+        <div class="thumbinner" style="width:258px;"><a class="image" href="../../images/180/18091.png.htm"><img alt="" class="thumbimage" height="270" src="../../images/180/18091.png"  width="256" /></a><div class="thumbcaption">
+          <div class="magnify"><a class="internal" href="../../images/180/18091.png.htm" title="Enlarge"><img alt="" height="11" src="../../images/1x1white.gif" title="This image is not present because of licensing restrictions" width="15" /></a></div>
+          <center>Adding up evidence.</center>
+         </div>
+        </div>
+       </div>
+       <p>For the purpose of explaining Bayes' theorem to jurors, it will usually be appropriate to give it in the form of <!--del_lnk--> betting odds rather than probabilities, as these are more widely understood. In this form Bayes' theorem states that</p>
+       <dl>
+        <dd>Posterior odds = prior odds x <!--del_lnk--> Bayes factor</dd>
+       </dl>
+       <p>In the example above, the juror who has a prior probability of 0.3 for the defendant being guilty would now express that in the form of odds of 3:7 in favour of the defendant being guilty, the Bayes factor is one million, and the resulting posterior odds are 3 million to 7 or about 429,000 to one in favour of guilt.</p>
+       <p>A <!--del_lnk--> logarithmic approach which replaces multiplication with addition and reduces the range of the numbers involved might be easier for a jury to handle. This approach, developed by <a href="../../wp/a/Alan_Turing.htm" title="Alan Turing">Alan Turing</a> during <a href="../../wp/w/World_War_II.htm" title="World War II">World War II</a> and later promoted by <!--del_lnk--> I. J. Good and <!--del_lnk--> E. T. Jaynes among others, amounts to the use of <!--del_lnk--> information entropy.</p>
+       <p>In the United Kingdom, Bayes' theorem was explained to the jury in the odds form by a statistician <!--del_lnk--> expert witness in the rape case of <!--del_lnk--> Regina versus Denis John Adams. A conviction was secured but the case went to Appeal, as no means of accumulating evidence had been provided for those jurors who did not want to use Bayes' theorem. The Court of Appeal upheld the conviction, but also gave their opinion that "To introduce Bayes' Theorem, or any similar method, into a criminal trial plunges the Jury into inappropriate and unnecessary realms of theory and complexity, deflecting them from their proper task." No further appeal was allowed and the issue of Bayesian assessment of forensic DNA data remains controversial.</p>
+       <p>Gardner-Medwin argues that the criterion on which a verdict in a criminal trial should be based is <i>not</i> the probability of guilt, but rather the <i>probability of the evidence, given that the defendant is innocent</i> (akin to a <!--del_lnk--> frequentist <!--del_lnk--> p-value). He argues that if the posterior probability of guilt is to be computed by Bayes' theorem, the prior probability of guilt must be known. This will depend on the incidence of the crime, which is an unusual piece of evidence to consider in a criminal trial. Consider the following three propositions:</p>
+       <p>A: The known facts and testimony could have arisen if the defendant is guilty,</p>
+       <p>B: The known facts and testimony could have arisen if the defendant is innocent,</p>
+       <p>C: The defendant is guilty.</p>
+       <p>Gardner-Medwin argues that the jury should believe both A and not-B in order to convict. A and not-B implies the truth of C, but the reverse is not true. It is possible that B and C are both true, but in this case he argues that a jury should acquit, even though they know that they will be letting some guilty people go free. See also <!--del_lnk--> Lindley's paradox.</p>
+       <p>Other court cases in which probabilistic arguments played some role were the <!--del_lnk--> Howland will forgery trial, the <!--del_lnk--> Sally Clark case, and the <!--del_lnk--> Lucia de Berk case.</p>
+       <h3><span class="mw-headline" id="Search_theory">Search theory</span></h3>
+       <p>In May 1968 the US nuclear submarine <!--del_lnk--> <i>Scorpion</i> (SSN-589) failed to arrive as expected at her home port of <!--del_lnk--> Norfolk, Virginia. The US Navy was convinced that the vessel had been lost off the Eastern seaboard but an extensive search failed to discover the wreck. The US Navy's deep water expert, <!--del_lnk--> John Craven USN, believed that it was elsewhere and he organised a search south west of the <!--del_lnk--> Azores based on a controversial approximate triangulation by hydrophones. He was allocated only a single ship, the <!--del_lnk--> <i>Mizar</i>, and he took advice from a firm of consultant mathematicians in order to maximise his resources. A Bayesian search methodology was adopted. Experienced submarine commanders were interviewed to construct hypotheses about what could have caused the loss of the <i>Scorpion</i>.</p>
+       <p>The sea area was divided up into grid squares and a probability assigned to each square, under each of the hypotheses, to give a number of probability grids, one for each hypothesis. These were then added together to produce an overall probability grid. The probability attached to each square was then the probability that the wreck was in that square. A second grid was constructed with probabilities that represented the probability of successfully finding the wreck if that square were to be searched and the wreck were to be actually there. This was a known function of water depth. The result of combining this grid with the previous grid is a grid which gives the probability of finding the wreck in each grid square of the sea if it were to be searched.</p>
+       <p>This sea grid was systematically searched in a manner which started with the high probability regions first and worked down to the low probability regions last. Each time a grid square was searched and found to be empty its probability was reassessed using <!--del_lnk--> Bayes' theorem. This then forced the probabilities of all the other grid squares to be reassessed (upwards), also by Bayes' theorem. The use of this approach was a major computational challenge for the time but it was eventually successful and the <i>Scorpion</i> was found about 740 kilometers southwest of the <!--del_lnk--> Azores in October of that year. Suppose a grid square has a probability <i>p</i> of containing the wreck and that the probability of successfully detecting the wreck if it is there is <i>q</i>. If the square is searched and no wreck is found, then, by Bayes' theorem, the revised probability of the wreck being in the square is given by</p>
+       <dl>
+        <dd><img alt="  p' = \frac{p(1-q)}{(1-p)+p(1-q)}." class="tex" src="../../images/180/18096.png" /></dd>
+       </dl>
+       <h2><span class="mw-headline" id="More_mathematical_examples">More mathematical examples</span></h2>
+       <h3><span class="mw-headline" id="Naive_Bayes_classifier">Naive Bayes classifier</span></h3>
+       <p>See <!--del_lnk--> naive Bayes classifier.</p>
+       <h3><span class="mw-headline" id="Posterior_distribution_of_the_binomial_parameter">Posterior distribution of the binomial parameter</span></h3>
+       <p>In this example we consider the computation of the posterior distribution for the binomial parameter. This is the same problem considered by Bayes in Proposition 9 of his essay.</p>
+       <p>We are given <i>m</i> observed successes and <i>n</i> observed failures in a binomial experiment. The experiment may be tossing a coin, drawing a ball from an urn, or asking someone their opinion, among many other possibilities. What we know about the parameter (let's call it <i>a</i>) is stated as the prior distribution, <i>p</i>(<i>a</i>).</p>
+       <p>For a given value of <i>a</i>, the probability of <i>m</i> successes in <i>m</i>+<i>n</i> trials is</p>
+       <dl>
+        <dd><img alt=" p(m,n|a) = \begin{pmatrix} n+m \\ m \end{pmatrix} a^m (1-a)^n. " class="tex" src="../../images/180/18097.png" /></dd>
+       </dl>
+       <p>Since <i>m</i> and <i>n</i> are fixed, and <i>a</i> is unknown, this is a likelihood function for <i>a</i>. From the continuous form of the <!--del_lnk--> law of total probability we have</p>
+       <dl>
+        <dd><img alt=" p(a|m,n) = \frac{p(m,n|a)\,p(a)}{\int_0^1 p(m,n|a)\,p(a)\,da}
+
+    = \frac{\begin{pmatrix} n+m \\ m \end{pmatrix} a^m (1-a)^n\,p(a)}
+         {\int_0^1 \begin{pmatrix} n+m \\ m \end{pmatrix} a^m (1-a)^n\,p(a)\,da}.
+" class="tex" src="../../images/180/18098.png" /></dd>
+       </dl>
+       <p>For some special choices of the prior distribution <i>p</i>(<i>a</i>), the integral can be solved and the posterior takes a convenient form. In particular, if <i>p</i>(<i>a</i>) is a <!--del_lnk--> beta distribution with parameters <i>m</i><sub>0</sub> and <i>n</i><sub>0</sub>, then the posterior is also a beta distribution with parameters <i>m</i>+<i>m</i><sub>0</sub> and <i>n</i>+<i>n</i><sub>0</sub>.</p>
+       <p>A <i><!--del_lnk--> conjugate prior</i> is a prior distribution, such as the beta distribution in the above example, which has the property that the posterior is the same type of distribution.</p>
+       <p>What is "Bayesian" about Proposition 9 is that Bayes presented it as a probability for the parameter <i>a</i>. That is, not only can one compute probabilities for experimental outcomes, but also for the parameter which governs them, and the same algebra is used to make inferences of either kind. Interestingly, Bayes actually states his question in a way that might make the idea of assigning a probability distribution to a parameter palatable to a <!--del_lnk--> frequentist. He supposes that a billiard ball is thrown at random onto a billiard table, and that the probabilities <i>p</i> and <i>q</i> are the probabilities that subsequent billiard balls will fall above or below the first ball. By making the binomial parameter <i>a</i> depend on a random event, he cleverly escapes a philosophical quagmire that was an issue he most likely was not even aware of.</p>
+       <h3><span class="mw-headline" id="Computer_applications">Computer applications</span></h3>
+       <p>Bayesian inference has applications in <!--del_lnk--> artificial intelligence and <!--del_lnk--> expert systems. Bayesian inference techniques have been a fundamental part of computerized <!--del_lnk--> pattern recognition techniques since the late 1950s. There is also an ever growing connection between Bayesian methods and simulation-based <a href="../../wp/m/Monte_Carlo_method.htm" title="Monte Carlo method">Monte Carlo</a> techniques since complex models cannot be processed in closed form by a Bayesian analysis, while the <!--del_lnk--> graphical model structure inherent to statistical models, may allow for efficient simulation algorithms like the <!--del_lnk--> Gibbs sampling and other <!--del_lnk--> Metropolis-Hastings algorithm schemes. Recently Bayesian inference has gained popularity amongst the <!--del_lnk--> phylogenetics community for these reasons; applications such as <!--del_lnk--> BEAST, <!--del_lnk--> MrBayes and <!--del_lnk--> P4 allow many demographic and evolutionary parameters to be estimated simultaneously.</p>
+       <p>As applied to <!--del_lnk--> statistical classification, Bayesian inference has been used in recent years to develop algorithms for identifying unsolicited bulk <!--del_lnk--> e-mail spam. Applications which make use of Bayesian inference for spam filtering include <!--del_lnk--> DSPAM, <!--del_lnk--> Bogofilter, <!--del_lnk--> SpamAssassin, <!--del_lnk--> InBoxer, and <!--del_lnk--> Mozilla. Spam classification is treated in more detail in the article on the <b><!--del_lnk--> naive Bayes classifier</b>.</p>
+       <p>In some applications <!--del_lnk--> fuzzy logic is an alternative to Bayesian inference. Fuzzy logic and Bayesian inference, however, are mathematically and semantically not compatible: You cannot, in general, understand the <i>degree of truth</i> in fuzzy logic as probability and vice versa.</p>
+      </div>
+      <div class="printfooter"> Retrieved from "<!--del_lnk--> http://en.wikipedia.org/w/index.php?title=Bayesian_inference&amp;oldid=202156209"</div>
+      <!-- end content -->
+      <div class="visualClear">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="column-one">
+<div id="logo"><a href="../../index.htm"><img src="../../schools-wikipedia-logo.png" alt="Wikipedia for Schools" /></a></div>
+<div class="menu">
+<p class="sosheading"><a href="../../wp/index/subject.htm">Subjects</a></p>
+<p><a href="../../wp/index/subject.Art.htm">Art</a></p>
+<p><a href="../../wp/index/subject.Business_Studies.htm">Business Studies</a></p>
+<p><a href="../../wp/index/subject.Citizenship.htm">Citizenship</a></p>
+<p><a href="../../wp/index/subject.Countries.htm">Countries</a></p>
+<p><a href="../../wp/index/subject.Design_and_Technology.htm">Design and Technology</a></p>
+<p><a href="../../wp/index/subject.Everyday_life.htm">Everyday life</a></p>
+<p><a href="../../wp/index/subject.Geography.htm">Geography</a></p>
+<p><a href="../../wp/index/subject.History.htm">History</a></p>
+<p><a href="../../wp/index/subject.IT.htm">Information Technology</a></p>
+<p><a href="../../wp/index/subject.Language_and_literature.htm">Language and literature</a></p>
+<p><a href="../../wp/index/subject.Mathematics.htm">Mathematics</a></p>
+<p><a href="../../wp/index/subject.Music.htm">Music</a></p>
+<p><a href="../../wp/index/subject.People.htm">People</a></p>
+<p><a href="../../wp/index/subject.Portals.htm">Portals</a></p>
+<p><a href="../../wp/index/subject.Religion.htm">Religion</a></p>
+<p><a href="../../wp/index/subject.Science.htm">Science</a></p>
+<p style="margin-top: 10px;" class="sosheading"><a rel="nofollow" href="../../wp/index/alpha.htm">Title Word Index</a></p>
+</div>
+</div>
+
+   <div class="visualClear">
+   </div>
+   <div id="sosebar">
+    <div class="center"> Wikipedia for Schools is a selection taken from the original English-language Wikipedia by the child sponsorship charity <a rel="author" href="../../wp/s/Soschildrensvillages.htm">SOS Children</a>. It was created as a <a href="../../wp/w/Wikipedia_For_Schools.htm">checked and child-friendly teaching resource</a> for use in schools in the developing world and beyond.Sources and authors can be found at www.wikipedia.org. See also our <a href="../../disclaimer.htm"><strong>Disclaimer</strong></a>. These articles are available under the <a href="../../wp/w/Wikipedia%253AText_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License.htm"> Creative Commons Attribution Share-Alike Version 3.0 Unported Licence</a>. This article was sourced from http://en.wikipedia.org/?oldid=202156209 . </div>
+   </div>
+  </div>
+ </body>
+</html>

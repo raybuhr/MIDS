@@ -1,0 +1,5 @@
+#!/bin/bash
+git add -A
+message=$@
+git commit -m "$message"
+git push
