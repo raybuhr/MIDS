@@ -1,0 +1,282 @@
+---
+title: "W241 Field Experiments - PS1"
+author: "Ray Buhr"
+date: "May 26, 2015"
+output: word_document
+---
+***
+
+####1. On the notation of potential outcomes:
+
+**a. Explain the notation Yi(1).**  
+Yi(1) is potential outcome representing the result of treatment.  
+<br>
+
+**b. Explain the notation E[Yi(1)|di=0].**  
+E[Yi(1)|di=0] is the expected value of a potential outcome receiving treatment given that the subject actually did not receive the treatment.  
+<br>
+
+**c. Explain the difference between the notation E[Yi(1)] and the notation E[Yi(1)|di=1].**  
+E[Yi(1)] is the expected value of treatment for a randomly selected subject. E[Yi(1)|di=1] is the expected value of treatment given that the subject received treatment. The expected values will differ because the randomly selected subject may or may not have received treatment and thus the expectation would be somewhere between the two potential outcomes.  
+<br>
+
+**d. (Extra credit) Explain the difference between the notation E[Yi(1)|di=1] and the notation E[Yi(1)|Di=1].  Use exercise 2.7 from FE to give a concrete example of the difference.**  
+E[Yi(1)|di=1] represents the expected value for a specific subject. E[Yi(1)|Di=1] represents the expected value on average accross all possible outcomes when d is a result dependent on randomness, such as a coin flip. 
+
+***
+
+####2. FE, exercise 2.2.  
+**Use data in table 2.1 to show that E[Yi(0)] - E[Yi(1)] = E[Yi(0) - Yi(1)]**  
+*Table 2.1*  
+
+Village i | Yi(0) Budget share if village head is male | Yi(1) Budget share if village head is female | Ti Treatment effect
+----- | ----- | ----- | -----
+Village 1 | 10 | 15 | 5
+Village 2 | 15 | 15 | 0
+Village 3 | 20 | 30 | 10
+Village 4 | 20 | 15 | -5
+Village 5 | 10 | 20 | 10
+Village 6 | 15 | 15 | 0
+Village 7 | 15 | 30 | 15
+**Average** | **15** | **20** | **5**  
+
+
+E[Yi(0)] = (2/7) * 10 + (3/7) * 15 + (2/7) * 20 = `r (2/7) * 10 + (3/7) * 15 + (2/7) * 20`  
+E[Yi(1)] = (4/7) * 15 + (2/7) * 30 + (1/7) * 20 = `r (4/7) * 15 + (2/7) * 30 + (1/7) * 20`  
+E[Yi(0)] - E[Yi(1)] = 15 - 20 = -5  
+E[Yi(0) - Yi(1)] = (1/7) * -5 + (2/7) * 0 + (2/7) * -10 + (1/7) * 5 + (1/7) * -15 = `r (1/7) * -5 + (2/7) * 0 + (2/7) * -10 + (1/7) * 5 + (1/7) * -15`  
+**E[Yi(0)] - E[Yi(1)] = E[Yi(0) - Yi(1)] = -5**  
+
+***
+
+####3. FE, exercise 2.3. 
+Use the values in table 2.1 to complete the table below.  
+
+**a. File in the number of observations in each of the nine cells.**  
+
+Yi(0) |Yi(1)=15 | Yi(1)=20 | Yi(1)=30 | Marginal distribution of Yi(0)
+--- | --- | --- | --- | ---
+10 | 1 | 1 | 0 | |
+15 | 2 | 0 | 1 | |
+20 | 1 | 0 | 1 | |
+Marginal distribution of Yi(1) | | | | 1.0  
+
+
+**b. Indicate the percentage of all subjects that fall into each of the if the nine cells.**
+  
+
+Yi(0) |Yi(1)=15 | Yi(1)=20 | Yi(1)=30 |
+--- | --- | --- | --- |
+10 | `r paste(round(1/7, 2), "%", sep="")` | `r paste(round(1/7, 2), "%", sep="")` | `r paste(round(0/7, 2), "%", sep="")` |
+15 | `r paste(round(2/7, 2), "%", sep="")` | `r paste(round(0/7, 2), "%", sep="")` | `r paste(round(1/7, 2), "%", sep="")` |
+20 | `r paste(round(1/7, 2), "%", sep="")` | `r paste(round(0/7, 2), "%", sep="")` | `r paste(round(1/7, 2), "%", sep="")` |
+
+
+**c. At the bottom of the table, indicate the proportion of subjects falling into each category of Yi(1).**  
+
+Yi(0) |Yi(1)=15 | Yi(1)=20 | Yi(1)=30 | Marginal distribution of Yi(0)
+--- | --- | --- | --- | ---
+10 | 1 | 1 | 0 | |
+15 | 2 | 0 | 1 | |
+20 | 1 | 0 | 1 | |
+Marginal distribution of Yi(1) | `r paste(round(4/7, 2), "%", sep=" ")` | `r paste(round(1/7, 2), "%", sep=" ")` | `r paste(round(2/7, 2), "%", sep=" ")` | `r paste(round(7/7, 2), "%", sep=" ")`  
+
+
+**d. At the right of the table, indicate the proportion of subjects falling into each category of Yi(0).**  
+
+
+Yi(0) |Yi(1)=15 | Yi(1)=20 | Yi(1)=30 | Marginal distribution of Yi(0)
+--- | --- | --- | --- | ---
+10 | 1 | 1 | 0 | `r paste(round(2/7, 2), "%", sep=" ")`
+15 | 2 | 0 | 1 | `r paste(round(3/7, 2), "%", sep=" ")`
+20 | 1 | 0 | 1 | `r paste(round(2/7, 2), "%", sep=" ")`
+Marginal distribution of Yi(1) | `r paste(round(4/7, 2), "%", sep=" ")` | `r paste(round(1/7, 2), "%", sep=" ")` | `r paste(round(2/7, 2), "%", sep=" ")` | `r paste(round(7/7, 2), "%", sep=" ")`
+
+
+**e. Use the table to calculate the conditional expectation that E[Yi(0) | Yi(1) > 15].**  
+E[Yi(0) | Yi(1) > 15] = 10 * ((1/7)/(3/7)) + 15 * ((1/7)/(3/7)) + 20 * ((1/7)/(3/7)) = `r 10 * ((1/7)/(3/7)) + 15 * ((1/7)/(3/7)) + 20 * ((1/7)/(3/7))`  
+<br>
+
+**f. Use the table to calculate the conditional expectation that E[Yi(1) | Yi(0) > 15].**  
+E[Yi(1) | Yi(0) > 15] = 15 * ((1/7)/(2/7)) + 20 * ((0/7)/(2/7)) + 30 * ((1/7)/(2/7)) = `r 15 * ((1/7)/(2/7)) + 20 * ((0/7)/(2/7)) + 30 * ((1/7)/(2/7))`  
+
+***
+
+####4. More practice with potential outcomes.  We are interested in the hypothesis that children playing outside leads them to have better eyesight.  
+
+Consider the following population of ten representative children whose visual acuity we can measure.  (Visual acuity is the decimal version of the fraction given as output in standard eye exams.  Someone with 20/20 vision has acuity 1.0, while someone with 20/40 vision has acuity 0.5.  Numbers greater than 1.0 are possible for people with better than “normal” visual acuity.)
+
+Key for the table below:  
+Yi(0) = Visual acuity after playing outside *less than 10 hours per week from age 3 to age 6*.  
+Yi(1) = Visual acuity after playing outside *at least 10 hours per week from age 3 to age 6*.  
+
+Subject | Yi(0) | Yi(1)  
+------  | --- | ---
+Child 1 | 1.1 | 1.1
+Child 2 | 0.1 | 0.6
+Child 3 | 0.5 | 0.5
+Child 4 | 0.9 | 0.9
+Child 5 | 1.6 | 0.7
+Child 6 | 2.0 | 2.0
+Child 7 | 1.2 | 1.2
+Child 8 | 0.7 | 0.7
+Child 9 | 1.0 | 1.0
+Child 10| 1.1 | 1.1
+*Average* | *`r mean(c(1.1, 0.1, 0.5, 0.9, 1.6, 2.0, 1.2, 0.7, 1.0, 1.1))`* | *`r mean(c(1.1, 0.6, 0.5, 0.9, 0.7, 2.0, 1.2, 0.7, 1.0, 1.1))`* |
+
+**a. Compute the individual treatment effect for each of the ten children.**  
+Child 1 = -1.1 + 1.1 = `r -1.1 + 1.1`  
+Child 2 = -0.1 + 0.6 = `r -0.1 + 0.6`  
+Child 3 = -0.5 + 0.5 = `r -0.5 + 0.5`  
+Child 4 = -0.9 + 0.9 = `r -0.9 + 0.9`  
+Child 5 = -1.6 + 0.7 = `r -1.6 + 0.7`  
+Child 6 = -2.0 + 2.0 = `r -2.0 + 2.0`  
+Child 7 = -1.2 + 1.2 = `r -1.2 + 1.2`  
+Child 8 = -0.7 + 0.7 = `r -0.7 + 0.7`  
+Child 9 = -1.0 + 1.0 = `r -1.0 + 1.0`  
+Child 10 = -1.1 + 1.1 = `r -1.1 + 1.1`  
+<br>
+
+**b. In a single paragraph, tell a story that could explain this distribution of treatment effects.  What might cause some children to have different treatment effects than others?**  
+Some children who do not spend more than 10 hours of week outside between ages 3 and 6 may spend that equivalent time watching television or computer screens which may reduce visual acuity due to extra daily eye strain. Other children may spend that equivalent time practicing *magic eye* puzzles, which may increase visual acuity due to practicing focusing on near objects. Most children are probably born with very different genetic starting points, some of which may have genes that cause visual acuity to get worse more rapidly than others.
+<br>
+
+**c. For this population, what is the true average treatment effect (ATE) of playing outside.**  
+ATE = mean(Yi(1)) - mean(Yi(0))  
+`Yi_1 = c(1.1, 0.1, 0.5, 0.9, 1.6, 2.0, 1.2, 0.7, 1.0, 1.1)`  `r Yi_1 = c(1.1, 0.1, 0.5, 0.9, 1.6, 2.0, 1.2, 0.7, 1.0, 1.1)` 
+`Yi_0 = c(1.1, 0.6, 0.5, 0.9, 0.7, 2.0, 1.2, 0.7, 1.0, 1.1)`  
+`r Yi_0 = c(1.1, 0.6, 0.5, 0.9, 0.7, 2.0, 1.2, 0.7, 1.0, 1.1)`  
+The mean of Yi(1) = `mean(Yi_1)` = `r mean(Yi_1)`  
+The mean of Yi(0) = `mean(Yi_0)` = `r mean(Yi_0)`  
+ATE = `mean(Yi_1) - mean(Yi_0)` = `r mean(Yi_1) - mean(Yi_0)`  
+<br>
+
+**d. Suppose we are able to do an experiment in which we can control the amount of time that these children play outside for three years.  We happen to randomly assign the odd-numbered children to treatment and the even-numbered children to control.  What is the estimate of the ATE you would reach under this assignment?**  
+
+Subject | Yi(0) | Yi(1)  
+------  | --- | ---
+Child 1 |  | 1.1 |
+Child 2 | 0.1 | |
+Child 3 |  | 0.5 |
+Child 4 | 0.9 | |
+Child 5 |  | 0.7 |
+Child 6 | 2.0 | |
+Child 7 |  | 1.2 |
+Child 8 | 0.7 | |
+Child 9 |  | 1.0 |
+Child 10| 1.1 | |
+*Average* | *`r mean(c(0.1, 0.9, 2.0, 0.7, 1.1))`* | *`r mean(c(1.1, 0.5, 0.7, 1.2, 1.0))`* |
+
+ATE = mean(Yi(1)) - mean(Yi(0)) = `r -1 * mean(c(0.1, 0.9, 2.0, 0.7, 1.1)) + mean(c(1.1, 0.5, 0.7, 1.2, 1.0))`  
+<br>
+  
+**e. How different is the estimate from the truth?  Intuitively, why is there a difference?**  The difference between the experiment result, -0.06, and the hypothetical result, 0.04, is `r -0.06 - 0.04`. There exists a difference between the two due to random selection for treatment. We would expect the sample average to become closer to the population average with more data, but our sample sizes are fairly small.
+<br>
+<br>
+
+**f. We just considered one way (odd-even) an experiment might split the children. How many different ways (every possible ways) are there to split the children into a treatment versus a control group (assuming at least one person is always in the treatment group and at least one person is always in the control group)?**  
+N! / v!(N-v)!  
+Choosing 9 treatments = 10! / 9!1! = `r factorial(10) / factorial(9)`  
+Choosing 8 treatments = 10! / 8!2! = `r factorial(10) / (factorial(8)*factorial(2))`  
+Choosing 7 treatments = 10! / 7!3! = `r factorial(10) / (factorial(7)*factorial(3))`  
+Choosing 6 treatments = 10! / 6!4! = `r factorial(10) / (factorial(6)*factorial(4))`  
+Choosing 5 treatments = 10! / 5!5! = `r factorial(10) / (factorial(5)*factorial(5))`  
+Choosing 4 treatments = 10! / 4!6! = `r factorial(10) / (factorial(4)*factorial(6))`  
+Choosing 3 treatments = 10! / 3!7! = `r factorial(10) / (factorial(3)*factorial(7))`  
+Choosing 2 treatments = 10! / 2!8! = `r factorial(10) / (factorial(2)*factorial(8))`  
+Choosing 1 treatment = 10! / 1!9! = `r factorial(10) / factorial(9)`  
+Total = `r 10*2 + 45*2 + 120*2 + 210*2 + 252`
+<br>
+<br>
+
+**g. Suppose that we decide it is too hard to control the behavior of the children, so we do an observational study instead.  Children 1-5 choose to play an average of more than 10 hours per week from age 3 to age 6, while Children 6-10 play less than 10 hours per week.  Compute the difference in means from the resulting observational data.**  
+
+Subject | Yi(0) | Yi(1)  
+------  | --- | ---
+Child 1 |  | 1.1
+Child 2 |  | 0.6
+Child 3 |  | 0.5
+Child 4 |  | 0.9
+Child 5 |  | 0.7
+Child 6 | 2.0 | |
+Child 7 | 1.2 | |
+Child 8 | 0.7 | |
+Child 9 | 1.0 | |
+Child 10| 1.1 | |
+*Average* | *`r mean(c(2,1.2,.7,1,1.1))`* | *`r mean(c(1.1,.6,.5,.9,.7))`*
+
+ATE = mean(Yi(1)) - mean(Yi(0)) = `r mean(c(1.1,.6,.5,.9,.7)) - mean(c(2,1.2,.7,1,1.1))`
+<br>
+<br>
+
+**h. Compare your answer in (g) to the true ATE.  Intuitively, what causes the difference?**  
+The ATE from the observational study, -0.44, is much lower than the true ATE, 0.04. The difference between the two groups are that the second half of children have higher average visual acuity than the first half, even though most children would not experience a difference in visual acuity if treated with more playing time outside. The bias in selection from the observational study is due to non-random selection --- the children (or maybe parents) selected themselves to play outside or not and the type of child to choose to play outside more may have more to do with visual acuity than the actual amount time spent outside.
+<br>
+
+***
+
+####5. FE, exercise 2.5.  
+A researcher plans to ask six subjects to donate time to an adult literacy program. Each
+subject will be asked to donate either 30 or 60 minutes. The researcher is considering
+three methods for randomizing the treatment. One method is to flip a coin before talking
+to each person and to ask for a 30-minute donation if the coin comes up heads or a 60-minute donation if it comes up tails. The second method is to write “30” and “60” on three playing cards each, and then shuffle the six cards. The first subject would be assigned the number on the first card, the second subject would be assigned the number on the second card, and so on. A third method is to write each number on three different slips of paper, seal the six slips into envelopes, and shuffle the six envelopes before talking to the first subject. The first subject would be assigned the first envelope, the second subject would be assigned the second envelope, and so on.  
+<br>
+
+**a. Discuss the strengths and weaknesses of each approach.**  
+The weakness of the first approach is that not all possible treatments may be experienced. While unlikely, it is possible that the coin flip results in heads 6 times which would produce biased conclusions. The other two approaches do not have this weakness.  
+<br>
+
+**b. In what ways would your answer to (a) change if the number of subjects were 600 instead of 6?**  
+With more subjects, the coin-flip should result in an approximately even distribution centered on the mean and thus would be a more viable design.  
+
+**c. What is the expected value of Di (the assigned number of minutes) if the coin toss method is used? What is the expected value of Di if the sealed envelope method is used?**  
+Regardless of the method used, since random selection is being used we would expect the Di to equal 45. 
+
+***
+
+####6. FE, exercise 2.6.  
+Many programs strive to help students prepare for college entrance exams, such as the SAT. In an effort to study the eff ectiveness of these preparatory programs, a researcher draws a random sample of students attending public high school in the United States and compares the SAT scores of those who took a preparatory class to those who did not. Is this an experiment or an observational study? Why?  
+
+<br>
+This is an example of an observational study because no treatment or change is being made. The research draws a random selection of data to review, but does not test to see what the impact of the preparatory class does, only what the results of the students who happened to take that class. This type of study would present biased conclusions due to the possibility that students with more money are more likely to take prep classes, but also more likely to go to better schools which may be the main reason they also score higher on the SAT. 
+
+***
+
+####7. FE, exercise 2.8.  
+Data | Bribe | RTIA | NGO | Control |
+--- | --- | --- | --- | ---- |
+Number of confederates in the study | 24 | 23 | 18 | 21 
+Number of confederates who had residence verification | 24 | 23 | 18 | 20
+Median number of days to residence verification | 17 | 37 | 37 | 37
+Number of confederates who received a ration card within one year | 24 | 20 | 3 | 5
+
+**a. Interpret the apparent effects of the treatments on the proportion of applicants who have their residence verified and the speed with which verification occurred.**  
+There does not appear to be significant difference between the treatment and the control group in getting residence verification, but the Bribe treatment seems to cut the amount of time to verification in half. 
+
+**b. Interpret the apparent effects of the treatments on the proportion of applicants who actually received a ration card.**  
+Both the Bribe (100%) and RTIA (87%) groups faired far better than the NGO (17%) and Control (24%) groups in terms of actually receiving a ration card within a year. 
+
+**c. What do these results seem to suggest about the effectiveness of the Right to Information Act as a way of helping slum dwellers obtain ration cards?**  
+These results suggest that  the Bribe treatment was the most effective method to obtain a ration card, but that following up an application with a Right to Information request was also highly effective. 
+
+***
+
+####8. FE, exercise 2.9.  
+A researcher wants to know how winning large sums of money in a national lottery affects people’s views about the estate tax. The researcher interviews a random sample of adults and compares the attitudes of those who report winning more than $10,000 in the lottery to those who claim to have won little or nothing. The researcher reasons that the lottery chooses winners at random, and therefore the amount that people report having won is random.
+<br>
+<br>
+**a. Critically evaluate this assumption.**  
+While winning the lottery may be random, it does not create a random selection of opinions. A very likely story could be that lottery winners want lower estate taxes to preserve their new wealth. Those same lottery winners were likely trying to preserve the little wealth they had before winning the lottery and thus winnning did not change their opinion, but the other group who did not win may have began to change their mind after seeing other people win and being able to now afford their portion of the tax.   
+
+**b. Suppose the researcher were to restrict the sample to people who had played the lottery at least once during the past year. Is it now safe to assume that the potential outcomes of those who report winning more than $10,000 are identical, in expectation, to those who report winning little or nothing?**  
+Not necessarily because lottery winners could be more likely to play frequently and many people play very infrequently. 
+
+***
+
+####9. FE, exercise 2.12(a).  
+A researcher studying 1,000 prison inmates noticed that prisoners who spend at least three hours per day reading are less likely to have violent encounters with prison staff. The researcher therefore recommends that all prisoners be required to spend at least three hours reading each day. Let di be 0 when prisoners read less than three hours each day and 1 when prisoners read more than three hours each day. Let Yi(0) be each prisoner’s potential number of violent encounters with prison staff when reading less than three hours per day, and let Yi(1) be each prisoner’s potential number of violent encounters when reading more than three hours per day.  
+<br>
+**a. In this study, nature has assigned a particular realization of di to each subject. When assessing this study, why might one be hesitant to assume that E[Yi(0) | Di = 0] = E[Yi(0) | Di = 1] and E[Yi(1) | Di = 0] = E[Yi(1) | Di = 1]?**  
+The selection bias inherenet is represented by E[Yi(1) | Di = 0] + E[Yi(0) | Di = 1], the two conditions where the treatment did not get administered correctly for some reason. It could be that the prisoners who selected to read more than 3 hours per day prior to the requirement did so because they had more introverted personalities and thus were less likely to engage with prison staff at all, violent or not. It could also be that once reading becomes the requirement, those prisoners no longer enjoy reading as much and thus end up more frustrated and likely to vent in a violent manner. Regardless of specific reason, the experiment would need to be conducted on a random sample of prisoners to determine the effect of reading 3 hours per day versus assuming the characterics of prisoners who read that much will apply to other prisoners if given the same treatment.
+<br>
+<br>
