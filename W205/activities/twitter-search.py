@@ -8,17 +8,17 @@ import json
 from boto.s3.connection import S3Connection
 
 # Twitter auth
-consumer_key = "g7WaeKhJUdXERWi7TBG2ET1hc"
-consumer_secret = "cfNMs6S91KcIJuuQkWmAMem8ogY99F1ZbZr83fMCkJupxNstdh"
-access_token = "63479910-PPtHT52R6zjhaQFiGYJPSfYwOCnDUyxn9LGI7ffEI"
-access_token_secret = "FkUmm1mhuIvoKMfEtlPG1bYqIBCQ3k4Cephf1cJCWta6K"
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth_handler=auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
 # AWS S3 connection
-conn = S3Connection('AKIAIRFWKMQG66FFWRCA', 'l/6tj4d166P6Gw5duZxuMcq6A5yHjZbXr/f0utlK')
+conn = S3Connection('', '')
 myBucket = conn.get_bucket('rbuhr-tweets') 
 
 class TweetSerializer():
