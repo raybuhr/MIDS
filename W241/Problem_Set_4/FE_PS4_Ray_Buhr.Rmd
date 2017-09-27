@@ -1,0 +1,325 @@
+---
+title: "Field Experiments - PS4"
+author: "Ray Buhr"
+date: "July 20, 2015"
+output: pdf_document
+---
+```{r}
+library(dplyr)
+```
+
+
+#### 1. FE exercise 5.2.  
+**a. In addition, please also answer this question: Which population is more relevant to study for future decisionmaking: the set of Compliers, or the set of Compliers plus NeverTakers? Why?**  
+
+In a scenario where the ATE was positive, but the CACE was negative, the CACE would be useful in comparing only the same kinds of people and not useful when trying to measure the net effect of the treatment. For example, testing whether justice meetings (meetings between the families of victims and the criminal) a negative CACE would be useful to understand how that meeting would actually benefit the families who were able to take part in the meeting, but would not accurately represent the overall costs of scheduling the meetings or the toll of non-compliance if the criminal could/did not attend. Deciding which population to study for future decision making depends on which factors are most important to the core question of the study. In the justice meeting example, the core question is whether creating an environment where those meetings are schedule has greater net benefit than net costs, so the ATE would be more informative.
+
+
+#### 2. FE exercise 5.6.  
+1000 voters in treatment, 2000 in control  
+canvasers state they contacted 500 voters in treatment, but actually only reached 250  
+400/1000 in treatment actually voted  
+700/2000 in control actually voted  
+
+**a.) estimate CACE with belief that 500 treatment received contact**  
+
+CACE = ATE / compliers  
+= (400/1000 - 700/2000) / (500/1000)  
+= `r (400/1000-700/2000)/(500/1000)`  
+
+**b.) estimate CACE with knowledge that only 250 in treatment received contact**  
+
+= (400/1000 - 700/2000) / (250/1000)  
+= `r (400/1000-700/2000)/(250/1000)`  
+
+**c.)**  
+
+The canvasers exaggerated contact numbers underestimate the effectiveness of actually making contact. Looking at the CACE, the effect of making contact based on the exaggerated contact rate equates to a 50% smaller effect than actually happened.  
+
+#### 3. FE exercise 5.10.   
+```{r, echo=FALSE}
+cl <- function(fm, cluster){
+	require(sandwich, quietly = TRUE)
+	require(lmtest, quietly = TRUE)
+	M <- length(unique(cluster))
+	N <- length(cluster)
+	K <- fm$rank
+	dfc <- (M/(M-1))*((N-1)/(N-K))
+	uj <- apply(estfun(fm),2, function(x) tapply(x, cluster, sum));
+	vcovCL <- dfc*sandwich(fm, meat=crossprod(uj)/N)
+	coeftest(fm, vcovCL)
+}
+```
+```{r}
+library(foreign)
+guan_green <- read.dta("~/MIDS/241/Guan_Green_CPS_2006.dta")
+```
+
+**a.) estimate the ITT**  
+
+```{r}
+library(lmtest)
+library(sandwich)
+guan_green <- na.omit(guan_green)
+itt_fit <- lm(turnout ~ treat2, data = guan_green)
+coeftest(itt_fit, vcovHC(itt_fit))
+```
+
+The ITT is `r coeftest(itt_fit, vcovHC(itt_fit))[2]`
+
+**b.) Test the sharp null hypothesis that ITT = 0 considering random assignment was clustered by dorm room.**  
+
+```{r}
+gg_lm <- lm(turnout ~ treat2 + dormid, data=guan_green)
+cl(gg_lm, guan_green$dormid)
+```
+
+At the 95% confidence level, with a standard error of `r cl(gg_lm, guan_green$dormid)[5]` and a p-value of `r cl(gg_lm, guan_green$dormid)[11]`, we find evidence that does not support the sharp null hypothesis that ITT = 0.
+
+**c.) estimate CACE**  
+
+```{r}
+library(AER)
+cace_fit <- ivreg(turnout ~ treat2, data=guan_green, ~contact) 
+coeftest(cace_fit, vcovHC(cace_fit))
+```
+
+CACE is `r coeftest(cace_fit, vcovHC(cace_fit))[2]`
+
+**d.) Write down a model of the expected turnout rates in the treatment and control groups, incorporating the average effect of the leaflet.**  
+
+expected turn out rate (ETR) =  E[Yi(z=1, d=1)] * treated + 1% * E[Yi(z=1, d=0)] (leaflets) + E[Y_i(z=0, d=0)] * control  
+effect of treated E[Yi(z=1, d=1)] = control E[Y_i(z=0, d=0)] + leaflet + CACE  
+effect on non-compliers in treatment E[Yi(z=1, d=0)] = control E[Yi(z=0, d=0)] + leaflet  
+
+**e.) given this assumption, estime CACE**  
+
+effect of treated = 892/1334 + 0.01 + CACE = 0.679 + CACE  
+effect on non-compliers in treatment = 892/1334 + 0.01 = 0.679  
+= (0.679 + CACE) * treated + 0.679 * leaflets + 0.669 * control = 1616.02 + 2380 * CACE + 209.132 + 892  
+= 2380 * CACE + 2717.152  
+(2152 + 892) = 2717.152 + 2380 * CACE  
+CACE = 0.1373311  
+
+**f.) assume leaflet had no effect on compliers, but increased never-takers by 3%, estimate CACE**    
+
+effect of treated = 892/1334 + 0.00 + CACE = 0.669 + CACE  
+effect on non-compliers in treatment = 892/1334 + 0.03 = 0.699  
+= (0.669 + CACE) * treated + 0.699 * leaflets + 0.669 * control = 1592.22 + 2380 * CACE + 215.292 + 892  
+= 2380 * CACE + 2699.512
+(2152 + 892) = 2699.512 + 2380 * CACE  
+CACE = 0.1447429
+
+
+#### 4. FE exercise 5.11  
+**a. We are rewriting part (a) as follows: “Estimate the proportion of Compliers by using the data on the Treatment group. Then compute a second estimate of the proportion of Compliers by using the data on the Placebo group. Are these sample proportions statistically significantly different from each other? Explain why you would not expect them to be different, given the experimental design.”**  
+
+```{r}
+nickerson <- data.frame(
+  treated = c(rep(0,2572), rep(1, 486), rep(0, 2086), rep(1, 470), rep(0, 2109)),
+  assigned = c(rep(0,2572), rep(1, 2572), rep(1, 2579)),
+  placebo = c(rep(0,2572), rep(0,2572), rep(1, 2579)),
+  voted = c(rep(1, 803), rep(0, 1769), 
+            rep(1, 190), rep(0, 296), rep(1, 683), rep(0, 1403), 
+            rep(1, 140), rep(0, 330), rep(1, 678), rep(0, 1431))
+)
+```
+
+Proportion of compliers in treatment group = 486 / (486 + 2086) = 18.896%  
+Proportion of compliers in placebo group = 470 / (470 + 2109) = 18.224%  
+Different of means = 0.672%
+
+The standard error in values among those assigned treatment and those who complied:
+```{r}
+treatment <- nickerson %>% filter(placebo == 0, assigned == 1)
+# standard error = sd / sqrt(n)
+sd(treatment$treated)/sqrt(length(treatment$treated))
+```
+
+Since the difference in means (`r (486 / (486 + 2086)) - (470 / (470 + 2109))`) is less than twice the standard error (`r sd(treatment$treated)/sqrt(length(treatment$treated))*2`) we can't say with any certainty that the difference is not due to chance. We wouldn't expect the difference to be much different because no matter what the message we would still expect those who could be present to receive contact to accept the message.   
+  
+  
+**b.) Does the data suggest never-takers in treatment and placebo groups have the same turnout rates?**  
+
+The results table shows that the percent of never-takes that turnout to vote for treatment was 32.74% and for placebo was 32.15%. The difference in means here is `r 0.3274 - 0.3215`, which at twice the standard error calculated above shows there is not a significant statistical difference between the turnout rates for never-takers in treatment vs. placebo. The comparison shows us the experiment design was solid since the failure of delivery of any message did not have an effect on outcome.  
+
+**c.) Estimate the CACE of receiving placebo. Is the estimate consistent with the assumption that placebo has no effect of turnout?**  
+
+```{r}
+baseline <- nickerson %>% filter(assigned == 0)
+placebo <- nickerson %>% filter(placebo == 1)
+placebo_effect <- lm(placebo$voted ~ placebo$assigned)
+summary(placebo_effect)
+
+ITT <- placebo_effect$coefficients[[1]] - mean(baseline$voted)
+ITT_d <- mean(placebo$treated)
+CACE <- ITT / ITT_d
+```
+
+With the CACE = `r CACE` and the standard error as seen in the model summary to be 0.009166, we can calculate the standard error of CACE as 0.009166 / ITT_d = `r 0.009166/ 0.1822412`. Since the CACE is even smaller than the CACE SE, we can say there is very likely no effect of the placebo on the voter turnout.  
+  
+**d.) Estimate the CACE of treatment using 2 different methods. First use conventional method of dividing ITT by ITT_d. Second compare turnout rates among complieres in treatment and placebo group.**  
+_Hint: ITT D means “the average effect of the treatment on the dosage of the treatment.” I.E., it’s the contact rate._  
+
+First method:  
+```{r}
+treatment_effect <- lm(voted ~ treated, data = treatment)
+ITT <- treatment_effect$coefficients[[1]] - mean(baseline$voted)
+ITT_d <- mean(treatment$treated)
+CACE_1 <- ITT / ITT_d
+CACE_1
+```
+
+Second method:
+```{r}
+treatment_contact_rate <- 486/2572
+placebo_contact_rate <- 470/2579
+CACE_2 <- .3909 - .2979
+CACE_2
+```
+
+The results of comparing the two methods of calculating CACE came back slightly different. The second method has higher statistical precision because we can compare compliers directly thus having higher statistical power (less chance of incorrectly rejecting the null hypothesis).
+
+#### 5. Determine the direction of bias in estimating the ATE for each of the following situations when we randomize at the individual level. Do we overestimate, or underestimate? Briefly but clearly explain your reasoning.  
+
+**a.) In the advertising example of Lewis and Reiley (2014), assume some treatment group members are friends with control group members.**  
+
+Treatment members who are friends with control members will lead to an understimate of the ATE because the friends who received treatment (saw ad) may talk to their friends about it thus causing some spillover to the control which diminishes the effect that would be observed without the influence from the friends in treatment group.  
+
+**b.) Consider the police displacement example from the bulleted list in the introduction to FE 8, where we are estimating the effects of enforcement on crime.**  
+
+The displacement of crime from one neighborhood to other nearby neighborhoods would overestimate the effect of the police campaign in the targeted neighborhood. If you could prevent the criminals from spilling over into other nearby areas, then they may still committ some of the crimes they took to other nearby areas since it was easier to get away with there. By not counting the crimes that just moved away a small distance, the effect of the police campaign look be larger than it really was. 
+
+**c.) Suppose employees work harder when you experimentally give them compensation that is more generous than they expected, that people feel resentful (and therefore work less hard) when they learn that their compensation is less than others, and that some treatment group members talk to control group members.**  
+
+When treatment group members for this study, people receiving boosted compensation, talk to control members, people receiving regular compensation, the effect on the control group would be amplified because they would feel resentful and thus work less hard than if they didn't know the treatment group was earning more, so the bias would be an overestimation. 
+
+**d.) When Olken (2007) randomly audits local Indonesian governments for evidence of corruption, suppose control group governments learn that treatment group governments are being randomly audited and assume they are likely to get audited too.**  
+
+The reaction of the control group members to the random audit of treatment groups likely causes them to behave in a less corrupt fashion than if they had no idea that other government groups were being audited. Therefore the bias is going to be an underestimate of actual corruption since the control is shifting behavior to hide their corrupt actions.  
+
+
+#### 6. FE exercise 8.2.  
+
+Random assignment to roommate pairs ensures that the two people are not self-selecting to room with someone similar to themselves. In the roommate pairs found to have correlated weights at the end of their freshmen year of college, perhaps that is because both people chose to room with someone eats and drinks in a similar style and thus would experience similar changes in weight over the year. In cases where the roommates did not choose each other, perhaps the roommates did not spend as much time together and never mimicked the others consumption habits.  
+
+#### 7. FE exercise 8.6.  
+
+```{r}
+clinic <- read.csv("~/MIDS/241/GerberGreenBook_Chapter8_Table_8_2.csv", stringsAsFactors = F)
+```
+
+**a.) Estimate E[Y01 - Y00] for random assignment that places the treatment at location A.**  
+
+(0/0.2) / (1/0.2) - ((0/0.4)+(6/0.6)+(6/0.8)) / ((1/0.4)+(1/0.6)+(1/0.8))  
+= `r (0/0.2) / (1/0.2) - ((0/0.4)+(6/0.6)+(6/0.8)) / ((1/0.4)+(1/0.6)+(1/0.8))`
+
+
+**b.) Estimate E[Y10 - Y00] for random assignment that places the treatment at location A, restricting the sample to the set of villages that have a non-zero probability of expressing both of these potential outcomes.**  
+
+(2/0.4) / (1/0.4) - ((0/0.4)+(6/0.6)) / ((1/0.4)+(1/0.6))  
+= `r (2/0.4) / (1/0.4) - ((0/0.4)+(6/0.6)) / ((1/0.4)+(1/0.6))`
+
+**c.) In order to make a more direct comparison between these two treatment effects, estimate E[Y01 - Y00], restricting the sample to the same set of villages in part b.**  
+
+(0/0.2) / (1/0.2) - ((0/0.4)+(6/0.6)) / ((1/0.4)+(1/0.6)) 
+= `r (0/0.2) / (1/0.2) - ((0/0.4)+(6/0.6)) / ((1/0.4)+(1/0.6))`
+
+#### 8. FE exercise 8.9.  
+
+```{r}
+hotspots <- read.csv("~/MIDS/241/GerberGreenBook_Chapter8_Table_8_4_8_5.csv", stringsAsFactors = F)
+```
+
+**a.) For the subset of 11 hotspot locations that lie outside the range of possible spillovers, calculate E[Y01 - Y00], the ATE of immediate police surveillance.**  
+
+```{r}
+hotspots_out <- hotspots[hotspots$hotwitin500==0, ]
+ATE <- mean(hotspots_out[hotspots_out$assignment==1,]$y) - mean(hotspots_out[hotspots_out$assignment==0,]$y)
+ATE
+```
+
+
+**b.) For the remaining 19 hotspot locations that lie within the range of possible spillovers, calculate E[Y01 - Y00], E[Y10 - Y00], and E[Y11 - Y00].**  
+
+```{r}
+hotspots_in <- hotspots[hotspots$hotwitin500!=0, ]
+```
+
+E[Y01 - Y00] =  
+```{r}
+mean(hotspots_in[hotspots_in$assignment==1,]$y) - mean(hotspots_in[hotspots_in$assignment==0,]$y)
+```
+
+
+E[Y10 - Y00] =  
+```{r}
+mean(hotspots_in[hotspots_in$exposure==10,]$y) - mean(hotspots_in[hotspots_in$exposure==0,]$y)
+```
+
+
+E[Y11 - Y00] =  
+```{r}
+mean(hotspots_in[hotspots_in$exposure==11,]$y) - mean(hotspots_in[hotspots_in$exposure==0,]$y)
+```
+
+
+**c.) Use te data to estimate the average effect of spillover on nonexperimentsal units.**  
+
+```{r}
+non_exp <- read.csv("~/MIDS/241/GerberGreenBook_Chapter8_Exercise_9c.csv", stringsAsFactors = F)
+y10 <- non_exp[non_exp$exposure==10,]$y
+y00 <- non_exp[non_exp$exposure==0,]$y
+y10_probs <- non_exp[non_exp$exposure==10,]$prob10
+y00_probs <- non_exp[non_exp$exposure==0,]$prob00
+sum(y10 / y10_probs) / sum(1 / y10_probs)
+sum(y00 / y00_probs) / sum(1 / y00_probs)
+```
+
+The effect of spillover on nonexperimental units is thus:
+```{r}
+sum(y10 / y10_probs) / sum(1 / y10_probs) - sum(y00 / y00_probs) / sum(1 / y00_probs)
+```
+
+
+#### 9. FE exercise 8.10.  
+
+**a.) Explain the assumptions needed to identify this causal effect based on this within-subjects design. Are these assumptions plausible? What special concerns arise due to the fact that the subject was conducting the study, undergoing the treatments and measuring her own outcomes?**  
+
+The assumptions needed to identify causal effects are that walking or running in the morning is truly random, that other aspects of her life (such as eating, drinking, other exercise) stay the same each day, that the difficulty in the tetris game stays the same each day, and that playing tetris every day doesn't make her better or worse at it. Some of the assumptions could be plausible, such as maintain daily caloric intake and restricting other exercise, but the assumption that playing tetris each day doesn't change skill in the game is not plausible. It could be a concern that the subject does not fully comply with all treatments each day, but fails to record such in order to prevent the study from becoming invalid.
+
+**b.) Estimate the effect of running on Tetris score.**  
+
+```{r}
+tetris <- read.dta("~/MIDS/241/Hough_WorkingPaper_2010.dta")
+run_effect_tetris <- lm(tetris$tetris ~ tetris$run)
+summary(run_effect_tetris)
+```
+
+The effect of running on Tetris would be `r run_effect_tetris$coefficients[[2]]` with a p-value of 0.01035.
+
+**c.) Use variable Run to predict Tetris score on the preceding day. Presumably the true effect is zero. Does randomization inference confirm?**  
+
+```{r}
+tetris$tetris_yesterday <- c(NA, tetris$tetris[1:25])
+run_effect_tetris_yesterday <- lm(tetris$tetris_yesterday ~ tetris$run)
+summary(run_effect_tetris_yesterday)
+```
+
+The effect of running on the tetris score yesterday was not zero, but `r run_effect_tetris_yesterday$coefficients[[2]]` with a p-value of 0.895.
+
+**d.) If Tetris responds to exercise, one might suppose that energy levels and GRE scores would as well. Are these hypotheses borne out by the data?**  
+
+```{r}
+run_effect_energy <- lm(energy ~ run, data = tetris)
+summary(run_effect_energy)
+
+run_effect_gre <- lm(gre ~ run, data = tetris)
+summary(run_effect_gre)
+```
+
+When regressed against energy, the run variable has a variable small effect size of 0.07143 with a p-value that is very high (0.873). Running effect on GRE question was actually negative, p-value of 0.353. Even though we might expect the effect of running on tetris to be similar to the effect of running on energy or gre, the data does not show the same causal effects. 
+
+**e.) Note that the observations in this regression are not necessarily all independent of each other.  Given that, would you expect randomization inference to give you a better answer than the regression answer you just obtained in (b)?  Which number(s) do you expect to be different in regression than in randomization inference?  What is the direction of the bias?**  
+
+Randomization ensures that variables are independent of each other. Randomization inference could give a better answer if the study design was conducted to truly assign the treatments randomly. I would expect the effect on tetris score to be zero, but the effect on energy to be positive. The direction of bias is overestimating due to not discounting the increase in skill from playing the same game, testing a similar difficulty math question each day. 

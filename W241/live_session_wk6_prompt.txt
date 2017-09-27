@@ -1,0 +1,16 @@
+Practicing regression with the Colin/José example from FE (p. 304-307)
+
+Note that equation [9.16] only gives estimated coefficients, and lacks estimates of those coefficients’ standard errors.  
+Let’s fix this by doing the regression ourselves.
+
+The full dataset is described completely in Table 9.1.  
+You will have to figure out how to create a version of this dataset for which you can run the regression.  
+
+What will that look like?  How many rows and columns?
+Once you have created the data file, run the regression in Equation 9.16.   
+Present the results with standard errors in parentheses.
+Which of the coefficients are statistically significant at the 5% level, and which are not?
+How do you interpret the magnitudes of the significant coefficients?
+Now that you’ve practiced doing a simple regression, it’s a really good thing to get in the habit of using 
+heteroskedasticity-robust standard errors.  
+Re-run your regression model with robust standard errors, and re-answer the previous problems.
